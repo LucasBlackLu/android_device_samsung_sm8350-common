@@ -123,5 +123,9 @@ TARGET_USES_MKE2FS := true
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.default
 
+# Releasetools
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_samsung_sm8350
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
+
 # VNDK
 PRODUCT_VNDK_VERSION := current
