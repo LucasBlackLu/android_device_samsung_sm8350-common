@@ -29,6 +29,9 @@ PRODUCT_PACKAGES += \
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
