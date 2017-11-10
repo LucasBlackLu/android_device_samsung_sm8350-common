@@ -28,6 +28,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.default
 
+# Namespaces
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
 # No A/B
 AB_OTA_UPDATER := false
 
