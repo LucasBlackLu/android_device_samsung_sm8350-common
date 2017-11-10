@@ -50,6 +50,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=mdfpp \
     ro.security.keystore.keytype=sakv2,gak \
 
+
+# Namespaces
+PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
