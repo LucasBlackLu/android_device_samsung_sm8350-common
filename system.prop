@@ -86,3 +86,7 @@ persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
+
+## WIFI
+wifi.direct.interface=p2p0
+ro.boot.wificountrycode=00
