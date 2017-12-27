@@ -613,6 +613,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.impl \
     vendor.qti.hardware.vibrator.service \
 
+# Weaver
+PRODUCT_PACKAGES += \
+    android.hardware.weaver@1.0
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
