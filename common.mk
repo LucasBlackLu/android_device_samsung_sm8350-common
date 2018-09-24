@@ -224,6 +224,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # Partitions
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
