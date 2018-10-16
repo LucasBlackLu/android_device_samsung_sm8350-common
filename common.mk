@@ -20,6 +20,10 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
