@@ -42,6 +42,10 @@ PRODUCT_PACKAGES += \
     vendor_modprobe.sh \
     vendor.samsung.rilchip.qcom.rc
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
