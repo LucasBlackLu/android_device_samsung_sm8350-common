@@ -31,6 +31,10 @@ PRODUCT_PACKAGES += \
     init.samsung.display.rc \
     init.samsung.rc
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
