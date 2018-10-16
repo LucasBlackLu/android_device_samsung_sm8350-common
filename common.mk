@@ -23,6 +23,10 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
