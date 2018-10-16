@@ -46,6 +46,10 @@ PRODUCT_PACKAGES += \
     init.qti.qcv.sh \
     vendor_modprobe.sh
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
