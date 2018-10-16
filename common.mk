@@ -6,6 +6,10 @@
 
 COMMON_PATH := device/samsung/sm8350-common
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Init files and fstab
 PRODUCT_PACKAGES += \
     fstab.ramplus \
