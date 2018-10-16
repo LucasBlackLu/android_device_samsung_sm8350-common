@@ -47,6 +47,10 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh
     vendor_modprobe.sh
 
+# Fastboot
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
