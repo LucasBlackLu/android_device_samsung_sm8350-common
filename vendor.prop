@@ -179,6 +179,9 @@ debug.media.codec2=2
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 ro.config.vc_call_vol_steps=8
 
+# Network manager
+ro.telephony.iwlan_operation_mode=legacy
+
 # NFC
 ro.vendor.nfc.feature.chipname=STM_ST21
 ro.vendor.nfc.info.antpos=16
