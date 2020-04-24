@@ -226,6 +226,9 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     hostapd
 
+PRODUCT_PACKAGES += \
+    WifiOverlay 
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(COMMON_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
