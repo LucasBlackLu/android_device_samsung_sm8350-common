@@ -301,6 +301,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
+    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
