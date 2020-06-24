@@ -154,6 +154,9 @@ ro.hardware.gatekeeper=mdfpp
 ro.hardware.vulkan=adreno
 ro.hardware.egl=adreno
 
+## Incremental FS
+ro.incremental.enable=true
+
 ## Keystore
 ro.hardware.keystore=mdfpp
 ro.hardware.keystore_desede=true
