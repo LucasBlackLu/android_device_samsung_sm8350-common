@@ -160,6 +160,10 @@ $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/s
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung
 
+## Overlays
+DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
+PRODUCT_ENFORCE_RRO_TARGETS += *
+
 ## Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.pixel-libperfmgr
