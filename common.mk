@@ -217,6 +217,13 @@ PRODUCT_COPY_FILES += \
 BOARD_SHIPPING_API_LEVEL := 33
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 
+## Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.samsung
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
