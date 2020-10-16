@@ -176,6 +176,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.vendor.sensors.rc \
 
+## SOONG namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/usb/etc \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/samsung \
+    $(COMMON_PATH) \
+
 ## Tether
 PRODUCT_PACKAGES += \
     ipacm \
