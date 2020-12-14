@@ -91,10 +91,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libdrmclearkeyplugin
 
-## Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
 ## Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
