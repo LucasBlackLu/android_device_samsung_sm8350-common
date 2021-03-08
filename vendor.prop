@@ -147,6 +147,9 @@ persist.vendor.dpmhalservice.enable=1
 ## Filesystem
 fs_mgr.overlayfs.prefer_cache_backing_storage=true
 
+## FUSE
+persist.sys.fuse.passthrough.enable=true
+
 ## Gatekeeper
 ro.hardware.gatekeeper=mdfpp
 
