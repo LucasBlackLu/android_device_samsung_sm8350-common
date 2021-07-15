@@ -34,6 +34,13 @@ PRODUCT_ENABLE_UFFD_GC := false
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    FrameworksResCommon \
+    SystemUIResCommon \
+    TelephonyResCommon \
+    WifiResCommon
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
