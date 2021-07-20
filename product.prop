@@ -2,6 +2,9 @@
 # common product properties for SM6375 devices
 #
 
+## Dalvik VM
+dalvik.vm.dex2oat64.enabled=true
+
 ## FRP Define
 ro.frp.pst=/dev/block/persistent
 
