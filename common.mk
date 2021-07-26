@@ -60,9 +60,13 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResCommon \
+    FrameworksResTarget \
     SystemUIResCommon \
     TelephonyResCommon \
-    WifiResCommon
+    WifiResCommon \
+    WifiResCommon \
+    WifiResTarget
+
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
