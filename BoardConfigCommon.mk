@@ -151,6 +151,9 @@ TARGET_BOARD_INFO_FILE := $(COMMON_PATH)/board-info.txt
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_samsung_sm8350
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
+# SELinux
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
