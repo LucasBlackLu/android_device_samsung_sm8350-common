@@ -135,6 +135,9 @@ TARGET_USES_MKE2FS := true
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.qcom
 
+# SELinux
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Use sha256 for dm-verity partitions
 BOARD_AVB_VENDOR_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_AVB_ODM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
