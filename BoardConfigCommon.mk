@@ -135,6 +135,9 @@ TARGET_USES_MKE2FS := true
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/root/fstab.qcom
 BOARD_USES_FULL_RECOVERY_IMAGE := true
 
+# SELinux
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
