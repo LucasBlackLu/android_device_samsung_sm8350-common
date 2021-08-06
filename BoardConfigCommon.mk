@@ -124,6 +124,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 BOARD_RECOVERY_MKBOOTIMG_ARGS += --header_version 2
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.default
 
+# SELinux
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
