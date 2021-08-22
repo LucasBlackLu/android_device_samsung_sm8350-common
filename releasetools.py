@@ -49,7 +49,7 @@ def AddImage(info, basename, dest):
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
 def OTA_InstallEnd(info):
-  AddImage(info, "dtbo.img", "/dev/block/by-name/dtbo")
+  AddImage(info, "dtbo.img", "/dev/block/bootdevice/by-name/dtbo")
   AddImage(info, "vbmeta.img", "/dev/block/bootdevice/by-name/vbmeta")
-  AddImage(info, "vendor_boot.img", "/dev/block/by-name/vendor_boot")
+  AddImage(info, "vendor_boot.img", "/dev/block/bootdevice/by-name/vendor_boot")
   return
