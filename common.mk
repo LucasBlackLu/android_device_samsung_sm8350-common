@@ -164,6 +164,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service.pixel-libperfmgr
 
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
 ## RIL
 PRODUCT_PACKAGES += \
     secril_config_svc \
