@@ -26,3 +26,6 @@ ril.subscription.types=NV,RUIM
 
 # RIL
 ro.vendor.qti.va_aosp.support=1
+
+# VNDK
+ro.vndk.version=current
