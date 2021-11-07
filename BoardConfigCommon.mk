@@ -197,9 +197,6 @@ VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 # Vibrator
 $(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
 
-# VNDK
-PRODUCT_VNDK_VERSION := current
-
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_HOSTAPD_DRIVER := NL80211
