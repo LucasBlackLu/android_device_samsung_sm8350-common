@@ -142,6 +142,7 @@ on boot
 
     # for BT MAC address
     mkdir /mnt/vendor/efs/bluetooth 0770 system bluetooth
+
     # if already exist
     chown system bluetooth /mnt/vendor/efs/bluetooth/bt_addr
     chmod 0770 /mnt/vendor/efs/bluetooth/bt_addr
@@ -491,6 +492,180 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
+<<<<<<< HEAD
+=======
+on post-fs-data
+    mkdir /data/vendor/bstsuperlowlight 0700 cameraserver system
+    copy  /vendor/etc/bstsuperlowlight/BLC_W11_front_1.txt                              /data/vendor/bstsuperlowlight/BLC_W11_front_1.txt
+    copy  /vendor/etc/bstsuperlowlight/BLC_W11_front_2.txt                              /data/vendor/bstsuperlowlight/BLC_W11_front_2.txt
+    copy  /vendor/etc/bstsuperlowlight/BLC_W11_front_3.txt                              /data/vendor/bstsuperlowlight/BLC_W11_front_3.txt
+    copy  /vendor/etc/bstsuperlowlight/BLC_W11_front_4.txt                              /data/vendor/bstsuperlowlight/BLC_W11_front_4.txt
+    copy  /vendor/etc/bstsuperlowlight/BLC_W11_rear_1.txt                               /data/vendor/bstsuperlowlight/BLC_W11_rear_1.txt
+    copy  /vendor/etc/bstsuperlowlight/BLC_W11_rear_2.txt                               /data/vendor/bstsuperlowlight/BLC_W11_rear_2.txt
+    copy  /vendor/etc/bstsuperlowlight/BLC_W11_rear_3.txt                               /data/vendor/bstsuperlowlight/BLC_W11_rear_3.txt
+    copy  /vendor/etc/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_1.cfg    /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_1.cfg
+    copy  /vendor/etc/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_2.cfg    /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_2.cfg
+    copy  /vendor/etc/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_3.cfg    /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_3.cfg
+    copy  /vendor/etc/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_4.cfg    /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_4.cfg
+    copy  /vendor/etc/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_1.cfg     /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_1.cfg
+    copy  /vendor/etc/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_2.cfg     /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_2.cfg
+    copy  /vendor/etc/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_3.cfg     /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_3.cfg
+    copy  /vendor/etc/bstsuperlowlight/DNS_W11_front_1.txt                              /data/vendor/bstsuperlowlight/DNS_W11_front_1.txt
+    copy  /vendor/etc/bstsuperlowlight/DNS_W11_front_2.txt                              /data/vendor/bstsuperlowlight/DNS_W11_front_2.txt
+    copy  /vendor/etc/bstsuperlowlight/DNS_W11_front_3.txt                              /data/vendor/bstsuperlowlight/DNS_W11_front_3.txt
+    copy  /vendor/etc/bstsuperlowlight/DNS_W11_front_4.txt                              /data/vendor/bstsuperlowlight/DNS_W11_front_4.txt
+    copy  /vendor/etc/bstsuperlowlight/DNS_W11_rear_1.txt                               /data/vendor/bstsuperlowlight/DNS_W11_rear_1.txt
+    copy  /vendor/etc/bstsuperlowlight/DNS_W11_rear_2.txt                               /data/vendor/bstsuperlowlight/DNS_W11_rear_2.txt
+    copy  /vendor/etc/bstsuperlowlight/DNS_W11_rear_3.txt                               /data/vendor/bstsuperlowlight/DNS_W11_rear_3.txt
+    copy  /vendor/etc/bstsuperlowlight/totalModel_W11_front_1_sig.bin                   /data/vendor/bstsuperlowlight/totalModel_W11_front_1_sig.bin
+    copy  /vendor/etc/bstsuperlowlight/totalModel_W11_front_2_sig.bin                   /data/vendor/bstsuperlowlight/totalModel_W11_front_2_sig.bin
+    copy  /vendor/etc/bstsuperlowlight/totalModel_W11_front_3_sig.bin                   /data/vendor/bstsuperlowlight/totalModel_W11_front_3_sig.bin
+    copy  /vendor/etc/bstsuperlowlight/totalModel_W11_front_4_sig.bin                   /data/vendor/bstsuperlowlight/totalModel_W11_front_4_sig.bin
+    copy  /vendor/etc/bstsuperlowlight/totalModel_W11_rear_1_sig.bin                    /data/vendor/bstsuperlowlight/totalModel_W11_rear_1_sig.bin
+    copy  /vendor/etc/bstsuperlowlight/totalModel_W11_rear_2_sig.bin                    /data/vendor/bstsuperlowlight/totalModel_W11_rear_2_sig.bin
+    copy  /vendor/etc/bstsuperlowlight/totalModel_W11_rear_3_sig.bin                    /data/vendor/bstsuperlowlight/totalModel_W11_rear_3_sig.bin
+    #+bug P86801AA2, huangxiaofeng01.wt, add, 2023.10.24, Fixed bst superlowlightraw issue
+    copy  /vendor/etc/bstsuperlowlight/totalModel_W11_rear_1.bin                        /data/vendor/bstsuperlowlight/totalModel_W11_rear_1.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_1.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_1.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_2.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_2.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_3.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_3.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_4.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_4.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_1.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_1.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_2.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_2.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_3.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_3.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_4.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_4.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_1.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_1.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_2.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_2.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_3.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_3.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_1.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_1.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_2.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_2.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_3.bin                  /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_3.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_1.bin                   /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_1.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_2.bin                   /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_2.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_3.bin                   /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_3.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_4.bin                   /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_4.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_1.bin                   /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_1.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_2.bin                   /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_2.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_3.bin                   /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_3.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_4.bin                   /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_4.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_1.bin                   /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_1.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_2.bin                   /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_2.bin
+    copy  /vendor/etc/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_3.bin                   /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_3.bin
+    copy  /vendor/etc/bstsuperlowlight/BstMask.bin                                      /data/vendor/bstsuperlowlight/BstMask.bin
+
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BLC_W11_front_1.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BLC_W11_front_2.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BLC_W11_front_3.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BLC_W11_front_4.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BLC_W11_rear_1.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BLC_W11_rear_2.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BLC_W11_rear_3.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_1.cfg
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_2.cfg
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_3.cfg
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_4.cfg
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_1.cfg
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_2.cfg
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_3.cfg
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/DNS_W11_front_1.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/DNS_W11_front_2.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/DNS_W11_front_3.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/DNS_W11_front_4.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/DNS_W11_rear_1.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/DNS_W11_rear_2.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/DNS_W11_rear_3.txt
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/totalModel_W11_front_1_sig.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/totalModel_W11_front_2_sig.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/totalModel_W11_front_3_sig.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/totalModel_W11_front_4_sig.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/totalModel_W11_rear_1_sig.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/totalModel_W11_rear_2_sig.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/totalModel_W11_rear_3_sig.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/totalModel_W11_rear_1.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_1.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_2.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_3.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_4.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_1.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_2.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_3.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_4.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_1.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_2.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_3.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_1.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_2.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_3.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_1.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_2.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_3.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_4.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_1.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_2.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_3.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_4.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_1.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_2.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_3.bin
+    chown camera camera                                                                 /data/vendor/bstsuperlowlight/BstMask.bin
+
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BLC_W11_front_1.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BLC_W11_front_2.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BLC_W11_front_3.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BLC_W11_front_4.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BLC_W11_rear_1.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BLC_W11_rear_2.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BLC_W11_rear_3.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_1.cfg
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_2.cfg
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_3.cfg
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_front_4.cfg
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_1.cfg
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_2.cfg
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/control_param_RAW2RAWProcFlow_W11_rear_3.cfg
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/DNS_W11_front_1.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/DNS_W11_front_2.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/DNS_W11_front_3.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/DNS_W11_front_4.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/DNS_W11_rear_1.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/DNS_W11_rear_2.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/DNS_W11_rear_3.txt
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/totalModel_W11_front_1_sig.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/totalModel_W11_front_2_sig.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/totalModel_W11_front_3_sig.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/totalModel_W11_front_4_sig.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/totalModel_W11_rear_1_sig.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/totalModel_W11_rear_2_sig.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/totalModel_W11_rear_3_sig.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/totalModel_W11_rear_1.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_1.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_2.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_3.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_1_sig_4.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_1.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_2.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_3.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_2_sig_4.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_1.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_2.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_3_sig_3.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_1.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_2.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_front_4_sig_3.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_1.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_2.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_3.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_1_sig_4.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_1.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_2.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_3.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_2_sig_4.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_1.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_2.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BSTRAWDNS_W11_rear_3_sig_3.bin
+    chmod 0666                                                                          /data/vendor/bstsuperlowlight/BstMask.bin
+
+>>>>>>> abf54f9 (gta9p-common: rootdir: Remove conditional starting of msm_irqbalance and don't disable it)
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
     group nfc
@@ -891,19 +1066,7 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/m
     class core
     user root
     group root
-    disabled
-
-service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_little_big.conf
-    class core
-    user root
-    group root
-    disabled
-
-service vendor.msm_irqbl_sdm630 /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_sdm630.conf
-    class core
-    user root
-    group root
-    disabled
+    writepid /dev/cpuset/system-background/tasks
 
 # service for USERDEBUG
 service vendor.LKCore-dbg /vendor/bin/LKCore
