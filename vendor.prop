@@ -2,6 +2,9 @@
 # common vendor properties for SM6375 devices
 #
 
+## Adoptable Storage
+ro.crypto.volume.options=aes-256-xts
+
 ## Audio
 ro.vendor.audio.sdk.ssr=false
 ro.qc.sdk.audio.ssr=false
