@@ -31,25 +31,26 @@ SECTION=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
-        --only-common )
-                ONLY_COMMON=true
-                ;;
-        --only-target )
-                ONLY_TARGET=true
-                ;;
-        -n | --no-cleanup )
-                CLEAN_VENDOR=false
-                ;;
-        -k | --kang )
-                KANG="--kang"
-                ;;
-        -s | --section )
-                SECTION="${2}"; shift
-                CLEAN_VENDOR=false
-                ;;
-        * )
-                SRC="${1}"
-                ;;
+    --only-common)
+        ONLY_COMMON=true
+        ;;
+    --only-target)
+        ONLY_TARGET=true
+        ;;
+    -n | --no-cleanup)
+        CLEAN_VENDOR=false
+        ;;
+    -k | --kang)
+        KANG="--kang"
+        ;;
+    -s | --section)
+        SECTION="${2}"
+        shift
+        CLEAN_VENDOR=false
+        ;;
+    *)
+        SRC="${1}"
+        ;;
     esac
     shift
 done
@@ -60,6 +61,10 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+    vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so)
+        # Replace libutils with vndk30 libutils
+        "${PATCHELF}" --replace-needed libutils.so libutils-v30.so "${2}"
+        ;;
     esac
 }
 
