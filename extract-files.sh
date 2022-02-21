@@ -16,8 +16,8 @@ ANDROID_ROOT="${MY_DIR}/../../.."
 
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
-    echo "Unable to find helper script at ${HELPER}"
-    exit 1
+	echo "Unable to find helper script at ${HELPER}"
+	exit 1
 fi
 source "${HELPER}"
 
@@ -30,52 +30,57 @@ KANG=
 SECTION=
 
 while [ "${#}" -gt 0 ]; do
-    case "${1}" in
-        --only-common )
-                ONLY_COMMON=true
-                ;;
-        --only-target )
-                ONLY_TARGET=true
-                ;;
-        -n | --no-cleanup )
-                CLEAN_VENDOR=false
-                ;;
-        -k | --kang )
-                KANG="--kang"
-                ;;
-        -s | --section )
-                SECTION="${2}"; shift
-                CLEAN_VENDOR=false
-                ;;
-        * )
-                SRC="${1}"
-                ;;
-    esac
-    shift
+	case "${1}" in
+	--only-common)
+		ONLY_COMMON=true
+		;;
+	--only-target)
+		ONLY_TARGET=true
+		;;
+	-n | --no-cleanup)
+		CLEAN_VENDOR=false
+		;;
+	-k | --kang)
+		KANG="--kang"
+		;;
+	-s | --section)
+		SECTION="${2}"
+		shift
+		CLEAN_VENDOR=false
+		;;
+	*)
+		SRC="${1}"
+		;;
+	esac
+	shift
 done
 
 if [ -z "${SRC}" ]; then
-    SRC="adb"
+	SRC="adb"
 fi
 
 function blob_fixup() {
-    case "${1}" in
-    esac
+	case "${1}" in
+	vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so)
+		# Replace libutils with vndk30 libutils
+		"${PATCHELF}" --replace-needed libutils.so libutils-v30.so "${2}"
+		;;
+	esac
 }
 
 if [ -z "${ONLY_TARGET}" ]; then
-    # Initialize the helper for common device
-    setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
+	# Initialize the helper for common device
+	setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
-    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+	extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
 
 if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" ]; then
-    # Reinitialize the helper for device
-    source "${MY_DIR}/../../${VENDOR}/${DEVICE}/extract-files.sh"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
+	# Reinitialize the helper for device
+	source "${MY_DIR}/../../${VENDOR}/${DEVICE}/extract-files.sh"
+	setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-    extract "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+	extract "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
 fi
 
 "${MY_DIR}/setup-makefiles.sh"
