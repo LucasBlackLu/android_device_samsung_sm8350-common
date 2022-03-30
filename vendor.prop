@@ -189,6 +189,7 @@ ro.hardware.lights=qcom
 
 # Media
 debug.stagefright.c2inputsurface=-1
+vendor.media.omx=0
 
 #NFC
 ro.vendor.nfc.feature.chipname=NXP_SN100U
