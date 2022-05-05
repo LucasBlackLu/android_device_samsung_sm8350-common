@@ -14,6 +14,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
 
+# Audio-Legacy for Muting logspam
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@4.0-impl
+
 # Audio
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8350/audio
 
