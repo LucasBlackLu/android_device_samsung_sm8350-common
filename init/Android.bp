@@ -7,4 +7,5 @@ prebuilt_etc {
     name: "fstab.default",
     src: "fstab.default",
     vendor: true,
+    vendor_ramdisk_available: true,
 }

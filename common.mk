@@ -6,11 +6,11 @@
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default \
     $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default
 
 PRODUCT_PACKAGES += \
-    fstab.default
+    fstab.default \
+    fstab.default.vendor_ramdisk
 
 # No A/B
 AB_OTA_UPDATER := false
