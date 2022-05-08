@@ -6,12 +6,11 @@
 
 # Init
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
     $(LOCAL_PATH)/init/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom
 
 PRODUCT_PACKAGES += \
-    fstab.qcom\
-    fstab.default.vendor_ramdisk \
+    fstab.qcom \
+    fstab.qcom.vendor_ramdisk \
     fstab.ramplus \
     init.audio.samsung.rc \
     init.fingerprint.rc \
