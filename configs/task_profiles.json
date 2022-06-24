@@ -83,32 +83,6 @@
       ]
     },
     {
-      "Name": "Frozen",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "FreezerState",
-            "Value": "1"
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Unfrozen",
-      "Actions": [
-        {
-          "Name": "SetAttribute",
-          "Params":
-          {
-            "Name": "FreezerState",
-            "Value": "0"
-          }
-        }
-      ]
-    },
-    {
       "Name": "SFrozen",
       "Actions": [
         {
