@@ -106,6 +106,8 @@ on post-fs-data
     # Enable WLAN cold boot calibration
     write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6490/fs_ready 1
 
+    mkdir /data/vendor/gatekeeper 0770 system system
+
 on early-boot
     start vendor.sensors
 
