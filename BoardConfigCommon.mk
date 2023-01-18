@@ -51,6 +51,9 @@ TARGET_NO_RPC := true
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# Display
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
+
 # File System
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
