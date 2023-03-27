@@ -80,6 +80,14 @@ BOARD_SHIPPING_API_LEVEL := 33
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 
 # WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    wpa_supplicant \
+    wpa_supplicant.conf \
+    hostapd
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(COMMON_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
