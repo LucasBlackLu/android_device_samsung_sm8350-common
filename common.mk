@@ -81,7 +81,7 @@ PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi-service \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
     wpa_supplicant \
