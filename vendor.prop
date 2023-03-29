@@ -118,6 +118,10 @@ persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 ## Bluetooth (SoC)
 vendor.qcom.bluetooth.soc=hastings
 
+## Chipset
+ro.soc.manufacturer=QTI
+ro.soc.model=SM6375
+
 ## Display
 vendor.gralloc.disable_ubwc=0
 vendor.display.vds_allow_hwc=1
