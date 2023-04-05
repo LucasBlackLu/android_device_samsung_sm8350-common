@@ -20,7 +20,6 @@ PRODUCT_PACKAGES += \
     init.fingerprint.rc \
     init.nfc.samsung.rc \
     init.qcom.rc \
-    init.qcom.usb.rc \
     init.qti.kernel.rc \
     init.ramplus.rc \
     init.samsung.bsp.rc \
@@ -44,8 +43,7 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.sh \
     vendor_modprobe.sh \
     init.qti.chg_policy.sh \
-    init.qti.qcv.sh \
-    init.qcom.usb.sh
+    init.qti.qcv.sh
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default\
@@ -95,6 +93,14 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.3-service-qti \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
+
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 
 # VNDK
 BOARD_SHIPPING_API_LEVEL := 30
