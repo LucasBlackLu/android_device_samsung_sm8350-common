@@ -21,5 +21,10 @@ AB_OTA_UPDATER := false
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RAMDISK)/init.recovery.qcom.rc \
+    $(COMMON_PATH)/init/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc \
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
