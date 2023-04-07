@@ -19,5 +19,9 @@ AB_OTA_UPDATER := false
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
