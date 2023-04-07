@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+COMMON_PATH := device/samsung/sm8350-common
+
 # Init files and fstab
 PRODUCT_PACKAGES += \
     fstab.ramplus \
@@ -48,6 +50,10 @@ AB_OTA_UPDATER := false
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
