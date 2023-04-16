@@ -959,10 +959,8 @@ vendor/lib64/hw/gralloc.default.so
 vendor/lib64/hw/memtrack.default.so
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/libEGL_adreno.so
-vendor/lib64/libadreno_utils.so
 vendor/lib64/libdisplaydebug.so
 vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdrmutils.so
 vendor/lib64/libgpu_tonemapper.so
 vendor/lib64/libgralloccore.so
@@ -974,10 +972,8 @@ vendor/lib64/libqdutils.so
 vendor/lib64/libqservice.so
 vendor/lib64/libsdedrm.so
 vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmextension.so
 vendor/lib64/libsdmutils.so
 vendor/lib64/libtinyxml2_1.so
 vendor/lib64/vendor.display.color@1.0.so
@@ -1034,6 +1030,15 @@ vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_32.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
 vendor/gpu/kbc/unified_ksqs.bin
+
+# Display - from XQ-BC72 61.2.A.0.410
+vendor/lib64/libdpps.so|9caf32a0d3636af579ea6e1a6c5638a16ed19444
+vendor/lib64/librcmask.so|8feb479fe590b6aec282ce3342574d9113f80516
+vendor/lib64/libsdm-diag.so|393c9ad3e3ad3210515900627f65bf6e3633226e
+vendor/lib64/libsdmextension.so|4c32026ff8cb1270081881d4def7a2ad05ad0b80
+vendor/lib64/libdisplayskuutils.so|37e4d543c696a5c9f0c1b44fd7299a0bc7dba5e8
+vendor/lib64/libsdm-color.so|a83576915a146492d430711e273b9af9a95d4fed
+vendor/lib64/libqrtrclient.so|2474a708487c269c04afffbf755fff1686c6011c
 
 # DPM
 system_ext/lib/vendor.qti.diaghal@1.0.so
