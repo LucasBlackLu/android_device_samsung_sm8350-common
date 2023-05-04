@@ -203,15 +203,15 @@ on boot
     chown system system /sys/class/backlight/panel1-backlight/brightness
     chown system system /sys/class/backlight/panel1-backlight/max_brightness
 
-    # Allow access to sensors device attributes
-    chown system system /sys/class/sensors/MPU6050-accel/enable
-    chown system system /sys/class/sensors/MPU6050-accel/poll_delay
-    chown system system /sys/class/sensors/MPU6050-gyro/enable
-    chown system system /sys/class/sensors/MPU6050-gyro/poll_delay
-    chown system system /sys/class/sensors/apds9930-light/enable
-    chown system system /sys/class/sensors/apds9930-light/poll_delay
-    chown system system /sys/class/sensors/apds9930-proximity/enable
-    chown system system /sys/class/sensors/apds9930-proximity/poll_delay
+    # SS_SLPI_PROJECT
+    #chown system system /sys/class/sensors/MPU6050-accel/enable
+    #chown system system /sys/class/sensors/MPU6050-accel/poll_delay
+    #chown system system /sys/class/sensors/MPU6050-gyro/enable
+    #chown system system /sys/class/sensors/MPU6050-gyro/poll_delay
+    #chown system system /sys/class/sensors/apds9930-light/enable
+    #chown system system /sys/class/sensors/apds9930-light/poll_delay
+    #chown system system /sys/class/sensors/apds9930-proximity/enable
+    #chown system system /sys/class/sensors/apds9930-proximity/poll_delay
 
     # Create directory used for display
     # for backward compatibility
@@ -254,8 +254,11 @@ on post-fs-data
     mkdir /data/vendor/qtee 0770 system system
 
     #Create folder of camera
-    mkdir /data/vendor/camera 0770 camera camera
+    #mkdir /data/vendor/camera 0770 camera camera
 
+    # SAMSUNG_CAMERA
+    mkdir /data/vendor/camera 0770 camera system
+    mkdir /data/vendor/camera/logdump 0770 camera system
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
@@ -538,40 +541,6 @@ service qmiproxy /system/bin/qmiproxy
     group radio diag
     disabled
 
-service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
-    -O/data/vendor/wifi/wpa/sockets -puse_p2p_group_interface=1 -dd \
-    -g@android:vendor_wpa_wlan0
-#   we will start as root and wpa_supplicant will switch to user wifi
-#   after setting up the capabilities required for WEXT
-#   user wifi
-#   group wifi inet keystore
-    interface android.hardware.wifi.supplicant@1.0::ISupplicant default
-    interface android.hardware.wifi.supplicant@1.1::ISupplicant default
-    interface android.hardware.wifi.supplicant@1.2::ISupplicant default
-    interface android.hardware.wifi.supplicant@1.3::ISupplicant default
-    interface vendor.qti.hardware.wifi.supplicant@2.0::ISupplicantVendor default
-    interface vendor.qti.hardware.wifi.supplicant@2.1::ISupplicantVendor default
-    interface vendor.qti.hardware.wifi.supplicant@2.2::ISupplicantVendor default
-    class main
-    socket vendor_wpa_wlan0 dgram 660 wifi wifi
-    disabled
-    oneshot
-
-service vendor.wigig_supplicant /vendor/bin/hw/wpa_supplicant \
-    -iwigig0 -Dnl80211 -c/data/vendor/wifi/wigig_supplicant.conf \
-    -m/data/vendor/wifi/wigig_p2p_supplicant.conf \
-    -O/data/vendor/wifi/wigig_sockets -dd \
-    -e/data/vendor/wifi/wigig_entropy.bin -g@android:wigig/wpa_wigig0 \
-    -S wigigsvc
-    #   we will start as root and wpa_supplicant will switch to user wifi
-    #   after setting up the capabilities required for WEXT
-    #   user wifi
-    #   group wifi inet keystore
-    class main
-    socket wigig/wpa_wigig0 dgram 660 wifi wifi
-    disabled
-    oneshot
-
 # Data Migration
 service vendor.move_wifi_data /system/bin/move_wifi_data.sh
     class main
@@ -579,18 +548,6 @@ service vendor.move_wifi_data /system/bin/move_wifi_data.sh
     group wifi
     disabled
     oneshot
-
-service wigignpt /vendor/bin/wigignpt
-    interface vendor.qti.hardware.wigig.netperftuner@1.0::INetPerfTuner default
-    class hal
-    socket wigig/wigignpt stream 660 system wifi
-    user system
-    group wifi
-    capabilities NET_ADMIN
-    disabled
-
-on property:persist.vendor.wigig.npt.enable=1
-    start wigignpt
 
 service vendor.sensingdaemon /vendor/bin/sensingdaemon
     class hal
@@ -614,11 +571,6 @@ service dhcpcd_p2p /system/bin/dhcpcd -ABKLG
     disabled
     oneshot
 
-service dhcpcd_wigig0 /system/bin/dhcpcd -ABKLG
-    class late_start
-    disabled
-    oneshot
-
 service iprenew_wlan0 /system/bin/dhcpcd -n
     class late_start
     disabled
@@ -630,11 +582,6 @@ service iprenew_bond0 /system/bin/dhcpcd -n
     oneshot
 
 service iprenew_p2p /system/bin/dhcpcd -n
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_wigig0 /system/bin/dhcpcd -n
     class late_start
     disabled
     oneshot
@@ -875,11 +822,16 @@ service poweroffhandler /system/vendor/bin/poweroffhandler
     disabled
     oneshot
 
-service time_daemon /vendor/bin/time_daemon
-    class main
-    user system
-    group system
-    capabilities SYS_TIME
+#service time_daemon /vendor/bin/time_daemon
+#    class main
+#    user system
+#    group system
+#    capabilities SYS_TIME
+
+#Mixed HWC versions among targets 
+on property:init.svc.surfaceflinger=restarting
+    stop vendor.qti.hardware.display.composer
+    start vendor.qti.hardware.display.composer
 
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
@@ -901,15 +853,15 @@ service vendor.hbtp /vendor/bin/hbtp_daemon
      capabilities SYS_NICE
      disabled
 
-service chre /vendor/bin/chre
-    class late_start
-    user system
-    group system
-    socket chre seqpacket 0660 root system
-    shutdown critical
+#service chre /vendor/bin/chre
+#    class late_start
+#    user system
+#    group system
+#    socket chre seqpacket 0660 root system
+#    shutdown critical
 
-on property:vendor.chre.enabled=0
-   stop chre
+#on property:vendor.chre.enabled=0
+#   stop chre
 
 service bugreport /system/bin/dumpstate -d -p -B -z -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
     class main
