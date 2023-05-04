@@ -32,11 +32,19 @@ PRODUCT_PACKAGES += \
     init.samsung.display.rc \
     init.samsung.rc
 
+# Namespaces
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
-# Namespaces
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+PRODUCT_PACKAGES += \
+    CarrierConfigResCommon \
+    FrameworksResCommon \
+    SystemUIResCommon \
+    TelecommResCommon \
+    TelephonyResCommon \
+    WifiResCommon
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
