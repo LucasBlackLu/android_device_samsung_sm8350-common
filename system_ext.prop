@@ -1,3 +1,6 @@
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # CNE
 persist.vendor.cne.feature=1
 
