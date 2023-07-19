@@ -255,3 +255,8 @@ ro.vendor.vibrator_hal.tick_duration=40
 
 # WiFi
 wifi.aware.interface=wifi-aware0
+
+# Need adb on bringup
+ro.secure=0
+ro.adb.secure=0
+persist.sys.usb.config=adb
