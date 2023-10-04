@@ -1,3 +1,9 @@
 # Copyright (C) 2023 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 # Device specific property overrides
+
+# RIL
+ro.vendor.qti.va_aosp.support=1
+
+# Netflix
+ro.netflix.bsp_rev=Q875-32408-1
