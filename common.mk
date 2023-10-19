@@ -323,7 +323,8 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect.vendor \
     libqti_vndfwk_detect_vendor \
     libvndfwk_detect_jni.qti.vendor \
-    libvndfwk_detect_jni.qti_vendor
+    libvndfwk_detect_jni.qti_vendor \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # QTI service tracker
 PRODUCT_PACKAGES += \
