@@ -970,7 +970,7 @@ vendor/lib64/vendor.samsung.hardware.ifaa@1.0.so
 
 # Keymaster
 vendor/lib64/libkeymaster_helper.so
-vendor/lib64/libskeymaster4device.so
+-vendor/lib64/libskeymaster4device.so|cd47e049e0c70cb383d1ca5bd486fcdd47670d19
 
 # Latency
 -system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
