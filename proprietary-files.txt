@@ -1147,8 +1147,8 @@ vendor/etc/init/init.vendor.qti.spu@1.1-service.rc
 vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
 vendor/lib/android.hardware.gatekeeper@1.0-impl.so
 vendor/lib/libhermes.so
-vendor/lib64/hw/gatekeeper.mdfpp.so
 vendor/lib64/android.hardware.gatekeeper@1.0-impl.so
+vendor/lib64/hw/gatekeeper.mdfpp.so|c557d589500581aa44abc70504cdd21f5bbbc0cc
 vendor/lib64/libhermes.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
 vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
