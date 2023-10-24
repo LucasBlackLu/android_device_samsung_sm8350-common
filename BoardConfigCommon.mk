@@ -123,6 +123,9 @@ TARGET_USES_MKE2FS := true
 ## Security
 VENDOR_SECURITY_PATCH := 2025-04-01
 
+## SePolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
