@@ -239,11 +239,6 @@ vendor/lib/unihal_entry.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0.so
 vendor/lib64/hw/camera.unihal.default.so
-vendor/lib64/camera.device@1.0-impl.so
-vendor/lib64/camera.device@3.2-impl.so
-vendor/lib64/camera.device@3.3-impl.so
-vendor/lib64/camera.device@3.4-impl.so
-vendor/lib64/camera.device@3.5-impl.so
 vendor/lib64/com.qti.chiusecaseselector.so
 vendor/lib64/com.qti.feature2.anchorsync.so
 vendor/lib64/com.qti.feature2.demux.so
@@ -351,10 +346,6 @@ vendor/lib64/unihal_cutils.so
 vendor/lib64/unihal_entry.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so
-vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so
-vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
-vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so
-vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
 
 # Charger
 vendor/bin/hvdcp_opti

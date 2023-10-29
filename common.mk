@@ -136,11 +136,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.device-V1-ndk.vendor \
     android.frameworks.cameraservice.service@2.2.vendor \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.camera.device@3.7.vendor \
-    android.hardware.camera.device-V2-ndk.vendor \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.6-service.sm8350 \
-    android.hardware.camera.provider@2.7.vendor \
+    android.hardware.camera.provider@2.5-service_64.samsung \
     libcamera2ndk_vendor \
     libdng_sdk \
     libdng_sdk.vendor \
