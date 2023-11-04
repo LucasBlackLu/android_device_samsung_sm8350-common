@@ -97,6 +97,9 @@ vendor.audio.feature.wsa.enable=false
 vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.snd_mon.enable=true
 
+## APK Verity
+ro.apk_verity.mode=2
+
 ## Bluetooth
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
