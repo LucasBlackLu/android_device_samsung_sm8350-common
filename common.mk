@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
     FrameworksResCommon \
     FrameworksResTarget \
     LahainaFrameworks \
+    LahainaSettings \
     LahainaSystemUI \
     SystemUIResCommon \
     TelephonyResCommon \
