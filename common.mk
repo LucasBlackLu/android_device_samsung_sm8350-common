@@ -110,6 +110,10 @@ PRODUCT_COPY_FILES += \
 
 TARGET_EXCLUDES_AUDIOFX := true
 
+# Authsecret
+ PRODUCT_PACKAGES += \
+     android.hardware.authsecret@1.0.vendor
+
 # Automotive/Gearhead
 PRODUCT_PACKAGES += \
     android.hardware.automotive.vehicle@2.0 \
