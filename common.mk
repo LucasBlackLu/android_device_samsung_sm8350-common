@@ -56,6 +56,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResCommon \
     FrameworksResTarget \
+    LahainaFrameworks \
     SystemUIResCommon \
     TelephonyResCommon \
     WifiResCommon \
