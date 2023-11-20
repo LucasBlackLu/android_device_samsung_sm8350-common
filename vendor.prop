@@ -101,6 +101,7 @@ vendor.audio.feature.snd_mon.enable=true
 ro.apk_verity.mode=2
 
 ## Bluetooth
+bluetooth.device.class_of_device=90,2,12
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
