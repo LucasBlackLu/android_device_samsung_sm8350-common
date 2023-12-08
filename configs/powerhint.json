@@ -19,6 +19,7 @@
         "1612800",
         "1401600",
         "1708800",
+        "1305600",
         "1094400",
         "691200"
       ],
@@ -43,6 +44,7 @@
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
+        "1324800",
         "1075200",
         "960000",
         "844800",
@@ -104,15 +106,6 @@
         "30"
       ],
       "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "SchedPreferSpread",
-      "Path": "/proc/sys/kernel/sched_prefer_spread",
-      "Values": [
-        "3",
-        "0"
-      ],
       "ResetOnInit": true
     },
     {
@@ -197,7 +190,7 @@
       "Path": "/sys/class/kgsl/kgsl-3d0/idle_timer",
       "Values": [
         "10000",
-        "58"
+        "72"
       ],
       "ResetOnInit": true
     },
@@ -366,19 +359,13 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
       "Duration": 0,
-      "Value": "1075200"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUBigPlusClusterMinFreq",
-      "Duration": 0,
-      "Value": "1075200"
+      "Value": "1324800"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 0,
-      "Value": "1708800"
+      "Value": "1305600"
     },
     {
       "PowerHint": "INTERACTION",
@@ -391,12 +378,6 @@
       "Node": "UclampTALatency",
       "Duration": 0,
       "Value": "1"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "SchedPreferSpread",
-      "Duration": 0,
-      "Value": "3"
     },
     {
       "PowerHint": "INTERACTION",
