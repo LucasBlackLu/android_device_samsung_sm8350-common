@@ -5,5 +5,9 @@
 ## FRP Define
 ro.frp.pst=/dev/block/persistent
 
+## LMKD
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=15
+
 ## Partition Build Property Order
 ro.product.property_source_order=odm,vendor,product,system_ext,system
