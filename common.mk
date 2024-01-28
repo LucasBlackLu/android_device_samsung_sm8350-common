@@ -225,6 +225,7 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.rc \
     init.qcom.sh \
+    init.qti.kernel.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc \
