@@ -40,6 +40,8 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 
+DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+
 # Kernel
 BOARD_DTB_OFFSET := 0x01f00000
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
