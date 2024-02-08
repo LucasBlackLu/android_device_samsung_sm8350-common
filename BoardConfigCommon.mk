@@ -59,8 +59,7 @@ DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/vintf/manifest_lahaina.xml \
     $(COMMON_PATH)/vintf/manifest_samsung.xml
 
-DEVICE_MATRIX_FILE := \
-    $(COMMON_PATH)/vintf/compatibility_matrix.xml
+DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
 # File systems
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE   := f2fs
