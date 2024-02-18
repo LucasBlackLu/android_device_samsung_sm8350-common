@@ -435,6 +435,7 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware-modem/image/ /
 /sys/bus/usb/devices/usb*   authorized                 0660  system  usb
 
 #USB mode setting
+/sys/bus/platform/devices/a400000.ssusb    mode        0660  system  usb
 /sys/bus/platform/devices/a600000.ssusb    mode        0660  system  usb
 /sys/bus/platform/devices/4e00000.ssusb    mode        0660  system  usb
 
