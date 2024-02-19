@@ -32,8 +32,75 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
 TARGET_NO_BOOTLOADER := true
 
+# Kernel
+BOARD_KERNEL_BINARIES := kernel
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom
+BOARD_KERNEL_CMDLINE += androidboot.console=ttyMSM0 androidboot.memcg=1
+BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
+BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237 service_locator.enable=1
+BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3 swiotlb=0
+BOARD_KERNEL_CMDLINE += loop.max_part=7 cgroup.memory=nokmem,nosocket
+BOARD_KERNEL_CMDLINE += pcie_ports=compat loop.max_part=7
+BOARD_KERNEL_CMDLINE += iptable_raw.raw_before_defrag=1
+BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_MKBOOTIMG_ARGS := --header_version 3
+KERNEL_LD := LD=ld.lld
+TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc
+TARGET_KERNEL_APPEND_DTB := false
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+TARGET_KERNEL_SOURCE := kernel/samsung/sm8350
+
+# File systems
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE   := ext4
+BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE   := ext4
+BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE  := ext4
+BOARD_ODMIMAGE_FILE_SYSTEM_TYPE      := ext4
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE    := ext4
+
+TARGET_USERIMAGES_USE_F2FS           := true
+TARGET_USERIMAGES_USE_EXT4           := true
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
+
+# Partitions, obtained with blockdev --getsize64
+BOARD_BOOTIMAGE_PARTITION_SIZE        := 100663296 #blockdev --getsize64 /dev/block/bootdevice/by-name/boot
+BOARD_CACHEIMAGE_PARTITION_SIZE       := 629145600 #blockdev --getsize64 /dev/block/bootdevice/by-name/boot
+BOARD_DTBOIMG_PARTITION_SIZE          := 25165824 #blockdev --getsize64 /dev/block/bootdevice/by-name/dtbo
+BOARD_RECOVERYIMAGE_PARTITION_SIZE    := 81788928 #blockdev --getsize64 /dev/block/bootdevice/by-name/recovery
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 100663296 #blockdev --getsize64 /dev/block/bootdevice/by-name/vendor_boot
+
+# Super Partitions, obtained with ls -l /dev/block/mapper, blockdev --getsize64 /dev/blockdev/dm-*
+BOARD_SUPER_PARTITION_SIZE                      := 12664700928 # 12067012608 ?
+BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE           := 12660506624 # BOARD_SUPER_PARTITION_SIZE-4MiB | 9649745920 ?
+#BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE      := 3000000000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE                := 3072000000
+#BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE      := 2000000000
+BOARD_VENDORIMAGE_PARTITION_SIZE                := 2170880000
+#BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE     := 3000000000
+BOARD_PRODUCTIMAGE_PARTITION_SIZE               := 2375680000
+#BOARD_ODMIMAGE_PARTITION_RESERVED_SIZE         := 500000000
+BOARD_ODMIMAGE_PARTITION_SIZE                   := 512000000
+BOARD_SUPER_PARTITION_GROUPS := samsung_dynamic_partitions
+BOARD_SAMSUNG_DYNAMIC_PARTITIONS_PARTITION_LIST := \
+    system \
+    product \
+    vendor \
+    odm
+
+BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
+
+# Out dirs
+TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_ODM := odm
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
