@@ -12,7 +12,31 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default
 
 PRODUCT_PACKAGES += \
-    fstab.default
+    fstab.default \
+    fstab.ramplus \
+    init.qcom.rc \
+    init.qti.kernel.rc \
+    init.qti.qcv.rc \
+    init.ramplus.rc \
+    init.samsung.bsp.rc \
+    init.samsung.display.rc \
+    init.samsung.connector.rc \
+    init.sensors.spu.rc \
+    init.samsung.rc \
+    init.target.rc \
+    init.vendor.rilcommon.rc \
+    ueventd.rc \
+    init.class_main.sh \
+    init.kernel.post_boot.sh \
+    init.kernel.post_boot-lahaina.sh \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sh \
+    init.qti.kernel.sh \
+    init.qti.qcv.sh \
+    vendor_modprobe.sh \
+    vendor.samsung.rilchip.qcom.rc
 
 # No A/B
 AB_OTA_UPDATER := false
