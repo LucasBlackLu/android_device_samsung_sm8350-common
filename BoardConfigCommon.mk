@@ -59,6 +59,9 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE      := ext4
 TARGET_USERIMAGES_USE_F2FS           := true
 TARGET_USERIMAGES_USE_EXT4           := true
 
+# Additional root folders
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
