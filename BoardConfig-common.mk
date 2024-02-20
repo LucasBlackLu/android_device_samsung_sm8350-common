@@ -56,6 +56,16 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/sm8350
 
+# HIDL
+DEVICE_MANIFEST_FILE := \
+    $(COMMON_PATH)/vintf/manifest_lahaina.xml
+
+DEVICE_MATRIX_FILE := \
+    $(COMMON_PATH)/vintf/compatibility_matrix.xml
+
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(COMMON_PATH)/vintf/framework_compatibility_matrix.xml
+
 # File systems
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE   := ext4
