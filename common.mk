@@ -313,6 +313,10 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     secril_config_svc
 
+# Remove few packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.multihal \
