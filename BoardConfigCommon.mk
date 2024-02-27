@@ -143,6 +143,11 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Platform
+BOARD_VENDOR := samsung
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := lahaina
+
 # Properties
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
@@ -183,10 +188,6 @@ BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA4096
 BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
-
-# Platform
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := lahaina
 
 # Vibrator
 $(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
