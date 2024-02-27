@@ -140,6 +140,7 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Platform
+BOARD_VENDOR := samsung
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := lahaina
 
