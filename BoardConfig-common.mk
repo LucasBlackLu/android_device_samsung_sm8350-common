@@ -61,6 +61,9 @@ TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/sm8350
 TARGET_KERNEL_CLANG_COMPILE := true
 
+# Kernel modules
+TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
+
 # HIDL
 DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/vintf/manifest_lahaina.xml
