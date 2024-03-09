@@ -1,0 +1,28 @@
+# CNE
+persist.vendor.cne.feature=1
+
+# Charger
+ro.charger.enable_suspend=1
+
+# DPM
+persist.vendor.dpm.feature=11
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.media.recorder-max-base-layer-fps=60
+vendor.mm.enable.qcom_parser=16777215
+
+# Netflix
+ro.netflix.bsp_rev=Q875-32408-1
+
+# Netmgr
+persist.vendor.data.mode=concurrent
+
+# QC Value Addons
+ro.vendor.qti.va_aosp.support=1
+
+# Radio
+ril.subscription.types=NV,RUIM
+
+# RIL
+ro.vendor.qti.va_aosp.support=1
