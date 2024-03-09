@@ -83,10 +83,14 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE    := ext4
 TARGET_USERIMAGES_USE_F2FS           := true
 TARGET_USERIMAGES_USE_EXT4           := true
 
+# Additional root folders
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
+BOARD_ROOT_EXTRA_FOLDERS += \
+    efs \
+	metadata
 
 # Partitions, obtained with blockdev --getsize64
 BOARD_BOOTIMAGE_PARTITION_SIZE        := 100663296 #blockdev --getsize64 /dev/block/bootdevice/by-name/boot
