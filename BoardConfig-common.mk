@@ -69,7 +69,8 @@ DEVICE_MATRIX_FILE := \
     $(COMMON_PATH)/vintf/compatibility_matrix.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(COMMON_PATH)/vintf/framework_compatibility_matrix.xml
+    $(COMMON_PATH)/vintf/framework_compatibility_matrix.xml \
+	vendor/derp/config/device_framework_matrix.xml
 
 # File systems
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
