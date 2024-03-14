@@ -61,4 +61,4 @@ odm                                                     /odm                    
 /devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*   auto                     auto      defaults              voldmanaged=usb:auto
 
 # Samsung ODE
-/dev/block/bootdevice/by-name/keyrefuge                 /keyrefuge               f2fs      rw,noatime,nosuid,nodev,discard,fsync_mode=nobarrier,inlinecrypt        wait,check,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,nofail
+#/dev/block/bootdevice/by-name/keyrefuge                 /keyrefuge               f2fs      rw,noatime,nosuid,nodev,discard,fsync_mode=nobarrier,inlinecrypt        wait,check,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,nofail
