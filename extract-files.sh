@@ -67,6 +67,10 @@ function blob_fixup() {
     vendor/lib/libwvhidl.so|vendor/lib/mediadrm/libwvdrmengine.so)
         "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
         ;;
+    vendor/lib64/libsec-ril.so)
+        xxd -p -c0 "${2}" | sed "s/600e40f9e10315aa820c8052e30314aa/600e40f9e10315aa820c8052030080d2/g" | xxd -r -p > "${2}".patched
+        mv "${2}".patched "${2}"
+        ;;
     esac
 }
 
