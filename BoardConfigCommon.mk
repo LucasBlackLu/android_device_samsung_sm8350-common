@@ -79,6 +79,9 @@ TARGET_USERIMAGES_USE_EXT4           := true
 # Additional root folders
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
+BOARD_ROOT_EXTRA_FOLDERS := \
+    efs
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
