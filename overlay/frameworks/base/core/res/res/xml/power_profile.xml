@@ -66,8 +66,7 @@
     </array>
     <item name="cpu.suspend">5.26</item>
     <item name="cpu.idle">34</item>
-    <item name="battery.capacity">6840</item>
-    <item name="battery.typical.capacity">7040</item>
+    <item name="battery.capacity">7040</item>
     <item name="wifi.controller.idle">1</item>
     <item name="wifi.controller.rx">65</item>
     <item name="wifi.controller.tx">265</item>
