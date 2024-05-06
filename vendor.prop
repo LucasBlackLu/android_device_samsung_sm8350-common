@@ -144,6 +144,9 @@ debug.sf.predict_hwc_composition_strategy=0
 ## DPM service
 persist.vendor.dpmhalservice.enable=1
 
+## Filesystem
+fs_mgr.overlayfs.prefer_cache_backing_storage=true
+
 ## Gatekeeper
 ro.hardware.gatekeeper=mdfpp
 
