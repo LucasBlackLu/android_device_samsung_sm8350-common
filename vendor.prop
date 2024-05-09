@@ -196,6 +196,9 @@ vendor.power.pasr.enabled=true
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+# Power HAL
+vendor.powerhal.disp.idle_support=false
+
 # QC Value Addons
 ro.vendor.qti.va_aosp.support=1
 
