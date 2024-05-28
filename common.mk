@@ -20,6 +20,7 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # A/B
 AB_OTA_UPDATER := false
+PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
 # Init 
 PRODUCT_PACKAGES += \
