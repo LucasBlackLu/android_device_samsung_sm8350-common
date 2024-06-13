@@ -21,6 +21,9 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     ueventd-odm.rc
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := false
+
 # No A/B
 AB_OTA_UPDATER := false
 
