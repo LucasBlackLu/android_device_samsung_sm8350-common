@@ -57,4 +57,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc
 
 # VNDK
-PRODUCT_TARGET_VNDK_VERSION := 30
+BOARD_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
