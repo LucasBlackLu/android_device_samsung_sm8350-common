@@ -44,6 +44,9 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default\
     $(COMMON_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := false
+
 # No A/B
 AB_OTA_UPDATER := false
 
