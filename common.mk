@@ -44,6 +44,9 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh
     vendor_modprobe.sh
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := false
+
 # No A/B
 AB_OTA_UPDATER := false
 
