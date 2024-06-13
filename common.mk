@@ -38,6 +38,9 @@ PRODUCT_PACKAGES += \
     vendor_modprobe.sh \
     vendor.samsung.rilchip.qcom.rc
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := false
+
 # No A/B
 AB_OTA_UPDATER := false
 
