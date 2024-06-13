@@ -19,6 +19,9 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := false
+
 # No A/B
 AB_OTA_UPDATER := false
 
