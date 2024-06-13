@@ -64,6 +64,9 @@ PRODUCT_PACKAGES += \
     init.qti.qcv.sh \
     vendor_modprobe.sh
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := false
+
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
