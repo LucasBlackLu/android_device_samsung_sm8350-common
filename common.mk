@@ -643,7 +643,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.sm8350 \
+    android.hardware.vibrator-service.samsung \
 
 # WiFi
 PRODUCT_PACKAGES += \
