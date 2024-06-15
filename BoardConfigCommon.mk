@@ -120,6 +120,12 @@ TARGET_COPY_OUT_ODM := odm
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := lahaina
 
+# SePolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+PRODUCT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
+
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_INCLUDE_RECOVERY_DTBO := true

@@ -1,0 +1,5 @@
+allow vold {
+    carrier_file
+    efs_file
+    spu_file
+}:dir { read open ioctl };
