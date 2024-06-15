@@ -108,6 +108,7 @@ TARGET_BOARD_PLATFORM := lahaina
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 # VNDK
 PRODUCT_VNDK_VERSION := current
