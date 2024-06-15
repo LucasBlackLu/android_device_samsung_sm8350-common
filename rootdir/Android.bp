@@ -21,13 +21,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.qcom.usb.rc",
-    src: "vendor/etc/init/hw/init.qcom.usb.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.qti.kernel.rc",
     src: "vendor/etc/init/hw/init.qti.kernel.rc",
     sub_dir: "init/hw",
@@ -238,12 +231,6 @@ sh_binary {
 sh_binary {
     name: "init.qcom.sh",
     src: "vendor/bin/init.qcom.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qcom.usb.sh",
-    src: "vendor/bin/init.qcom.usb.sh",
     vendor: true,
 }
 

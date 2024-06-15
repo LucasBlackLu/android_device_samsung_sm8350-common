@@ -499,7 +499,6 @@ PRODUCT_PACKAGES += \
     init.fingerprint.rc \
     init.qcom.factory.rc \
     init.qcom.rc \
-    init.qcom.usb.rc \
     init.qti.display_boot.rc \
     init.qti.kernel.rc \
     init.qti.media.rc \
@@ -538,7 +537,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
     init.qti.chg_policy.sh \
     init.qti.display_boot.sh \
     init.qti.kernel.sh \
@@ -630,6 +628,10 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \
     android.hardware.usb@1.0.vendor \
     android.hardware.usb@1.1.vendor \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+ 
+ PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
 
 # VNDK
 PRODUCT_PACKAGES += \
