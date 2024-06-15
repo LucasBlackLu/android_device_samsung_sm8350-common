@@ -23,6 +23,14 @@ TARGET_2ND_CPU_VARIANT := cortex-a76
 TARGET_BOOTLOADER_BOARD_NAME := lahaina
 TARGET_NO_BOOTLOADER := true
 
+# Dexpreopt
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    WITH_DEXPREOPT ?= true
+    WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
+  endif
+endif
+
 # Kernel config
 TARGET_KERNEL_SOURCE        := kernel/samsung/sm8350
 TARGET_KERNEL_ARCH          := arm64
