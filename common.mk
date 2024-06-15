@@ -135,6 +135,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.7.vendor \
     android.hardware.camera.device-V2-ndk.vendor \
     android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.6-service.sm8350 \
     android.hardware.camera.provider@2.7.vendor \
     libcamera2ndk_vendor \
     libdng_sdk \
