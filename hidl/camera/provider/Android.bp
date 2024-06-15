@@ -4,11 +4,28 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+soong_config_module_type {
+    name: "samsung_sm8350_model",
+    module_type: "cc_defaults",
+    config_namespace: "samsung_sm8350CameraVars",
+    value_variables: ["samsung_sm8350_model"],
+    properties: ["cppflags"],
+}
+
+samsung_sm8350_model {
+    name: "samsung_sm8350_model_defaults",
+    soong_config_variables: {
+        samsung_sm8350_model: {
+            cppflags: ["-DSAMSUNG_SM8350_MODEL_%s"],
+        },
+    },
+}
 
 cc_binary {
     name: "android.hardware.camera.provider@2.6-service.sm8350",
     defaults: [
         "hidl_defaults",
+        "samsung_sm8350_model_defaults",
     ],
     compile_multilib: "both",
     proprietary: true,

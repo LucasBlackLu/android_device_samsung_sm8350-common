@@ -64,6 +64,12 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
 
 # Camera
+SOONG_CONFIG_NAMESPACES += samsung_sm8350CameraVars
+SOONG_CONFIG_samsung_sm8350CameraVars += \
+    samsung_sm8350_model
+
+SOONG_CONFIG_samsung_sm8350CameraVars_samsung_sm8350_model := $(TARGET_DEVICE)
+
 USE_CAMERA_STUB := false
 USE_DEVICE_SPECIFIC_CAMERA := true
 
