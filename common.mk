@@ -57,5 +57,12 @@ PRODUCT_PACKAGES += \
     init.qti.qcv.sh \
     vendor_modprobe.sh
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(COMMON_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/samsung
+
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
