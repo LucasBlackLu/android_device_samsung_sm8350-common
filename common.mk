@@ -643,8 +643,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.impl \
-    vendor.qti.hardware.vibrator.service \
+    android.hardware.vibrator-service.sm8350 \
 
 # WiFi
 PRODUCT_PACKAGES += \
