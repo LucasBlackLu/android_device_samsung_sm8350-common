@@ -30,6 +30,7 @@ TARGET_KERNEL_HEADER_ARCH   := arm64
 TARGET_LINUX_KERNEL_VERSION := 5.4
 
 # Kernel flags
+BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_CMDLINE += console=null androidboot.hardware=qcom \
 BOARD_KERNEL_CMDLINE += androidboot.memcg=1 lpm_levels.sleep_disabled=1 \ 
 BOARD_KERNEL_CMDLINE += video=vfb:640x400,bpp=32,memsize=3072000 \
@@ -40,8 +41,8 @@ BOARD_KERNEL_CMDLINE += cgroup.memory=nokmem,nosocket \
 BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image \
 BOARD_KERNEL_CMDLINE += printk.devkmsg=on pcie_ports=compat \
 BOARD_KERNEL_CMDLINE += cpuinfo.chipname=SM8350 panic=4 \
+BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=qcom \
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-BOARD_BOOT_HEADER_VERSION := 3
 
 BOARD_KERNEL_BASE            := 0x00000000
 BOARD_KERNEL_PAGESIZE        := 4096
