@@ -57,6 +57,18 @@ DEVICE_MANIFEST_FILE += $(COMMON_PATH)/vintf/manifest_lahaina.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
 # Filesystem
+BOARD_ROOT_EXTRA_FOLDERS := \
+    carrier \
+    dqmdbg \
+    efs \
+    keydata \
+    keyrefuge \
+    metadata \
+    omr \
+    optics \
+    prism \
+    spu
+
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Kernel
