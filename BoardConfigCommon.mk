@@ -78,6 +78,9 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE    := ext4
 TARGET_USERIMAGES_USE_F2FS           := true
 TARGET_USERIMAGES_USE_EXT4           := true
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_samsung_sm8350
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
