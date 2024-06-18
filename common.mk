@@ -21,6 +21,12 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     ueventd-odm.rc
 
+PRODUCT_PACKAGES += \
+    init.samsung.bsp.rc \
+    init.samsung.connector.rc \
+    init.samsung.display.rc \
+    init.samsung.rc
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
