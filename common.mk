@@ -22,6 +22,12 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+PRODUCT_PACKAGES += \
+    init.samsung.bsp.rc \
+    init.samsung.connector.rc \
+    init.samsung.display.rc \
+    init.samsung.rc
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
