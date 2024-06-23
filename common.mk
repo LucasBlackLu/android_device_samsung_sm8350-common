@@ -6,6 +6,9 @@
 
 COMMON_PATH := device/samsung/sm8350-common
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
