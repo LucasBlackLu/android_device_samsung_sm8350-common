@@ -5,6 +5,10 @@
 
 COMMON_PATH := device/samsung/sm8350-common
 
+# Add common definitions for Qualcomm
+$(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
