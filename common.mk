@@ -18,6 +18,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# A/B
+AB_OTA_UPDATER := false
+
 # Init 
 PRODUCT_PACKAGES += \
     fstab.qcom \
