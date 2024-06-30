@@ -137,6 +137,10 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_29.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     system/core/libprocessgroup/profiles/task_profiles_29.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor
+
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -205,8 +209,9 @@ PRODUCT_COPY_FILES += \
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.qti \
-    android.hardware.health-service.qti_recovery 
+    android.hardware.health-service.samsung \
+    android.hardware.health-service.samsung-recovery \
+    android.hardware.health@2.1.vendor
 
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
