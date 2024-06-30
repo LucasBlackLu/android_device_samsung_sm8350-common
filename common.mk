@@ -121,6 +121,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor
+
 # Configstore
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -183,6 +187,12 @@ PRODUCT_COPY_FILES += \
 # GPS
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.samsung \
+    android.hardware.health-service.samsung-recovery \
+    android.hardware.health@2.1.vendor
 
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
