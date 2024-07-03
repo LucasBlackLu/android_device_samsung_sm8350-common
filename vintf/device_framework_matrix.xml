@@ -28,22 +28,6 @@
         </interface>
     </hal>
     <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.keymint</name>
-        <version>1-2</version>
-        <interface>
-            <name>ISehKeyMintExtension</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.samsung.hardware.keymint</name>
-        <version>1-2</version>
-        <interface>
-            <name>ISehKeyMintFactory</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
         <name>vendor.samsung.hardware.radio.bridge</name>
         <interface>
             <name>ISehRadioBridge</name>
