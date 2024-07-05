@@ -180,6 +180,7 @@ ro.hardware.lights=qcom
 debug.media.codec2=2
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 ro.config.vc_call_vol_steps=8
+vendor.media.omx=0
 
 # Network manager
 ro.telephony.iwlan_operation_mode=legacy
@@ -194,10 +195,6 @@ ro.vendor.nfc.support.ese=false
 ro.vendor.nfc.support.nonaid=true
 ro.vendor.nfc.support.othercategory=true
 ro.vendor.nfc.support.uicc=true
-
-# OMX
-debug.stagefright.ccodec=1
-debug.stagefright.omx_default_rank=0
 
 # PASR
 vendor.pasr.activemode.enabled=false
