@@ -237,6 +237,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung \
     $(COMMON_PATH) \
 
+## Sysconfig
+PRODUCT_PACKAGES += \
+    initial-package-stopped-states-aosp.xml
+
 ## Tether
 PRODUCT_PACKAGES += \
     ipacm \
