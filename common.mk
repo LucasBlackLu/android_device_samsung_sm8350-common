@@ -52,6 +52,8 @@ PRODUCT_PACKAGES += \
     libaudioroute \
     libaudioroute.vendor \
     libaudioutils \
+    libaudioroute.vendor\
+    libstagefright_softomx_plugin.vendor \
     libtinyalsa \
     libtinycompress \
     tinycap \
