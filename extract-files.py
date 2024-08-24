@@ -57,6 +57,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libshim_sensorndkbridge.so'),
      ('vendor/lib/libwvhidl.so', 'vendor/lib/mediadrm/libwvdrmengine.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
+     ('vendor/lib64/unihal_android.so'): blob_fixup()
+        .add_needed('libui_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
