@@ -31,6 +31,7 @@
 import /vendor/etc/init/hw/init.samsung.bsp.rc
 import /vendor/etc/init/hw/init.samsung.display.rc
 import /vendor/etc/init/hw/init.samsung.connector.rc
+import /vendor/etc/init/hw/init.samsung.firmware.rc
 import /vendor/etc/init/init.sensors.spu.rc
 
 on early-init
