@@ -21,6 +21,7 @@ PRODUCT_PACKAGES += \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.connector.rc \
+    init.samsung.firmware.rc \
     init.sensors.spu.rc \
     init.samsung.rc \
     init.target.rc \
