@@ -172,8 +172,7 @@ PRODUCT_COPY_FILES += \
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
-    IPACM_cfg.xml \
-    IPACM_Filter_cfg.xml
+    IPACM_cfg.xml
 
 # Init
 PRODUCT_COPY_FILES += \
@@ -307,8 +306,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     libprotobuf-cpp-full \
-    librmnetctl \
-    secril_config_svc
+    librmnetctl
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -353,10 +351,6 @@ PRODUCT_PACKAGES += \
 # Verified Boot
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
-
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.samsung
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 31
