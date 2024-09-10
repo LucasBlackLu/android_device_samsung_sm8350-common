@@ -234,6 +234,7 @@ vendor/lib/libcpion.so
 vendor/lib/libminksocket.so
 vendor/lib/libtrustedapploader.so
 vendor/lib/libwvhidl.so
+vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib64/libcpion.so
 vendor/lib64/libminksocket.so
 vendor/lib64/libtrustedapploader.so
