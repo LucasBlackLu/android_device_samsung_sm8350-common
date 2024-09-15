@@ -20,7 +20,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.vendor.rilcommon.rc \
     init.vendor.sensors.rc \
-    ueventd.rc \
+    ueventd.qcom.rc \
     vendor.samsung.rilchip.qcom.rc
 
 # Vendor scripts
