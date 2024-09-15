@@ -3,3 +3,6 @@ ro.netflix.bsp_rev=Q875-32408-1
 
 # RIL
 ro.telephony.default_network=33,33
+
+# Logs 
+persist.log.tag.ACDB-LOADER=S
