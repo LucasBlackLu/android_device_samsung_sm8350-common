@@ -17,3 +17,6 @@ ro.netflix.bsp_rev=Q875-32408-1
 
 # Radio
 ril.subscription.types=NV,RUIM
+
+# Logs 
+persist.log.tag.ACDB-LOADER=S
