@@ -24,8 +24,8 @@ PRODUCT_PACKAGES += \
     init.sensors.spu.rc \
     init.samsung.rc \
     init.target.rc \
-    init.vendor.rilcommon.rc \
-    ueventd.rc \
+	init.vendor.rilcommon.rc \
+    ueventd.qcom.rc \
     init.class_main.sh \
     init.kernel.post_boot.sh \
     init.kernel.post_boot-lahaina.sh \
