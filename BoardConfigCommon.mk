@@ -105,5 +105,15 @@ TARGET_USES_ION := true
 USE_OPENGL_RENDERER := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 
+# HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(COMMON_PATH)/compatibility_matrix.device.xml
+
+DEVICE_MANIFEST_FILE := \
+    $(COMMON_PATH)/manifest_lahaina.xml
+
+DEVICE_MATRIX_FILE := \
+    $(COMMON_PATH)/compatibility_matrix.xml
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
