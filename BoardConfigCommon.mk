@@ -48,6 +48,16 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
+# HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(COMMON_PATH)/compatibility_matrix.device.xml
+
+DEVICE_MANIFEST_FILE := \
+    $(COMMON_PATH)/manifest_lahaina.xml
+
+DEVICE_MATRIX_FILE := \
+    $(COMMON_PATH)/compatibility_matrix.xml
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
