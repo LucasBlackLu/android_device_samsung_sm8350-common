@@ -34,6 +34,16 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
 
+# HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(COMMON_PATH)/compatibility_matrix.device.xml
+
+DEVICE_MANIFEST_FILE := \
+    $(COMMON_PATH)/manifest_lahaina.xml
+
+DEVICE_MATRIX_FILE := \
+    $(COMMON_PATH)/compatibility_matrix.xml
+
 # Kernel
 BOARD_DTB_OFFSET := 0x01f00000
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
