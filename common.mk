@@ -17,7 +17,8 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.recovery.qcom.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    ueventd-odm.rc
 
 # No A/B
 AB_OTA_UPDATER := false
