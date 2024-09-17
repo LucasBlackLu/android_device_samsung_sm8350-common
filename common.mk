@@ -4,6 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default \
+    $(LOCAL_PATH)/rootdir/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.default
+
+PRODUCT_PACKAGES += \
+    fstab.default
+
 # No A/B
 AB_OTA_UPDATER := false
 
