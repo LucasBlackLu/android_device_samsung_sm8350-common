@@ -218,6 +218,7 @@ PRODUCT_PACKAGES += \
     fstab.default \
     fstab.default.vendor_ramdisk \
     fstab.ramplus \
+	ipa_fws.rc \
     init.qcom.rc \
     init.qti.kernel.rc \
     init.qti.qcv.rc \
