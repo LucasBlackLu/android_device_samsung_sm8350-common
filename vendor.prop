@@ -78,9 +78,9 @@ camera.disable_zsl_mode=1
 ro.camera.notify_nfc=1
 
 # Crypto
-ro.crypto.dm_default_key.options_format.version=2
-ro.crypto.metadata_init_delete_all_keys.enabled=false
-ro.crypto.volume.metadata.method=dm-default-key
+#ro.crypto.dm_default_key.options_format.version=2
+#ro.crypto.metadata_init_delete_all_keys.enabled=false
+#ro.crypto.volume.metadata.method=dm-default-key
 
 # DRM
 drm.service.enabled=true
