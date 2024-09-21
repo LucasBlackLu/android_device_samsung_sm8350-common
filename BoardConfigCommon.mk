@@ -83,6 +83,10 @@ TARGET_USERIMAGES_USE_EXT4           := true
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm8350
+TARGET_RECOVERY_DEVICE_MODULES := libinit_sm8350
+
 # Partitions, obtained with blockdev --getsize64
 BOARD_BOOTIMAGE_PARTITION_SIZE        := 100663296 #blockdev --getsize64 /dev/block/bootdevice/by-name/boot
 BOARD_CACHEIMAGE_PARTITION_SIZE       := 629145600 #blockdev --getsize64 /dev/block/bootdevice/by-name/boot
