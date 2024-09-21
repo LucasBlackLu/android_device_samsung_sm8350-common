@@ -97,6 +97,10 @@ DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/vintf/manifest_lahaina.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm8350
+TARGET_RECOVERY_DEVICE_MODULES := libinit_sm8350
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
