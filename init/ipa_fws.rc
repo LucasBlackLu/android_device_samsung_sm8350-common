@@ -6,3 +6,10 @@
 on early-boot
 write /dev/ipa 1
 
+    mount none vendor/firmware/ipa_fws.b00 bind
+    mount none vendor/firmware/ipa_fws.b01 bind
+    mount none vendor/firmware/ipa_fws.b02 bind
+    mount none vendor/firmware/ipa_fws.b03 bind
+    mount none vendor/firmware/ipa_fws.b04 bind
+    mount none vendor/firmware/ipa_fws.elf bind
+    mount none vendor/firmware/ipa_fws.mdt bind
