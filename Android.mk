@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter o1q t2q p3q ,$(TARGET_DEVICE)),)
+ifneq ($(filter o1q t2q p3q r9q r9q2 ,$(TARGET_DEVICE)),)
 
 # A/B builds require us to create the mount points at compile time.
 # Just creating it for all cases since it does not hurt.

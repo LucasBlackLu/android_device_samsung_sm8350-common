@@ -13,6 +13,7 @@
 #include "init_sm8350.h"
 
 #define MODEL_NAME_S21 5
+#define MODEL_NAME_S21FE 6
 
 static void property_override(char const prop[], char const value[]) {
     prop_info *pi;
@@ -39,7 +40,7 @@ void vendor_load_properties()
     if (bootloader.substr(0, MODEL_NAME_S21 ) == "G9910") {
         bl_model = bootloader.substr(0, MODEL_NAME_S21 );
     } else {
-        bl_model = bootloader.substr(0, MODEL_NAME_S21 );
+        bl_model = bootloader.substr(0, MODEL_NAME_S21FE );
     }
 
     std::string model;
