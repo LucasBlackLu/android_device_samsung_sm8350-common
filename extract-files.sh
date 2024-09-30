@@ -29,6 +29,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
             ;;
+        vendor/lib64/libnlnetmgr.so|vendor/lib64/libhypermotion_core.so|vendor/lib64/libsensorlistener.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libshim_sensorndkbridge.so" "${2}"
+            ;;
     esac
 }
 
