@@ -45,6 +45,7 @@ BOARD_KERNEL_CMDLINE += printk.devkmsg=on pcie_ports=compat \
 BOARD_KERNEL_CMDLINE += cpuinfo.chipname=SM8350 panic=4 \
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_BOOT_HEADER_VERSION := 3
+TARGET_KERNEL_CLANG_VERSION := r487747c
 
 BOARD_KERNEL_BASE            := 0x00000000
 BOARD_KERNEL_PAGESIZE        := 4096
