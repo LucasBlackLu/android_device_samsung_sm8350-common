@@ -172,6 +172,7 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # SELinux
 TARGET_SEPOLICY_DIR := lahaina
 include device/qcom/sepolicy_vndr/SEPolicy.mk
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Security
 BOOT_SECURITY_PATCH := 2024-04-01
