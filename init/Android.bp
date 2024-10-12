@@ -9,3 +9,182 @@ prebuilt_etc {
     vendor: true,
     vendor_ramdisk_available: true,
 }
+
+prebuilt_etc {
+    name: "fstab.ramplus",
+    src: "fstab.ramplus",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.audio.samsung.rc",
+    src: "init.audio.samsung.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.fingerprint.rc",
+    src: "init.fingerprint.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.nfc.samsung.rc",
+    src: "init.nfc.samsung.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "init.qcom.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.kernel.rc",
+    src: "init.qti.kernel.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.ramplus.rc",
+    src: "init.ramplus.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.bsp.rc",
+    src: "init.samsung.bsp.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.connector.rc",
+    src: "init.samsung.connector.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.display.rc",
+    src: "init.samsung.display.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.rc",
+    src: "init.samsung.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.vendor.rilcommon.rc",
+    src: "init.vendor.rilcommon.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.vendor.sensors.rc",
+    src: "init.vendor.sensors.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.rc",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.samsung.rilchip.qcom.rc",
+    src: "vendor.samsung.rilchip.qcom.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+// vendor script
+
+sh_binary {
+    name: "init.class_main.sh",
+    src: "init.class_main.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot.sh",
+    src: "init.kernel.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-lahaina.sh",
+    src: "init.kernel.post_boot-lahaina.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.class_core.sh",
+    src: "init.qcom.class_core.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "init.qcom.early_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.post_boot.sh",
+    src: "init.qcom.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sh",
+    src: "init.qcom.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.chg_policy.sh",
+    src: "init.qti.chg_policy.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.sh",
+    src: "init.qti.kernel.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.qcv.sh",
+    src: "init.qti.qcv.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "vendor_modprobe.sh",
+    src: "vendor_modprobe.sh",
+    vendor: true,
+}
