@@ -1,0 +1,63 @@
+on post-fs-data
+	chmod 0770 /spu/sensorhub
+	chmod 0660 /spu/sensorhub/slpi_spu.b00
+	chmod 0660 /spu/sensorhub/slpi_spu.b01
+	chmod 0660 /spu/sensorhub/slpi_spu.b02
+	chmod 0660 /spu/sensorhub/slpi_spu.b03
+	chmod 0660 /spu/sensorhub/slpi_spu.b04
+	chmod 0660 /spu/sensorhub/slpi_spu.b05
+	chmod 0660 /spu/sensorhub/slpi_spu.b06
+	chmod 0660 /spu/sensorhub/slpi_spu.b07
+	chmod 0660 /spu/sensorhub/slpi_spu.b08
+	chmod 0660 /spu/sensorhub/slpi_spu.b09
+	chmod 0660 /spu/sensorhub/slpi_spu.b10
+	chmod 0660 /spu/sensorhub/slpi_spu.b11
+	chmod 0660 /spu/sensorhub/slpi_spu.b12
+	chmod 0660 /spu/sensorhub/slpi_spu.b13
+	chmod 0660 /spu/sensorhub/slpi_spu.b14
+	chmod 0660 /spu/sensorhub/slpi_spu.b15
+	chmod 0660 /spu/sensorhub/slpi_spu.b16
+	chmod 0660 /spu/sensorhub/slpi_spu.b17
+	chmod 0660 /spu/sensorhub/slpi_spu.b18
+	chmod 0660 /spu/sensorhub/slpi_spu.b19
+	chmod 0660 /spu/sensorhub/slpi_spu.b20
+	chmod 0660 /spu/sensorhub/slpi_spu.b21
+	chmod 0660 /spu/sensorhub/slpi_spu.b22
+	chmod 0660 /spu/sensorhub/slpi_spu.b23
+	chmod 0660 /spu/sensorhub/slpi_spu.b24
+	chmod 0660 /spu/sensorhub/slpi_spu.b25
+	chmod 0660 /spu/sensorhub/slpi_spu.b26
+	chmod 0660 /spu/sensorhub/slpi_spu.b27
+	chmod 0660 /spu/sensorhub/slpi_spu.mdt
+	chmod 0660 /spu/sensorhub/slpi_ver.txt
+	chown root system /spu/sensorhub
+	chown root system /spu/sensorhub/slpi_spu.b00
+	chown root system /spu/sensorhub/slpi_spu.b01
+	chown root system /spu/sensorhub/slpi_spu.b02
+	chown root system /spu/sensorhub/slpi_spu.b03
+	chown root system /spu/sensorhub/slpi_spu.b04
+	chown root system /spu/sensorhub/slpi_spu.b05
+	chown root system /spu/sensorhub/slpi_spu.b06
+	chown root system /spu/sensorhub/slpi_spu.b07
+	chown root system /spu/sensorhub/slpi_spu.b08
+	chown root system /spu/sensorhub/slpi_spu.b09
+	chown root system /spu/sensorhub/slpi_spu.b10
+	chown root system /spu/sensorhub/slpi_spu.b11
+	chown root system /spu/sensorhub/slpi_spu.b12
+	chown root system /spu/sensorhub/slpi_spu.b13
+	chown root system /spu/sensorhub/slpi_spu.b14
+	chown root system /spu/sensorhub/slpi_spu.b15
+	chown root system /spu/sensorhub/slpi_spu.b16
+	chown root system /spu/sensorhub/slpi_spu.b17
+	chown root system /spu/sensorhub/slpi_spu.b18
+	chown root system /spu/sensorhub/slpi_spu.b19
+	chown root system /spu/sensorhub/slpi_spu.b20
+	chown root system /spu/sensorhub/slpi_spu.b21
+	chown root system /spu/sensorhub/slpi_spu.b22
+	chown root system /spu/sensorhub/slpi_spu.b23
+	chown root system /spu/sensorhub/slpi_spu.b24
+	chown root system /spu/sensorhub/slpi_spu.b25
+	chown root system /spu/sensorhub/slpi_spu.b26
+	chown root system /spu/sensorhub/slpi_spu.b27
+	chown root system /spu/sensorhub/slpi_spu.mdt
+	chown root system /spu/sensorhub/slpi_ver.txt
