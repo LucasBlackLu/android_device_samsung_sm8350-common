@@ -98,7 +98,8 @@ TARGET_USERIMAGES_USE_EXT4           := true
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
 BOARD_ROOT_EXTRA_FOLDERS := \
-    efs
+    efs \
+    metadata
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
