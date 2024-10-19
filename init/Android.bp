@@ -136,6 +136,13 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "wifi_firmware.rc",
+    src: "wifi_firmware.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
 // vendor script
 
 sh_binary {

@@ -1,0 +1,22 @@
+# Copyright (c) 2019-2020 Qualcomm Technologies, Inc.
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#
+
+on early-init
+
+# bootloader revision 1, G9910 (china)
+on fs && property:ro.boot.rp=1 && property:ro.boot.em.model=SM-G9910
+    mount none /vendor/firmware/wlan/o1q/rev1/wpss.b01 /vendor/firmware/wpss.b01 bind
+    mount none /vendor/firmware/wlan/o1q/rev1/wpss.mdt /vendor/firmware/wpss.mdt bind
+
+# bootloader revision 2, G9960 (china)
+on fs && property:ro.boot.rp=2 && property:ro.boot.em.model=SM-G9960 
+    mount none /vendor/firmware/wlan/t2q/rev2/wpss.b01 /vendor/firmware/wpss.b01 bind
+    mount none /vendor/firmware/wlan/t2q/rev2/wpss.mdt /vendor/firmware/wpss.mdt bind
+
+# bootloader revision 3, G9980 (china)
+on fs && property:ro.boot.rp=3 && property:ro.boot.em.model=SM-G9980
+    mount none /vendor/firmware/wlan/p3q/rev3/wpss.b01 /vendor/firmware/wpss.b01 bind
+    mount none /vendor/firmware/wlan/p3q/rev3/wpss.mdt /vendor/firmware/wpss.mdt bind
+
