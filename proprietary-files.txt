@@ -1218,7 +1218,7 @@ vendor/lib/vendor.samsung.hardware.health@2.0.so
 vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so
 vendor/lib64/vendor.samsung.hardware.health@2.0.so
 
-# IPA
+# IPA-Firmware
 vendor/etc/init/ipa_fws.rc
 
 # Keymaster

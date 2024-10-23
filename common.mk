@@ -223,8 +223,7 @@ PRODUCT_PACKAGES += \
     init.vendor.rilcommon.rc \
     init.vendor.sensors.rc \
     ueventd.qcom.rc \
-    vendor.samsung.rilchip.qcom.rc \
-    wifi_firmware.rc
+    vendor.samsung.rilchip.qcom.rc
 
 # Vendor scripts
 PRODUCT_PACKAGES += \
