@@ -7,4 +7,6 @@ allow vendor_init system_file:file { read getattr open };
 
 allow vendor_init block_device:lnk_file setattr;
 
+allow vendor_init rootfs:dir { read };
+
 set_prop(vendor_init, vendor_power_prop)
