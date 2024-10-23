@@ -815,6 +815,11 @@ vendor/firmware/evass.b19
 vendor/firmware/evass.mbn
 vendor/firmware/evass.mdt
 
+# Charger
+vendor/bin/hvdcp_opti
+vendor/etc/charger_fstab.qti
+vendor/etc/charger_fw_fstab.qti
+
 # Display
 lib/vendor.qti.hardware.display.config-V1-ndk.so
 lib/vendor.qti.hardware.display.config-V10-ndk.so
