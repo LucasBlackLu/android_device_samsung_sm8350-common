@@ -967,6 +967,9 @@ vendor/etc/init/vendor.samsung.hardware.ifaa@1.0-service.rc
 vendor/lib64/libIfaaCa.so
 vendor/lib64/vendor.samsung.hardware.ifaa@1.0.so
 
+# IPA
+vendor/etc/init/ipa_fws.rc
+
 # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-service
 vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti
