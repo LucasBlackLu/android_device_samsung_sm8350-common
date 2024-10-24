@@ -1,0 +1,16 @@
+on early-init
+
+on fs && property:ro.boot.em.model=SM-G9910
+    mount none /vendor/firmware/ipa_fws.b01 /vendor/firmware/ipa_fws.b01 bind
+    mount none /vendor/firmware/ipa_fws.elf /vendor/firmware/ipa_fws.elf bind
+    mount none /vendor/firmware/ipa_fws.mdt /vendor/firmware/ipa_fws.mdt bind
+
+on fs && property:ro.boot.em.model=SM-G9960
+    mount none /vendor/firmware/ipa_fws.b01 /vendor/firmware/ipa_fws.b01 bind
+    mount none /vendor/firmware/ipa_fws.elf /vendor/firmware/ipa_fws.elf bind
+    mount none /vendor/firmware/ipa_fws.mdt /vendor/firmware/ipa_fws.mdt bind
+
+on fs && property:ro.boot.em.model=SM-G9980
+    mount none /vendor/firmware/ipa_fws.b01 /vendor/firmware/ipa_fws.b01 bind
+    mount none /vendor/firmware/ipa_fws.elf /vendor/firmware/ipa_fws.elf bind
+    mount none /vendor/firmware/ipa_fws.mdt /vendor/firmware/ipa_fws.mdt bind

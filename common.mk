@@ -145,7 +145,7 @@ PRODUCT_PACKAGES += \
     init.samsung.bsp.rc \
     init.samsung.connector.rc \
     init.samsung.display.rc \
-    init.samsung.rc
+    init.samsung.firmware.rc \
     init.samsung.rc \
     init.sensors.spu.rc
 
