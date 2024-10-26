@@ -27,6 +27,9 @@
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
+import /vendor/etc/init/hw/init.samsung.rc
+import /vendor/etc/init/hw/init.${ro.product.vendor.device}.rc
+import /vendor/etc/init/hw/init.${ro.product.vendor.name}.rc
 
 import /vendor/etc/init/hw/init.qti.kernel.rc
 
@@ -67,6 +70,12 @@ on init
     chown system system /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     chmod 0660 /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     start logd
+
+    # Property used by vintf for sku specific manifests
+    setprop ro.boot.product.hardware.sku ${ro.boot.hardware.sku}
+
+    # System Performance 0-7 to 0-2,4-7
+    write /dev/cpuset/foreground/cpus 0-2,4-7
 
 on early-fs
     start vold
@@ -144,6 +153,11 @@ on boot
     #Allow access to memory hotplug device attributes
     chown system system /sys/kernel/mem-offline/anon_migrate
 
+# For CDSP crash
+on property:ro.boot.debug_level=0x494d
+    setprop vendor.fastrpc.process.attrs 1
+    setprop vendor.fastrpc.debug.trace 1
+
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
 
@@ -153,21 +167,10 @@ on property:vendor.display.lcd_density=640
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
 
-on init && property:ro.boot.mode=charger
-    mount_all /vendor/etc/charger_fw_fstab.qti --early
-    write /sys/kernel/boot_adsp/boot 1
-    wait /sys/class/power_supply/battery
-
 on charger
     start vendor.power_off_alarm
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
-
-service vendor.lowi /vendor/bin/lowirpcd
-   class core
-   user system
-   group system wakelock
-   capabilities BLOCK_SUSPEND
 
 #pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
