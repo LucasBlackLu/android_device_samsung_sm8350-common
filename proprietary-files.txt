@@ -1069,11 +1069,9 @@ vendor/lib64/vendor.qti.hardware.vpp@2.0.so
 # Media-Hardware
 vendor/lib/libOmxCore.so
 vendor/lib/libmm-omxcore.so
--vendor/lib/libplatformconfig.so
 vendor/lib/libstagefrighthw.so
 vendor/lib64/libOmxCore.so
 vendor/lib64/libmm-omxcore.so
--vendor/lib64/libplatformconfig.so
 vendor/lib64/libstagefrighthw.so
 
 # NFC
