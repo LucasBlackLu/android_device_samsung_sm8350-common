@@ -8,3 +8,9 @@ prebuilt_etc {
     src: "fstab.default",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "fstab.emmc",
+    src: "fstab.emmc",
+    vendor: true,
+}
