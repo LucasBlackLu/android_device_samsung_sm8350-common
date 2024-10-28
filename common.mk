@@ -22,6 +22,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qti.kernel.rc \
     init.ramplus.rc \
+    init.recovery.qcom.rc \
     init.samsung.bsp.rc \
     init.samsung.connector.rc \
     init.samsung.display.rc \
