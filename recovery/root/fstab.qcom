@@ -58,7 +58,6 @@ odm                                                     /odm                    
 /devices/platform/soc/8804000.sdhci/mmc_host*           /storage/sdcard1         vfat     nosuid,nodev                     wait,voldmanaged=sdcard1:auto,encryptable=footer
 /dev/block/bootdevice/by-name/modem                     /vendor/firmware_mnt     vfat     ro,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337,context=u:object_r:firmware_file:s0 wait
 /dev/block/bootdevice/by-name/bluetooth                 /vendor/bt_firmware      vfat     ro,shortname=lower,uid=1002,gid=3002,dmask=227,fmask=337,context=u:object_r:bt_firmware_file:s0 wait
-/dev/block/bootdevice/by-name/qmcs                      /mnt/vendor/qmcs         vfat     noatime,nosuid,nodev,context=u:object_r:vendor_qmcs_file:s0   wait,check,formattable
 
 # VOLD:samsung/common/fstab_non_AB.samsung
 /devices/platform/soc/8804000.sdhci/mmc_host*           auto                     vfat     defaults                         voldmanaged=sdcard:auto
