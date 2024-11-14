@@ -72,6 +72,11 @@ function blob_fixup() {
         [ "$2" = "" ] && return 0
         "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
         ;;
+    vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so)
+        [ "$2" = "" ] && return 0
+        # Replace libutils with vndk30 libutils
+        "${PATCHELF}" --replace-needed libutils.so libutils-v30.so "${2}"
+        ;;
     esac
 
     return 0
