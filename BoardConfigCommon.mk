@@ -69,6 +69,7 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom androidboot.memcg=1 \
+    androidboot.init_fatal_reboot_target=recovery \
     androidboot.selinux=permissive \
     androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 \
     cgroup.memory=nokmem,nosocket \
