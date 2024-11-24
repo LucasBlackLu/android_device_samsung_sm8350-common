@@ -340,7 +340,7 @@ vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
 # Camera
 vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
-vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64_vcc.rc
+vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
 vendor/lib/camera/components/com.qti.eisv2.so
 vendor/lib/camera/components/com.qti.eisv3.so
 vendor/lib/camera/components/com.qti.hvx.addconstant.so
@@ -538,7 +538,6 @@ vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so
 vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so
-vendor/lib64/vendor.samsung.hardware.camera.vcc@1.0.so
 
 # Camera-arcsoft
 vendor/lib/libarcsoft_aieffectpk_video.so
