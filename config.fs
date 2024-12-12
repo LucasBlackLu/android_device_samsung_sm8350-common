@@ -228,3 +228,27 @@ mode: 0771
 user: AID_MEDIA
 group: AID_MEDIA
 caps: 0
+
+[vendor/bin/*.sh]
+mode: 0555
+user: AID_ROOT
+group: AID_SHELL
+caps: 0
+
+[vendor/etc/*.sh]
+mode: 0555
+user: AID_ROOT
+group: AID_SHELL
+caps: 0
+
+[vendor/bin/*.json]
+mode: 0644
+user: AID_ROOT
+group: AID_SHELL
+caps: 0
+
+[vendor/etc/*.json]
+mode: 0644
+user: AID_ROOT
+group: AID_SHELL
+caps: 0
