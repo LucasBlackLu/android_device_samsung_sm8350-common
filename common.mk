@@ -12,6 +12,11 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint
+
 # Shipping API
 BOARD_SHIPPING_API_LEVEL := 33
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
