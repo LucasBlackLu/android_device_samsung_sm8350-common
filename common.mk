@@ -392,6 +392,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
 
 # Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti \
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/power/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
 
