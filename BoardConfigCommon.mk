@@ -171,5 +171,10 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Platform
+BOARD_USES_QCOM_HARDWARE := true
+QCOM_BOARD_PLATFORMS += lahaina
+TARGET_BOARD_PLATFORM := lahaina
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
