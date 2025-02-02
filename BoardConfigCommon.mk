@@ -50,5 +50,11 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 # Bootanimation
 TARGET_BOOTANIMATION_HALF_RES := true
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := lahaina 
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_RADIOIMAGE := true
+TARGET_NO_RPC := true
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
