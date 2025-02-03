@@ -33,13 +33,23 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.common-util \
+    android.hardware.audio.common-util.vendor \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.soundtrigger@2.2-impl \
     audio.primary.default \
+    audio.primary.lahaina:32 \
     audio.r_submix.default \
     audio.usb.default \
     cplay \
+    libaudiofoundation \
     libaudioroute \
     libaudioutils \
     libtinyalsa \
+    libtinycompress \
     tinycap \
     tinymix \
     tinypcminfo \
