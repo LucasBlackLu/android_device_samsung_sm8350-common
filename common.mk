@@ -287,5 +287,9 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2 \
     libxml2 \
 
+# Seccomp Policy
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(COMMON_PATH)/configs/seccomp_policy,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy) \
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
