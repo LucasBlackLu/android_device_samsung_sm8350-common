@@ -306,7 +306,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
 
-# Wifi
+# WiFi
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay \
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/aoa_cldb_falcon.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_falcon.bin \
     $(COMMON_PATH)/configs/wifi/aoa_cldb_swl14.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/aoa_cldb_swl14.bin \
