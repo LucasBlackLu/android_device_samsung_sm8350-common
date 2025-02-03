@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+/* Copyright (c) 2019, The Linux Foundation. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ *     * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above
+ *       copyright notice, this list of conditions and the following
+ *       disclaimer in the documentation and/or other materials provided
+ *       with the distribution.
+ *     * Neither the name of The Linux Foundation nor the names of its
+ *       contributors may be used to endorse or promote products derived
+ *       from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ * BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * Tuned for Product OT
+ */
+-->
+<HintConfigs>
+    <Powerhint>
+
+        <!-- POWER_HINT_ID_COMMON -->
+        <!-- llcc-ddr-bw hyst disable : MPCTLV3_LLCC_DDR_BW_HYST_OPT(0x43024000)   : 0    -->
+        <!-- llcc-ddr-bw sample_ms    : MPCTLV3_LLCC_DDR_BW_SAMPLE_MS(0x4300C000)  : 10   -->
+        <!-- llcc-ddr-bw min_freq     : MPCTLV3_LLCC_DDR_BW_MIN_FREQ(0x43010000)   : 3879 -->
+        <!-- cpu-llcc-bw hyst disable : MPCTLV3_CPU_LLCC_BW_HYST_OPT(0x41838000)   : 0    -->
+        <!-- cpu-llcc-bw sample_ms    : MPCTLV3_CPU_LLCC_BW_SAMPLE_MS(0x4183C000)  : 16   -->
+        <!-- cpu-llcc-bw min_freq     : MPCTLV3_CPU_LLCC_BW_MIN_FREQ(0x41828000)   : 9155 -->
+        <!-- cpu-llcc-bw io_percent   : MPCTLV3_CPU_LLCC_BW_IO_PERCENT(0x41834000) : 100  -->
+        <!-- CPU0 DDR memlat          : MPCTLV3_LLCC_MEMLAT_RATIO_CELL_0(0x43420000): 1   -->
+        <!-- CPU4 DDR memlat          : MPCTLV3_LLCC_MEMLAT_RATIO_CELL_0(0x43424000): 1   -->
+        <!-- silver cluster min freq  : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 998 -->
+        <!-- sched prefer spread      : MPCTLV3_SCHED_PREFER_SPREAD(0x40CA8000)            : 3   -->
+        <Config
+            Id="0x00001331" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x43024000, 0, 0x43034000, 10, 0x43010000, 38,
+                       0x41838000, 0, 0x4183C000, 16, 0x41828000, 91, 0x41834000, 100,
+                       0x43420000, 1, 0x43424000, 1, 0x40800100, 998, 0x40CA8000, 3"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x00001332" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_30FPS -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x00001333" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_8K_30FPS -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x00001334" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS -->
+        <!-- silver cluster min freq  : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 998 -->
+        <Config
+            Id="0x00001335" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 998"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_60FPS -->
+        <Config
+            Id="0x00001336" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612, 
+			0x40C20000, 65, 0x40C1C000, 75, 0x40800100, 1094, 0x40800000, 1075"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_FRONT -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x00001337" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_30FPS_FRONT -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x00001338" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_FRONT -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x00001339" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_60FPS_FRONT -->
+        <!-- silver pl : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE(0x41444100)     : 0    -->
+        <!-- gold pl   : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG (0x41444000)       : 0    -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x0000133A" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x41444100, 0, 0x41444000, 0, 0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_PRO -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x0000133B" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_30FPS_PRO -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x0000133C" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_8K_30FPS_PRO -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x0000133D" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_PRO -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x0000133E" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_60FPS_PRO -->
+        <Config
+            Id="0x0000133F" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612, 0x40C20000, 65, 0x40C1C000, 75, 0x40800100, 1094, 0x40800000, 1075"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_120FPS_PRO -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)          : 1    -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1094 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 20   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 30   -->
+        <Config
+            Id="0x00001340" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1094, 0x40800000, 1324, 0x40C20000, 20, 0x40C1C000, 30"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_HFR -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)          : 1    -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1094 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 30   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 40   -->
+        <Config
+            Id="0x00001341" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1094, 0x40800000, 1324, 0x40C20000, 30, 0x40C1C000, 40"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_HFR_480FPS -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)          : 1    -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1094 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 20   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 30   -->
+        <Config
+            Id="0x00001342" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1094, 0x40800000, 1324, 0x40C20000, 20, 0x40C1C000, 30"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_BEAUTY -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <Config
+            Id="0x00001343" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_30FPS_BEAUTY -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 30   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 40   -->
+        <Config
+            Id="0x00001344" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_BEAUTY -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 30   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 40   -->
+        <Config
+            Id="0x00001345" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_BEAUTY_FRONT -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <Config
+            Id="0x00001346" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_BEAUTY_FRONT -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <Config
+            Id="0x00001347" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_HDR10 -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <Config
+            Id="0x00001348" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1324, 0x40C20000, 30, 0x40C1C000, 40"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_30FPS_HDR10 -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)		  : 1	 -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <!-- gpu min lock            : MPCTLV3_GPU_MIN_POWER_LEVEL(0x42804000)            : 0x6(490Mhz)-->
+        <Config
+            Id="0x00001349" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1497, 0x40800000, 1324, 0x40C20000, 30, 0x40C1C000, 40 , 0x42804000 , 0x6"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_HDR10 -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)		  : 1	 -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <!-- gpu min lock            : MPCTLV3_GPU_MIN_POWER_LEVEL(0x42804000)            : 0x6(490Mhz)-->
+        <Config
+            Id="0x0000134A" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1497, 0x40800000, 1324, 0x40C20000, 30, 0x40C1C000, 40 , 0x42804000 , 0x6"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_HYPER_LAPSE -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <Config
+            Id="0x0000134B" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_SUPER_STEADY -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)		  : 1	 -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1440 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <!-- gpu min lock            : MPCTLV3_GPU_MIN_POWER_LEVEL(0x42804000)            : 0x6(490Mhz)-->
+        <Config
+            Id="0x0000134C" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1497, 0x40800000, 1440, 0x40C20000, 30, 0x40C1C000, 40 , 0x42804000 , 0x6"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_SUPER_STEADY -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)		  : 1	 -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1440 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <!-- gpu min lock            : MPCTLV3_GPU_MIN_POWER_LEVEL(0x42804000)            : 0x6(490Mhz)-->
+        <Config
+            Id="0x0000134D" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1497, 0x40800000, 1440, 0x40C20000, 30, 0x40C1C000, 40 , 0x42804000 , 0x6"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_TRACKING_ZOOM -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <Config
+            Id="0x0000134E" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_LIVE_FOCUS_VIDEO -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1305 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 30   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 40   -->
+        <Config
+            Id="0x0000134F" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1305, 0x40800000, 1324, 0x40C20000, 30, 0x40C1C000, 40"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_DIRECTORS_VIEW -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x00001350" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_AR_DOODLE -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x00001351" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_FHD_30FPS_UW -->
+        <Config
+            Id="0x00001352" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_FHD_30FPS_TELE -->
+        <Config
+            Id="0x00001353" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_UHD_30FPS_UW -->
+        <Config
+            Id="0x00001354" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_UHD_30FPS_TELE -->
+        <Config
+            Id="0x00001355" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_SUPER_NIGHT -->
+        <Config
+            Id="0x00001356" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_SUPER_NIGHT_BEAUTY -->
+        <Config
+            Id="0x00001357" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VT_CALL -->
+        <Config
+            Id="0x00001358" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_PERF_CTS -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <Config
+            Id="0x00001359" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1324"/>
+
+        <!-- POWER_HINT_ID_LIVE_FOCUS -->
+        <Config
+            Id="0x0000135A" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+    </Powerhint>
+</HintConfigs>
+
