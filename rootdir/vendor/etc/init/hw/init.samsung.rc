@@ -1,0 +1,80 @@
+
+# Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+#
+
+import /vendor/etc/init/hw/init.samsung.bsp.rc
+import /vendor/etc/init/hw/init.samsung.power.rc
+import /vendor/etc/init/hw/init.samsung.display.rc
+
+on early-init
+    mkdir /mnt/vendor/efs 0771 radio system
+    mkdir /mnt/vendor/persist 0771 root system
+
+on init
+    symlink /dev/block/by-name/steady /dev/block/steady
+    symlink /dev/block/by-name/persistent /dev/block/persistent
+
+on late-init
+
+on post-fs
+    # Create carrier folder for HiddenMenu
+    mkdir /efs/carrier 0755 system system
+    restorecon_recursive /efs
+
+    restorecon_recursive /mnt/vendor/efs
+    chown radio system /mnt/vendor/efs
+    chmod 0771 /mnt/vendor/efs
+
+    chown system radio /efs
+    chmod 0771 /efs
+    restorecon /efs
+
+on late-fs
+
+on post-fs-data
+    # carrier partition
+    chown system system /carrier
+    chmod 0771 /carrier
+    restorecon /carrier
+
+on boot
+# Meta event
+    chown system radio /sys/class/sensors/sensor_dev/flush
+
+on shutdown
+
+# service definition
+
+# on property triggers
+
+
+service factory_ssc /vendor/bin/factory.ssc
+    class core
+    user system
+    group system radio inet diag net_admin net_raw sdcard_rw sdcard_r media_rw

@@ -1,0 +1,320 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Ramdisk's Hw
+
+prebuilt_etc {
+    name: "init.qcom.factory.rc",
+    src: "vendor/etc/init/hw/init.qcom.factory.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "vendor/etc/init/hw/init.qcom.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.usb.rc",
+    src: "vendor/etc/init/hw/init.qcom.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.kernel.rc",
+    src: "vendor/etc/init/hw/init.qti.kernel.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.bsp.rc",
+    src: "vendor/etc/init/hw/init.samsung.bsp.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.display.rc",
+    src: "vendor/etc/init/hw/init.samsung.display.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.power.rc",
+    src: "vendor/etc/init/hw/init.samsung.power.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.rc",
+    src: "vendor/etc/init/hw/init.samsung.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "vendor/etc/init/hw/init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fingerprint_common.rc",
+    src: "vendor/etc/init/fingerprint_common.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.fingerprint.rc",
+    src: "vendor/etc/init/init.fingerprint.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qti.media.rc",
+    src: "vendor/etc/init/init.qti.media.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.ramplus.rc",
+    src: "vendor/etc/init/init.ramplus.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.vendor.onebinary.rc",
+    src: "vendor/etc/init/init.vendor.onebinary.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.vendor.rilcommon.rc",
+    src: "vendor/etc/init/init.vendor.rilcommon.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.vendor.sensors.rc",
+    src: "vendor/etc/init/init.vendor.sensors.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.vendor.sysfw.rc",
+    src: "vendor/etc/init/init.vendor.sysfw.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.qti.diag.rc",
+    src: "vendor/etc/init/vendor.qti.diag.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.samsung.rilchip.qcom.rc",
+    src: "vendor/etc/init/vendor.samsung.rilchip.qcom.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sensors.qti.rc",
+    src: "vendor/etc/init/vendor.sensors.qti.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.sensors.sscrpcd.rc",
+    src: "vendor/etc/init/vendor.sensors.sscrpcd.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "wifi_qcom.rc",
+    src: "vendor/etc/init/wifi_qcom.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "wifi_sm6375.rc",
+    src: "vendor/etc/init/wifi_sm6375.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+// Ramdisk's Scripts
+
+sh_binary {
+    name: "init.class_main.sh",
+    src: "vendor/bin/init.class_main.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.crda.sh",
+    src: "vendor/bin/init.crda.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot.sh",
+    src: "vendor/bin/init.kernel.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-blair.sh",
+    src: "vendor/bin/init.kernel.post_boot-blair.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.kernel.post_boot-holi.sh",
+    src: "vendor/bin/init.kernel.post_boot-holi.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.mdm.sh",
+    src: "vendor/bin/init.mdm.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.class_core.sh",
+    src: "vendor/bin/init.qcom.class_core.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.coex.sh",
+    src: "vendor/bin/init.qcom.coex.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "vendor/bin/init.qcom.early_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.efs.sync.sh",
+    src: "vendor/bin/init.qcom.efs.sync.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.post_boot.sh",
+    src: "vendor/bin/init.qcom.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sdio.sh",
+    src: "vendor/bin/init.qcom.sdio.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sensors.sh",
+    src: "vendor/bin/init.qcom.sensors.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sh",
+    src: "vendor/bin/init.qcom.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.usb.sh",
+    src: "vendor/bin/init.qcom.usb.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.chg_policy.sh",
+    src: "vendor/bin/init.qti.chg_policy.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.early_init.sh",
+    src: "vendor/bin/init.qti.early_init.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.debug.sh",
+    src: "vendor/bin/init.qti.kernel.debug.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.debug-blair.sh",
+    src: "vendor/bin/init.qti.kernel.debug-blair.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.debug-holi.sh",
+    src: "vendor/bin/init.qti.kernel.debug-holi.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.kernel.sh",
+    src: "vendor/bin/init.qti.kernel.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.media.sh",
+    src: "vendor/bin/init.qti.media.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qti.qcv.sh",
+    src: "vendor/bin/init.qti.qcv.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "qca6234-service.sh",
+    src: "vendor/bin/qca6234-service.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "vendor_modprobe.sh",
+    src: "vendor/bin/vendor_modprobe.sh",
+    vendor: true,
+}
