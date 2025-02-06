@@ -59,10 +59,6 @@ BOARD_KERNEL_PAGESIZE        := 4096
 BOARD_KERNEL_SEPARATED_DTBO  := true
 BOARD_RAMDISK_USE_LZ4        := true
 
-# Kernel Clang Flags
-KERNEL_CC := CC=clang
-override KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
-
 # Kernel: mkbootimgs args
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
