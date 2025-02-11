@@ -771,7 +771,7 @@ vendor/lib64/libhermes_cred.so
 -vendor/lib64/libkeymaster_helper.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libsfplugin_ccodec_utils.so
--vendor/lib64/libskeymaster4device.so
+-vendor/lib64/libskeymaster4device.so|246a253acdd4a4390819c305f868b1ff262c0102
 vendor/lib64/libspcom.so
 vendor/lib64/libspcom.so
 
