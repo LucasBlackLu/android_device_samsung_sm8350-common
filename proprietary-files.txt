@@ -1067,12 +1067,6 @@ vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
-# Vibrator
-vendor/bin/hw/vendor.samsung.hardware.vibrator-service
-vendor/etc/init/vendor.samsung.hardware.vibrator-default.rc
--vendor/etc/vintf/manifest/vendor.samsung.hardware.vibrator-default.xml
-vendor/lib64/vendor.samsung.hardware.vibrator-V3-ndk_platform.so
-
 # Wi-Fi
 vendor/firmware/bcmdhd_clm.blob
 vendor/firmware/bcmdhd_mfg.bin_b1
