@@ -132,6 +132,8 @@ struct Device : public IDevice, public ParametersUtil {
 
     uint32_t version() const { return mDevice->common.version; }
 
+    int halSetParameters(const char* keysAndValues) override;
+
   private:
     bool mIsClosed;
     audio_hw_device_t* mDevice;
@@ -150,7 +152,6 @@ struct Device : public IDevice, public ParametersUtil {
 
     // Methods from ParametersUtil.
     char* halGetParameters(const char* keys) override;
-    int halSetParameters(const char* keysAndValues) override;
 };
 
 }  // namespace implementation

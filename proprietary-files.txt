@@ -947,7 +947,7 @@ vendor/lib64/libengmode_tlc.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libril_sem.so
 vendor/lib64/librmnetctl.so
-vendor/lib64/libsec-ril.so
+vendor/lib64/libsec-ril.so|8f24d1e52e80b6a20f6c6e6c33b63a9826a15986
 vendor/lib64/libsecril-client.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
