@@ -114,7 +114,6 @@ PRODUCT_PACKAGES += \
     libsdmcore \
     libsdmutils \
     libtinyxml \
-    memtrack.default \
     vendor.display.config@1.0 \
     vendor.display.config@1.15.vendor \
     vendor.display.config@2.0 \
@@ -263,16 +262,6 @@ PRODUCT_PACKAGES += \
 
 # No A/B
 AB_OTA_UPDATER := false
-
-# OMX
-PRODUCT_PACKAGES += \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxCore \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
-    libstagefrighthw
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
