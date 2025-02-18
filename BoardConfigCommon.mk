@@ -140,7 +140,6 @@ BOARD_KERNEL_CMDLINE := \
     cgroup.memory=nokmem,nosocket \
     cpuinfo.chipname=SM8350 \
     console=null \
-    firmware_class.path=/vendor/firmware_mnt/image \
     loop.max_part=7 \
     lpm_levels.sleep_disabled=1 \
     msm_rtb.filter=0x237 \
