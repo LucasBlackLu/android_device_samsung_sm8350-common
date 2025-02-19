@@ -35,6 +35,10 @@ PRODUCT_PACKAGES += \
     tinypcminfo \
     tinyplay \
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0 \
+
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
