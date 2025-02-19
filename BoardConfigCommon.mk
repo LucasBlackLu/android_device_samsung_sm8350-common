@@ -31,6 +31,18 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
 
 # Filesystem
+BOARD_ROOT_EXTRA_FOLDERS := \
+    carrier \
+    dqmdbg \
+    efs \
+    keydata \
+    keyrefuge \
+    metadata \
+    omr \
+    optics \
+    prism \
+    spu \
+
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Kernel
