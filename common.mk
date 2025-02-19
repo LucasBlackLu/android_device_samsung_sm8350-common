@@ -561,10 +561,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext \
 
-# TextClassifier
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1 \
-
 # WiFi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
