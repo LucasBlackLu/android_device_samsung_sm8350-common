@@ -73,6 +73,9 @@ BOARD_USES_QCNE := true
 # DPM
 BOARD_USES_DPM := true
 
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
+
 # Filesystem
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \
