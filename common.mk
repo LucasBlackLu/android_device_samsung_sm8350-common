@@ -575,6 +575,10 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0.vendor \
     android.hardware.usb@1.1.vendor \
 
+# Vendor Service Manager
+PRODUCT_PACKAGES += \
+    vndservicemanager \
+
 # WiFi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
