@@ -238,6 +238,13 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor \
 
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    libipanat \
+    liboffloadhal \
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
