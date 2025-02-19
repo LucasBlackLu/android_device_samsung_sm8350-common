@@ -19,6 +19,13 @@ COMMON_PATH := device/samsung/sm8350-common
 PRODUCT_PACKAGES += \
     fs_config_files \
 
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService-Soong \
+    com.dsi.ant.antradio_library \
+    com.dsi.ant@1.0.vendor \
+    com.qualcomm.qti.ant@1.0 \
+
 # API
 PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_SHIPPING_API_LEVEL := 30
