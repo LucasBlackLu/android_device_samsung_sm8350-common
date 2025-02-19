@@ -28,11 +28,43 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.gatekeeper=mdfpp \
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service \
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service.samsung \
+    libkeymaster4support.vendor:64 \
+    libkeymaster4_1support.vendor:64 \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=mdfpp \
+    ro.security.keystore.keytype=sakv2,gak \
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.2 \
 
 # Ramdisk
 PRODUCT_PACKAGES += \

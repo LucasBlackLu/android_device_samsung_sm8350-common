@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BOARD_VENDOR := samsung
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
@@ -83,6 +84,9 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS :=  --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_SOURCE := kernel/samsung/sm8350
 TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
+
+# Keymaster
+TARGET_KEYMASTER_VARIANT := samsung
 
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
