@@ -212,6 +212,8 @@ PRODUCT_COPY_FILES += \
 # QMI
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/qmi,$(TARGET_COPY_OUT_VENDOR)/etc/) \
+    system/core/libprocessgroup/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    system/core/libprocessgroup/profiles/task_profiles_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
