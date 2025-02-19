@@ -73,6 +73,9 @@ BOARD_USES_QCNE := true
 # DPM
 BOARD_USES_DPM := true
 
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/compatibility_matrix.device.xml
