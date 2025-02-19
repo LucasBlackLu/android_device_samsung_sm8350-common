@@ -53,6 +53,18 @@ TARGET_KERNEL_VERSION := 5.4
 TARGET_KEYMASTER_VARIANT := samsung
 
 # Additional root folders
+BOARD_ROOT_EXTRA_FOLDERS := \
+    carrier \
+    dqmdbg \
+    efs \
+    keydata \
+    keyrefuge \
+    metadata \
+    omr \
+    optics \
+    prism \
+    spu \
+
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
 # Partitions
