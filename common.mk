@@ -16,6 +16,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 COMMON_PATH := device/samsung/sm8350-common
 
 # API
+PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Gatekeeper
