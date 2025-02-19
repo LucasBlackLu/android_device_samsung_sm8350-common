@@ -147,6 +147,9 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/cne/mwqem.conf:$(TARGET_COPY_OUT_VENDOR)/etc/cne/mwqem.conf \
     $(COMMON_PATH)/configs/cne/profileMwqem.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/profileMwqem.xml \
 
+# Data
+$(call inherit-product, vendor/qcom/opensource/dataservices/dataservices_vendor_product.mk)
+
 # Fasatboot
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
