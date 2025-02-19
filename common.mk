@@ -127,7 +127,7 @@ PRODUCT_PACKAGES += \
     libgui_vendor:32 \
     libgrallocusage.vendor \
     libstdc++ \
-    libstdc++.vendor \
+    libstdc++_vendor \
 
 # Charger
 PRODUCT_PACKAGES += \
