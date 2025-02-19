@@ -11,5 +11,5 @@
     <integer name="def_user_rotation">0</integer>
 
     <!-- Default accelerometer rotation -->
-    <bool name="def_accelerometer_rotation">false</bool>
+    <bool name="def_accelerometer_rotation">true</bool>
 </resources>
