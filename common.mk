@@ -22,5 +22,16 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/vendor/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
+
+# Recovery
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
