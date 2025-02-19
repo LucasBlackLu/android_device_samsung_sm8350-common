@@ -13,5 +13,9 @@ COMMON_PATH := device/samsung/sm8350-common
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Partitions
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
