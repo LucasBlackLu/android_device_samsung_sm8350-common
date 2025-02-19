@@ -149,6 +149,9 @@ TARGET_KERNEL_VERSION := 5.4
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
 
+# NFC
+TARGET_USES_NQ_NFC := true
+
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
