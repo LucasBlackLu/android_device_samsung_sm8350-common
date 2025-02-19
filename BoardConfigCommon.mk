@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BOARD_VENDOR := samsung
+
 COMMON_PATH := device/samsung/sm8350-common
 
 # Architecture
@@ -135,6 +137,9 @@ BOARD_MKBOOTIMG_ARGS := --dtb_offset $(BOARD_DTB_OFFSET) --kernel_offset $(BOARD
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/sm8350
 TARGET_KERNEL_VERSION := 5.4
+
+# Keymaster
+TARGET_KEYMASTER_VARIANT := samsung
 
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
