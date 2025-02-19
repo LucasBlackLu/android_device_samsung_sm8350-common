@@ -160,6 +160,13 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd \
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.face@1.0 \
+    android.hardware.biometrics.face@1.0.vendor \
+    android.hardware.biometrics.fingerprint@2.1 \
+    android.hardware.biometrics.fingerprint@2.1.vendor \
+
 # GNSS/GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0 \
