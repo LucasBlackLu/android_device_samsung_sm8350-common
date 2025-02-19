@@ -406,18 +406,15 @@ vendor/bin/hw/vendor.qti.hardware.display.composer-service
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
-vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib/libdisplayconfig.qti.so
 vendor/lib/libdpps.so
 vendor/lib/libqdcm-mode-parser.so
-vendor/lib/libqdutils.so
 vendor/lib/libsnapdragoncolor-manager.so
 vendor/lib/libsnapdragoncolor-qdcm.so
 vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdpps.so
 vendor/lib64/libhistogram.so
 vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libqdutils.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
 
@@ -446,15 +443,11 @@ vendor/lib64/vendor.display.postproc@1.0.so
 vendor/lib/libsdm-color.so
 vendor/lib/libsdm-diag.so
 vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmcore.so
 vendor/lib/libsdmextension.so
-vendor/lib/libsdmutils.so
 vendor/lib64/libsdm-color.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmextension.so
-vendor/lib64/libsdmutils.so
 
 # DRM
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
