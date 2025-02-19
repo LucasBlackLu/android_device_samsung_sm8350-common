@@ -52,5 +52,12 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0 \
     android.hardware.gnss@2.1 \
 
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.4-hal \
+    android.hardware.graphics.composer@2.4-service \
+    libion \
+    libvulkan \
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
