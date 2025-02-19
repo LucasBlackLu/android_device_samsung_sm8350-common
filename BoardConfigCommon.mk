@@ -56,5 +56,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
 
+# Camera
+USE_CAMERA_STUB := false
+USE_DEVICE_SPECIFIC_CAMERA := true
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
