@@ -210,6 +210,9 @@ TARGET_USERIMAGES_SPARSE_F2FS_DISABLED := false
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
+
 # SEPolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 
