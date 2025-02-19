@@ -59,5 +59,8 @@ PRODUCT_PACKAGES += \
     libion \
     libvulkan \
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := false
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
