@@ -29,7 +29,7 @@ function blob_fixup() {
         vendor/lib64/libsec-ril.so)
             sed -i 's/ril.dds.call.ongoing/vendor.calls.ongoing/g' "${2}"
             ;;
-        vendor/lib64/libskeymaster4device.so)
+        vendor/lib64/hw/gatekeeper.mdfpp.so|vendor/lib64/libskeymaster4device.so)
             "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
             ;;
     esac
