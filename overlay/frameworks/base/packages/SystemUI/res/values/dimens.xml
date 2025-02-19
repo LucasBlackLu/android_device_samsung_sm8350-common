@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2025 The LineageOS Project
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ */
+-->
+<resources>
+    <!-- Padding for the lock icon on the keyguard. In pixels - should not scale with
+         display size. -->
+    <dimen name="lock_icon_padding">32px</dimen>
+</resources>
