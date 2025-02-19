@@ -165,6 +165,9 @@ TARGET_KERNEL_VERSION := 5.4
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
 
+# Lights
+$(call soong_config_set,samsungVars,target_specific_header_path,$(COMMON_PATH)/include)
+
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
