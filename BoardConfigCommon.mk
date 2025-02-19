@@ -136,6 +136,9 @@ TARGET_KERNEL_VERSION := 5.4
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
 
+# NFC
+TARGET_USES_NQ_NFC := true
+
 # Additional root folders
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \
