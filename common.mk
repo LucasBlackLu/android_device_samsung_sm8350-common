@@ -165,6 +165,7 @@ PRODUCT_PACKAGES += \
 # Fasatboot
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
+    fastbootd \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
