@@ -49,6 +49,10 @@ PRODUCT_PACKAGES += \
     camera.device@3.4-impl \
     camera.device@3.5-impl \
 
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend \
+
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 

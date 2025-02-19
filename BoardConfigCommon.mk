@@ -64,6 +64,9 @@ TARGET_NO_RPC := true
 USE_CAMERA_STUB := false
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# Charger
+BOARD_CHARGER_ENABLE_SUSPEND := true
+
 # Filesystem
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \
