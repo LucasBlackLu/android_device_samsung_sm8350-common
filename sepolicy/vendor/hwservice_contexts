@@ -2,7 +2,6 @@ vendor.samsung.external.secure_storage::ISecureStorage             u:object_r:ha
 vendor.samsung.hardware.bluetooth.a2dpOffload::IA2dpOffload        u:object_r:hal_bluetooth_a2dp_hwservice:s0
 vendor.samsung.hardware.bluetooth::IBTVendor                       u:object_r:hal_bluetooth_hwservice:s0
 vendor.samsung.hardware.camera.provider::ISecCameraProvider        u:object_r:hal_camera_hwservice:s0
-vendor.samsung.hardware.exthealth::IExtHealth                      u:object_r:hal_health_hwservice:s0
 vendor.samsung.hardware.gnss::ISecGnss                             u:object_r:hal_gnss_hwservice:s0
 vendor.samsung.hardware.miscpower::ISecMiscPower                   u:object_r:hal_miscpower_hwservice:s0
 vendor.samsung.hardware.qchdcpkprov_server::Iqchdcpkprov_server    u:object_r:hal_qchdcpkprov_hwservice:s0
