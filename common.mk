@@ -48,6 +48,10 @@ PRODUCT_PACKAGES += \
     camera.device@3.4-impl \
     camera.device@3.5-impl \
 
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend \
+
 # Fasatboot
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
