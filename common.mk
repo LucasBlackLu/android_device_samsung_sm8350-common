@@ -13,5 +13,19 @@ COMMON_PATH := device/samsung/sm8350-common
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.primary.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    cplay \
+    libaudioroute \
+    libaudioutils \
+    libtinyalsa \
+    tinycap \
+    tinymix \
+    tinypcminfo \
+    tinyplay \
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
