@@ -34,6 +34,10 @@ PRODUCT_PACKAGES += \
     tinypcminfo \
     tinyplay \
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0 \
+
 # Fasatboot
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
