@@ -20,6 +20,20 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.primary.default \
+    audio.r_submix.default \
+    audio.usb.default \
+    cplay \
+    libaudioroute \
+    libaudioutils \
+    libtinyalsa \
+    tinycap \
+    tinymix \
+    tinypcminfo \
+    tinyplay \
+
 # Fasatboot
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
