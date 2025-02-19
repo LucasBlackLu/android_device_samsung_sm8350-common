@@ -9,4 +9,7 @@
 <resources>
     <!-- Default for Settings.System.USER_ROTATION -->
     <integer name="def_user_rotation">0</integer>
+
+    <!-- Default accelerometer rotation -->
+    <bool name="def_accelerometer_rotation">false</bool>
 </resources>
