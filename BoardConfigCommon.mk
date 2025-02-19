@@ -60,6 +60,10 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
 
+# Camera
+USE_CAMERA_STUB := false
+USE_DEVICE_SPECIFIC_CAMERA := true
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/compatibility_matrix.device.xml
