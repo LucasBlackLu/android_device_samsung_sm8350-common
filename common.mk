@@ -187,6 +187,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     device/samsung/qcom-common/overlay \
+    $(COMMON_PATH)/overlay \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
