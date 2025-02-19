@@ -11,5 +11,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
