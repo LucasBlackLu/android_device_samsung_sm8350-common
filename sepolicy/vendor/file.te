@@ -22,6 +22,9 @@ type wifi_efs_file, file_type;
 # Files
 type sec_poc_file, file_type;
 
+# Proc
+type proc_last_kmsg, fs_type, proc_type;
+
 # Rootfs
 type carrier_file, fs_type;
 allow carrier_file labeledfs:filesystem associate;
