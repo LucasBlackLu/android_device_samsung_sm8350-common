@@ -1,1 +1,5 @@
 # All unpinned blobs below are extracted from t2qzhx-user 14 UP1A.231005.007 G9960ZHSBGXJ4 release-keys
+
+# Keymaster
+-vendor/lib64/libkeymaster_helper.so
+-vendor/lib64/libskeymaster4device.so
