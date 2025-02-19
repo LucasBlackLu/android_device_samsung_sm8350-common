@@ -112,6 +112,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth.audio-impl \
     aptxalsOverlay \
     audio.bluetooth.default \
     libbluetooth_audio_session \
@@ -138,6 +139,7 @@ PRODUCT_PACKAGES += \
     libgrallocusage.vendor \
     libstdc++ \
     libstdc++_vendor \
+    libutilscallstack.vendor:64 \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
 
@@ -285,6 +287,8 @@ PRODUCT_PACKAGES += \
     libcodec2_vndk \
     libcodec2_vndk.vendor \
     libsfplugin_ccodec \
+    libjsoncpp \
+    libjsoncpp.vendor \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -450,9 +454,12 @@ PRODUCT_COPY_FILES += \
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 PRODUCT_PACKAGES += \
+    libcurl.vendor:64 \
     libjson \
+    libjsoncpp.vendor:64 \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
+    libsqlite.vendor:64 \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor \
 
@@ -522,6 +529,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
 
+# RenderScripts
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl \
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
@@ -557,6 +568,7 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
+    libdumpstateutil.vendor:64 \
     libsensorndkbridge \
     sensors.samsung \
 
@@ -581,6 +593,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext \
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0.vendor \
+    android.hardware.thermal@1.0.vendor \
 
 # Touch
 PRODUCT_PACKAGES += \
@@ -625,6 +642,7 @@ PRODUCT_COPY_FILES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl \
+    libpng.vendor:32 \
     libwfdaac_vendor \
 
 # Get non-open-source specific aspects
