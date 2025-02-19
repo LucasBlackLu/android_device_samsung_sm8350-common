@@ -70,6 +70,9 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 # CnE
 BOARD_USES_QCNE := true
 
+# DPM
+BOARD_USES_DPM := true
+
 # Filesystem
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \
