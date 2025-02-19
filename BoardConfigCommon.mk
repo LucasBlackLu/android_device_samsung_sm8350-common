@@ -69,5 +69,8 @@ BOARD_USES_QCNE := true
 # Dexpreopt
 BOARD_USES_SYSTEM_OTHER_ODEX := true
 
+# DPM
+BOARD_USES_DPM := true
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
