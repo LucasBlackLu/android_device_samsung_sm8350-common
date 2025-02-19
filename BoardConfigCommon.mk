@@ -186,8 +186,17 @@ TARGET_SYSTEM_DLKM_PROP += $(COMMON_PATH)/system_dlkm.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
-# Rootfs
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
+# Recovery
+BOARD_HAS_DOWNLOAD_MODE := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_RAMDISK_USE_LZ4 := true
+BOARD_RECOVERY_MKBOOTIMG_ARGS += --header_version 2
+TARGET_NO_RECOVERY := false
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/vendor/etc/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+TARGET_USERIMAGES_SPARSE_F2FS_DISABLED := false
+TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USES_MKE2FS := true
 
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
