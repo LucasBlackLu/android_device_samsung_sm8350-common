@@ -438,10 +438,12 @@ vendor/lib64/vendor.display.postproc@1.0.so
 
 # Display (SDM)
 vendor/lib/libsdm-color.so
+vendor/lib/libsdm-colormgr-algo.so
 vendor/lib/libsdm-diag.so
 vendor/lib/libsdm-disp-vndapis.so
 vendor/lib/libsdmextension.so
 vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-colormgr-algo.so
 vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib64/libsdmextension.so
