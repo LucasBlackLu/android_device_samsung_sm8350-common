@@ -43,5 +43,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/rootdir/vendor/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
+
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc \
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
