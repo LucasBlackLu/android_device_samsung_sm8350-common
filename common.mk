@@ -71,6 +71,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.gatekeeper=mdfpp \
 
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.4-hal \
+    android.hardware.graphics.composer@2.4-service \
+    libion \
+    libvulkan \
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
