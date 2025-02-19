@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BOARD_VENDOR := samsung
+
 COMMON_PATH := device/samsung/sm8350-common
 
 # Architecture
@@ -29,6 +31,9 @@ TARGET_BOOTLOADER_BOARD_NAME := lahaina
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
+
+# Keymaster
+TARGET_KEYMASTER_VARIANT := samsung
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296

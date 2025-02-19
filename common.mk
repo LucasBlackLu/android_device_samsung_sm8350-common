@@ -13,6 +13,29 @@ COMMON_PATH := device/samsung/sm8350-common
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.gatekeeper=mdfpp \
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service \
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service.samsung \
+    libkeymaster4support.vendor:64 \
+    libkeymaster4_1support.vendor:64 \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=mdfpp \
+    ro.security.keystore.keytype=sakv2,gak \
+
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
