@@ -551,6 +551,7 @@ PRODUCT_PACKAGES += \
     libnetutils.vendor \
     librilutils \
     libxml2 \
+    secril_config_svc \
 
 # SamsungAdvancedDisplay
 PRODUCT_PACKAGES += \
