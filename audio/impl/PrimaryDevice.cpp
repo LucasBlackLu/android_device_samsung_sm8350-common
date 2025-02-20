@@ -24,6 +24,10 @@ namespace audio {
 namespace CPP_VERSION {
 namespace implementation {
 
+namespace util {
+using namespace ::android::hardware::audio::CORE_TYPES_CPP_VERSION::implementation::util;
+}
+
 PrimaryDevice::PrimaryDevice(audio_hw_device_t* device) : mDevice(new Device(device)) {}
 
 PrimaryDevice::~PrimaryDevice() {
@@ -190,7 +194,7 @@ Return<void> PrimaryDevice::updateAudioPatch(int32_t previousPatch,
 
 // Methods from ::android::hardware::audio::CPP_VERSION::IPrimaryDevice follow.
 Return<Result> PrimaryDevice::setVoiceVolume(float volume) {
-    if (!isGainNormalized(volume)) {
+    if (!util::isGainNormalized(volume)) {
         ALOGW("Can not set a voice volume (%f) outside [0,1]", volume);
         return Result::INVALID_ARGUMENTS;
     }
@@ -205,29 +209,25 @@ Return<Result> PrimaryDevice::setMode(AudioMode mode) {
      * For the g_call_sim_slot parameter 0x01 describes SIM1 and 0x02 SIM2.
      */
 
-    char simSlot1[92], simSlot2[92];
+    char simSlot[92];
 
-    // These props return either 0 (not calling),
-    // or 1 (SIM is calling)
-    property_get("vendor.calls.ongoing0", simSlot1, "");
-    property_get("vendor.calls.ongoing1", simSlot2, "");
+    // This prop returns either -1 (no SIM is calling),
+    // 0 (SIM1 is calling) or 1 (SIM2 is calling)
+    property_get("vendor.calls.slotid", simSlot, "");
 
-    // Wait until one sim slot reports a call
-    if (mode == AudioMode::IN_CALL) {
-        while (strcmp(simSlot1, "0") == 0 && strcmp(simSlot2, "0") == 0) {
-            std::this_thread::sleep_for(std::chrono::milliseconds(50));
-            property_get("vendor.calls.ongoing0", simSlot1, "");
-            property_get("vendor.calls.ongoing1", simSlot2, "");
-        }
+    // Wait until RIL reports which SIM is being used
+    while (strcmp(simSlot, "-1") == 0 && mode == AudioMode::IN_CALL) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
+        property_get("vendor.calls.slotid", simSlot, "");
     }
 
-    if (strcmp(simSlot1, "1") == 0) {
+    if (strcmp(simSlot, "0") == 0) {
         // SIM1
         mDevice->halSetParameters("call_state=2;g_call_state=2;g_call_sim_slot=0x01");
-    } else if (strcmp(simSlot2, "1") == 0) {
+    } else if (strcmp(simSlot, "1") == 0) {
         // SIM2
         mDevice->halSetParameters("call_state=2;g_call_state=2;g_call_sim_slot=0x02");
-    } else if (strcmp(simSlot1, "0") == 0 && strcmp(simSlot2, "0") == 0) {
+    } else if (strcmp(simSlot, "-1") == 0) {
         // No call
         mDevice->halSetParameters("call_state=1;g_call_state=1");
     }
@@ -354,7 +354,7 @@ Return<Result> PrimaryDevice::setBtHfpSampleRate(uint32_t sampleRateHz) {
     return mDevice->setParam(AUDIO_PARAMETER_KEY_HFP_SET_SAMPLING_RATE, int(sampleRateHz));
 }
 Return<Result> PrimaryDevice::setBtHfpVolume(float volume) {
-    if (!isGainNormalized(volume)) {
+    if (!util::isGainNormalized(volume)) {
         ALOGW("Can not set BT HFP volume (%f) outside [0,1]", volume);
         return Result::INVALID_ARGUMENTS;
     }

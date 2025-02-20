@@ -7,7 +7,9 @@
 #ifndef ANDROID_HARDWARE_AUDIO_UTIL_H
 #define ANDROID_HARDWARE_AUDIO_UTIL_H
 
-#include PATH(android/hardware/audio/FILE_VERSION/types.h)
+// clang-format off
+#include PATH(android/hardware/audio/CORE_TYPES_FILE_VERSION/types.h)
+// clang-format on
 
 #include <algorithm>
 #include <vector>
@@ -17,18 +19,18 @@
 namespace android {
 namespace hardware {
 namespace audio {
-namespace CPP_VERSION {
+namespace CORE_TYPES_CPP_VERSION {
 namespace implementation {
 
-using namespace ::android::hardware::audio::common::CPP_VERSION;
-using namespace ::android::hardware::audio::CPP_VERSION;
+using namespace ::android::hardware::audio::common::COMMON_TYPES_CPP_VERSION;
+using namespace ::android::hardware::audio::CORE_TYPES_CPP_VERSION;
+
+namespace util {
 
 /** @return true if gain is between 0 and 1 included. */
 constexpr bool isGainNormalized(float gain) {
     return gain >= 0.0 && gain <= 1.0;
 }
-
-namespace util {
 
 template <typename T>
 inline bool element_in(T e, const std::vector<T>& v) {
@@ -62,7 +64,7 @@ static inline Result analyzeStatus(const char* className, const char* funcName, 
 
 }  // namespace util
 }  // namespace implementation
-}  // namespace CPP_VERSION
+}  // namespace CORE_TYPES_CPP_VERSION
 }  // namespace audio
 }  // namespace hardware
 }  // namespace android
