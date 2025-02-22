@@ -1,37 +1,12 @@
-
-# Copyright (c) 2018-2021, The Linux Foundation. All rights reserved.
+# Copyright (C) 2018 The Android Open Source Project
 #
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are
-# met:
-#     * Redistributions of source code must retain the above copyright
-#       notice, this list of conditions and the following disclaimer.
-#     * Redistributions in binary form must reproduce the above
-#       copyright notice, this list of conditions and the following
-#       disclaimer in the documentation and/or other materials provided
-#       with the distribution.
-#     * Neither the name of The Linux Foundation nor the names of its
-#       contributors may be used to endorse or promote products derived
-#       from this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
-# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
-# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
-# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
-# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
-# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
+# Display configuration common for all android devices
 #
 
-on post-fs-data
+
+on init
 # Permissions for Display
 # Brightness Permission
-	wait /sys/class/lcd/panel/alpm
 	chown system system /sys/class/backlight/panel0-backlight/brightness
 	chmod 0664 /sys/class/backlight/panel0-backlight/brightness
 
@@ -40,27 +15,6 @@ on post-fs-data
 
 	chown system system /sys/class/leds/lcd-backlight/brightness
 	chmod 0664 /sys/class/leds/lcd-backlight/brightness
-
-# ECC
-	chown system system /sys/class/lcd/panel/ecc
-	chmod 0660 /sys/class/lcd/panel/ecc
-
-	chown system system /sys/class/lcd/panel1/ecc
-	chmod 0660 /sys/class/lcd/panel1/ecc
-
-# UDC data
-	chown system system /sys/class/lcd/panel/udc_data
-	chmod 0660 /sys/class/lcd/panel/udc_data
-
-	chown system system /sys/class/lcd/panel1/udc_data
-	chmod 0660 /sys/class/lcd/panel1/udc_data
-
-# UDC factory data
-	chown system system /sys/class/lcd/panel/udc_fac
-	chmod 0660 /sys/class/lcd/panel/udc_fac
-
-	chown system system /sys/class/lcd/panel1/udc_fac
-	chmod 0660 /sys/class/lcd/panel1/udc_fac
 
 # HMT
 	chown system system /sys/class/lcd/panel/hmt_on
@@ -397,6 +351,7 @@ on post-fs-data
 	chown system system /sys/class/lcd/panel1/ldu_correction
 	chmod 0660 /sys/class/lcd/panel1/ldu_correction
 	chown radio system /sys/class/lcd/panel1/force_flip
+	chown system system /sys/class/lcd/panel/panel_vcom_type
 
 # COPR
 	chown system system /sys/class/lcd/panel/copr_roi
@@ -421,8 +376,14 @@ on post-fs-data
 	chown system system /sys/class/lcd/panel/self_mask
 	chmod 0660 /sys/class/lcd/panel/self_mask
 
+	chown system system /sys/class/lcd/panel/self_mask_udc
+	chmod 0660 /sys/class/lcd/panel/self_mask_udc
+
 	chown system system /sys/class/lcd/panel1/self_mask
 	chmod 0660 /sys/class/lcd/panel1/self_mask
+
+	chown system system /sys/class/lcd/panel1/self_mask_udc
+	chmod 0660 /sys/class/lcd/panel1/self_mask_udc
 
 	chown system system /sys/class/lcd/panel/self_mask_check
 	chmod 0660 /sys/class/lcd/panel/self_mask_check
@@ -506,6 +467,8 @@ on post-fs-data
 # VRR
 	chown system system /sys/class/lcd/panel/vrr
 	chmod 0440 /sys/class/lcd/panel/vrr
+	chown system system /sys/class/lcd/panel/vrr_state
+	chmod 0440 /sys/class/lcd/panel/vrr_state
 	chown system system /sys/class/lcd/panel/vrr_lfd
 	chmod 0660 /sys/class/lcd/panel/vrr_lfd
 	chown system system /sys/class/drm/card0/device/perf_mode
@@ -525,5 +488,31 @@ on post-fs-data
 	chown system system /dev/sec_display_debug
 	chmod 0660 /dev/sec_display_debug
 
-	setprop system.display_driver.ready true
+# vendor graphics trace points - perfetto-trace
+    chmod 0660 /sys/kernel/debug/tracing/events/drm/enable
+    chmod 0660 /sys/kernel/tracing/events/drm/enable
+    chmod 0660 /sys/kernel/debug/events/tracing/sde/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/enable
 
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_cmd_release_bw/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_cmd_release_bw/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_encoder_underrun/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_encoder_underrun/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_evtlog/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_evtlog/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_calc_crtc/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_calc_crtc/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_crtc_update/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_crtc_update/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_set_ot/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_set_ot/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_set_qos_luts/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_set_qos_luts/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_uidle_cntr/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_uidle_cntr/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_uidle_status/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_uidle_status/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/sde_perf_update_bus/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/sde_perf_update_bus/enable
+    chmod 0660 /sys/kernel/debug/tracing/events/sde/tracing_mark_write/enable
+    chmod 0660 /sys/kernel/tracing/events/sde/tracing_mark_write/enable	
