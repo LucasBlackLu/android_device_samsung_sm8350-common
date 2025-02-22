@@ -49,7 +49,7 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.samsung.power.rc",
+    name: "init.samsung.connector.rc",
     src: "vendor/etc/init/hw/init.samsung.power.rc",
     sub_dir: "init/hw",
     vendor: true,
@@ -93,13 +93,6 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.ramplus.rc",
     src: "vendor/etc/init/init.ramplus.rc",
-    sub_dir: "init/",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.vendor.onebinary.rc",
-    src: "vendor/etc/init/init.vendor.onebinary.rc",
     sub_dir: "init/",
     vendor: true,
 }
@@ -154,15 +147,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "wifi_qcom.rc",
-    src: "vendor/etc/init/wifi_qcom.rc",
+    name: "wifi_brcm.rc",
+    src: "vendor/etc/init/wifi_brcm.rc",
     sub_dir: "init/",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "wifi_sm6375.rc",
-    src: "vendor/etc/init/wifi_sm6375.rc",
+    name: "wifi_sm8350.rc",
+    src: "vendor/etc/init/wifi_sm8350.rc",
     sub_dir: "init/",
     vendor: true,
 }
@@ -187,15 +180,10 @@ sh_binary {
     vendor: true,
 }
 
-sh_binary {
-    name: "init.kernel.post_boot-blair.sh",
-    src: "vendor/bin/init.kernel.post_boot-blair.sh",
-    vendor: true,
-}
 
 sh_binary {
-    name: "init.kernel.post_boot-holi.sh",
-    src: "vendor/bin/init.kernel.post_boot-holi.sh",
+    name: "init.kernel.post_boot-lahaina.sh",
+    src: "vendor/bin/init.kernel.post_boot-lahaina.sh",
     vendor: true,
 }
 
@@ -262,30 +250,6 @@ sh_binary {
 sh_binary {
     name: "init.qti.chg_policy.sh",
     src: "vendor/bin/init.qti.chg_policy.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qti.early_init.sh",
-    src: "vendor/bin/init.qti.early_init.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qti.kernel.debug.sh",
-    src: "vendor/bin/init.qti.kernel.debug.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qti.kernel.debug-blair.sh",
-    src: "vendor/bin/init.qti.kernel.debug-blair.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qti.kernel.debug-holi.sh",
-    src: "vendor/bin/init.qti.kernel.debug-holi.sh",
     vendor: true,
 }
 

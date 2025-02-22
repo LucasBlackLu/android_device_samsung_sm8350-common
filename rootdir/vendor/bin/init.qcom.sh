@@ -465,8 +465,8 @@ case "$buildvariant" in
 esac
 
 #enable coresight for diag_mdlog_system over qdss
-chown -h root.oem_2902 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/block_size
-chmod 660 /sys/devices/platform/soc/8048000.tmc/coresight-tmc-etr/block_size
+chown -h root.oem_2902 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size
+chmod 660 /sys/devices/platform/soc/6048000.tmc/coresight-tmc-etr/block_size
 
 # disable ftrace log on coresight stm buffer 
 case "$buildvariant" in
