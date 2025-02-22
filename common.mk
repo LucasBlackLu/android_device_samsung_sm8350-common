@@ -209,7 +209,10 @@ PRODUCT_PACKAGES += \
 
 
 # Namespaces
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    bootable/deprecated-ota \
+    hardware/samsung \
 
 # Partitions
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -320,6 +323,23 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(COMMON_PATH)/configs/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.3-service.dual_role_usb \
+    android.hardware.usb-service.samsung \
+    android.hardware.usb@1.0.vendor \
+    android.hardware.usb@1.1.vendor \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+
+# Vendor Service Manager
+PRODUCT_PACKAGES += \
+    vndservicemanager \
+
+# WiFi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
