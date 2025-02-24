@@ -112,8 +112,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/manifest_lahaina.xml
 
-DEVICE_MATRIX_FILE := \
-    $(COMMON_PATH)/compatibility_matrix.xml
+# Init
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm8350
+TARGET_RECOVERY_DEVICE_MODULES := libinit_sm8350
 
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
