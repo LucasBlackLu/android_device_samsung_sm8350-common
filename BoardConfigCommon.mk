@@ -171,7 +171,8 @@ SOONG_CONFIG_samsungCameraVars_needs_sec_reserved_field := true
 TARGET_KEYMASTER_VARIANT := samsung
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_samsung_sm7325
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm8350
+TARGET_RECOVERY_DEVICE_MODULES := libinit_sm8350
 
 # HIDL manifests
 DEVICE_MANIFEST_SKUS := lahaina 

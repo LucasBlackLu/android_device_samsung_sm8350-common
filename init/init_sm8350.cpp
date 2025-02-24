@@ -10,10 +10,9 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
-#include "init_sm7325.h"
+#include "init_sm8350.h"
 
-#define MODEL_NAME_LEN 5
-#define MODEL_NAME_LEN_M52 6
+#define MODEL_NAME_S21 5
 
 static void property_override(char const prop[], char const value[]) {
     prop_info *pi;
@@ -37,10 +36,10 @@ void vendor_load_properties()
 {
     const std::string bootloader = android::base::GetProperty("ro.bootloader", "");
     std::string bl_model;
-    if (bootloader.substr(0, MODEL_NAME_LEN_M52) == "M526BR") {
-        bl_model = bootloader.substr(0, MODEL_NAME_LEN_M52);
+    if (bootloader.substr(0, MODEL_NAME_S21 ) == "G9910") {
+        bl_model = bootloader.substr(0, MODEL_NAME_S21 );
     } else {
-        bl_model = bootloader.substr(0, MODEL_NAME_LEN);
+        bl_model = bootloader.substr(0, MODEL_NAME_S21 );
     }
 
     std::string model;
@@ -58,11 +57,11 @@ void vendor_load_properties()
     }
 
     if (device.size() == 0) {
-        LOG(ERROR) << "Could not detect device, forcing a52sxq";
-        device = "a52sxq";
+        LOG(ERROR) << "Could not detect device, forcing o1q";
+        device = "o1q";
     }
 
-    name = device + "xx";
+    name = device + "zhx";
 
     LOG(INFO) << "Found bootloader: %s", bootloader.c_str();
     LOG(INFO) << "Setting ro.product.model: %s", model.c_str();
