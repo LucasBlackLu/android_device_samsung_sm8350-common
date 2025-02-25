@@ -283,6 +283,11 @@ PRODUCT_PACKAGES += \
     libkeymaster4support.vendor:64 \
     libkeymaster4_1support.vendor:64 \
 
+# Keymint
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/android.hardware.hardware_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.xml \
+    $(LOCAL_PATH)/configs/permissions/android.hardware.strongbox_keystore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.strongbox_keystore.xml
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.samsung \
