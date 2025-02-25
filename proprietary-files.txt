@@ -606,8 +606,16 @@ vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
 # Keymaster
+vendor/lib/libkeymasterdeviceutils.so
+vendor/lib/libsfplugin_ccodec_utils.so
+vendor/lib/libspcom.so
+vendor/lib64/libhermes_cred.so
 -vendor/lib64/libkeymaster_helper.so
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libqtikeymaster4.so
+vendor/lib64/libsfplugin_ccodec_utils.so
 -vendor/lib64/libskeymaster4device.so|246a253acdd4a4390819c305f868b1ff262c0102
+vendor/lib64/libspcom.so
 
 # Light
 vendor/lib/hw/lights.lahaina.so
