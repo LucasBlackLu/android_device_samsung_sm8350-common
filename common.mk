@@ -178,6 +178,7 @@ PRODUCT_PACKAGES += \
     libsdmcore \
     libsdmutils \
     libtinyxml \
+	libui_shim.vendor \
     memtrack.default \
 
 PRODUCT_PACKAGES += \
