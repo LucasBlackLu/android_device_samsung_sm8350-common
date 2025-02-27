@@ -903,6 +903,7 @@ vendor/lib/libconfigdb.so
 vendor/lib/libdsi_netctrl.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
+vendor/lib/libmdmdetect.so
 vendor/lib/libnetmgr.so
 vendor/lib/libnetmgr_common.so
 vendor/lib/libqcmaputils.so
@@ -912,12 +913,14 @@ vendor/lib/libqmi_client_helper.so
 vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmiservices.so
+vendor/lib/libqrtr.so
 vendor/lib/libqsocket.so
 vendor/lib/libxml.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
+vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libnetmgr_common.so
 vendor/lib64/libnlnetmgr.so
@@ -928,6 +931,7 @@ vendor/lib64/libqmi_client_helper.so
 vendor/lib64/libqmi_client_qmux.so
 vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmiservices.so
+vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libril_sem.so
 vendor/lib64/libsec-ril.so|9775f8f7ecb8a2194949a07363b149d2d86717d6
