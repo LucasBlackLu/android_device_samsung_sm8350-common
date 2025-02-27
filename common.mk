@@ -51,6 +51,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/init/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/fstab.qcom
 
 # Kernel
+PRODUCT_ENABLE_UFFD_GC := true
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # Partitions
