@@ -10,6 +10,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 COMMON_PATH := device/samsung/sm8350-common
 
+# AID
+PRODUCT_PACKAGES += \
+    fs_config_files \
+
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 
