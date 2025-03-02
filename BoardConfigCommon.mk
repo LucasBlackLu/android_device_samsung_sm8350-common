@@ -189,8 +189,6 @@ TARGET_SYSTEM_DLKM_PROP += $(COMMON_PATH)/system_dlkm.prop
 TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
-<<<<<<< HEAD
-=======
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
@@ -207,8 +205,7 @@ TARGET_USES_MKE2FS := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Rootfs
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
->>>>>>> 3cd8f0405 (sm8350-common: Setup default recovery flags)
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
