@@ -201,5 +201,8 @@ TARGET_USES_MKE2FS := true
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Rootfs
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
