@@ -1,0 +1,11 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "android.hidl.base@1.0",
+    shared_libs: ["libhidlbase"],
+    system_ext_specific: true,
+    vendor_available: true,
+}
