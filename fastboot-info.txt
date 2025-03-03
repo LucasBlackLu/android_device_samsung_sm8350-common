@@ -1,0 +1,10 @@
+version 3
+flash boot
+flash dtbo
+flash odm
+flash product
+flash recovery
+flash --apply-vbmeta vbmeta
+flash system
+flash vendor
+flash vendor_boot
