@@ -123,7 +123,7 @@ DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/manifest_lahaina.xml
 
 DEVICE_MATRIX_FILE := \
-    $(COMMON_PATH)/compatibility_matrix.xml
+    hardware/qcom-caf/common/compatibility_matrix.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm8350
