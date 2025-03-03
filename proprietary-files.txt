@@ -54,6 +54,7 @@ vendor/lib/hw/audio.primary.default.so
 vendor/lib/hw/audio.primary.lahaina.so
 vendor/lib/lib_SamsungRec_08020.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
+vendor/lib/lib_lvacfs.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/liba2dpoffload.so
 vendor/lib/libadm.so
