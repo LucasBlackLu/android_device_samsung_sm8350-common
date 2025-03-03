@@ -220,6 +220,8 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
 
 # Fasatboot
+TARGET_BOARD_FASTBOOT_INFO_FILE := $(COMMON_PATH)/fastboot-info.txt
+
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd \
