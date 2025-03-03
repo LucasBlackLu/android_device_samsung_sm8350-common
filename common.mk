@@ -404,6 +404,9 @@ PRODUCT_COPY_FILES += \
 # QMI
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
+PRODUCT_PACKAGES += \
+    libjson \
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(COMMON_PATH)/configs/qmi,$(TARGET_COPY_OUT_VENDOR)/etc/) \
     system/core/libprocessgroup/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
