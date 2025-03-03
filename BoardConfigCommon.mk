@@ -114,7 +114,7 @@ DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/manifest_lahaina.xml
 
 DEVICE_MATRIX_FILE := \
-    $(COMMON_PATH)/compatibility_matrix.xml
+    hardware/qcom-caf/common/compatibility_matrix.xml
 
 # Kernel
 BOARD_DTB_OFFSET := 0x01f00000
