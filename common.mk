@@ -52,6 +52,7 @@ PRODUCT_PACKAGES += \
     cplay \
     libaudiofoundation \
     libaudioroute \
+    libaudioroute.vendor \
     libaudioutils \
     libtinyalsa \
     libtinycompress \
@@ -514,6 +515,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.sim-V1-ndk.vendor:64 \
     android.hardware.radio.voice-V1-ndk.vendor:64 \
     android.hardware.secure_element@1.0.vendor \
+    libnetutils.vendor \
     librilutils \
     libxml2 \
 
