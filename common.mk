@@ -129,8 +129,16 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.frameworks.cameraservice.common@2.0.vendor \
+    android.frameworks.cameraservice.common-V1-ndk.vendor \
+    android.frameworks.cameraservice.device@2.1.vendor \
+    android.frameworks.cameraservice.device-V1-ndk.vendor \
+    android.frameworks.cameraservice.service@2.2.vendor \
+    android.hardware.camera.device@3.7.vendor \
+    android.hardware.camera.device-V2-ndk.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
+    android.hardware.camera.provider@2.7.vendor \
     libcamera2ndk_vendor \
     libdng_sdk \
     libdng_sdk.vendor \
