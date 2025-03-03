@@ -174,6 +174,8 @@ ro.hardware.keystore_desede=true
 ro.hardware.lights=qcom
 
 # Media
+debug.media.codec2=2
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 ro.config.vc_call_vol_steps=8
 
 # NFC
@@ -188,7 +190,7 @@ ro.vendor.nfc.support.othercategory=true
 ro.vendor.nfc.support.uicc=true
 
 # OMX
-debug.stagefright.ccodec=4
+debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 
 # PASR
