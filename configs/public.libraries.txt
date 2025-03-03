@@ -9,3 +9,4 @@ libprotobuf-cpp-lite.so
 libqti-perfd-client.so
 libsdsprpc.so
 libswldc_capture_core.camera.samsung.so
+sensors.samsung.so
