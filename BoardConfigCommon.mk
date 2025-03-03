@@ -79,6 +79,7 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     $(COMMON_PATH)/compatibility_matrix.device.xml
 
 DEVICE_MANIFEST_FILE := \
