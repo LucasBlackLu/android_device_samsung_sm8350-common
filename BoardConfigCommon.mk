@@ -131,6 +131,7 @@ BOARD_DTB_OFFSET := 0x01f00000
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom androidboot.memcg=1 \
+    androidboot.selinux=permissive \
     androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 \
     cgroup.memory=nokmem,nosocket \
     cpuinfo.chipname=SM8350 \
