@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * SPDX-FileCopyrightText: The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
+ */
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="mdnie_scenario_entries" translatable="false">
+        <item>LineageOS (default)</item>
+        <item>Video</item>
+        <item>Video warm</item>
+        <item>Video cold</item>
+        <item>Camera</item>
+        <item>Navigation</item>
+        <item>Gallery</item>
+        <item>Video call</item>
+        <item>Browser</item>
+        <item>eBook</item>
+        <item>E-mail</item>
+        <item>Digital television</item>
+    </string-array>
+
+    <string-array name="mdnie_scenario_entries_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>16</item>
+    </string-array>
+</resources>
