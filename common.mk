@@ -516,6 +516,7 @@ PRODUCT_PACKAGES += \
     librilutils \
     libxml2 \
     secril_config_svc \
+    sehradiomanager \
 
 # SamsungAdvancedDisplay
 PRODUCT_PACKAGES += \
