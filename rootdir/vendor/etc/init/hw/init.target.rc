@@ -190,6 +190,10 @@ on property:ro.boot.debug_level=0x494d
     setprop vendor.fastrpc.process.attrs 1
     setprop vendor.fastrpc.debug.trace 1
 
+    # Load WLAN driver
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/ qca_cld3_wlan qca_cld3_qca6390
+    exec_background u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules/5.4-gki qca_cld3_wlan qca_cld3_qca6390
+
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
 
@@ -260,3 +264,6 @@ service fan_control_turn_off /vendor/bin/fan_control 0
     user root
     disabled
     oneshot
+
+on property:ro.boot.debug_level=0x494d
+   start vendor.cnss_diag
