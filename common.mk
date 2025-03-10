@@ -134,34 +134,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
 
-# Camera
-PRODUCT_PACKAGES += \
-    android.frameworks.cameraservice.common@2.0.vendor \
-    android.frameworks.cameraservice.common-V1-ndk.vendor \
-    android.frameworks.cameraservice.device@2.1.vendor \
-    android.frameworks.cameraservice.device-V1-ndk.vendor \
-    android.frameworks.cameraservice.service@2.2.vendor \
-    android.hardware.camera.device@3.7.vendor \
-    android.hardware.camera.device-V2-ndk.vendor \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.7.vendor \
-    libcamera2ndk_vendor \
-    libdng_sdk \
-    libdng_sdk.vendor \
-    libgui_vendor:32 \
-    libgrallocusage.vendor \
-    libstdc++ \
-    libstdc++_vendor \
-    libutilscallstack.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor \
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
-    frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
-    frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml \
-
 # CAS
 PRODUCT_PACKAGES += \
     android.hardware.cas@1.2-service-lazy \
