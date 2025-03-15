@@ -546,28 +546,6 @@
         <fqname>@1.0::ISehDevicesFactory/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.samsung.hardware.biometrics.face</name>
-        <transport>hwbinder</transport>
-        <version>3.0</version>
-        <version>2.0</version>
-        <interface>
-            <name>ISehBiometricsFace</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::ISehBiometricsFace/default</fqname>
-        <fqname>@3.0::ISehBiometricsFace/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.biometrics.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>3.0</version>
-        <interface>
-            <name>ISehBiometricsFingerprint</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@3.0::ISehBiometricsFingerprint/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.samsung.hardware.bluetooth</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -617,16 +595,6 @@
         </interface>
         <fqname>@2.0::ISehGnss/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.ifaa</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISehIfaa</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISehIfaa/default</fqname>
-    </hal>
     <hal format="aidl">
         <name>vendor.samsung.hardware.media.converter</name>
         <fqname>ISehColorConverterStore/default</fqname>
@@ -640,61 +608,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::ISehMiscPower/default</fqname>
-    </hal>
-    <hal format="hidl" override="true">
-        <name>vendor.samsung.hardware.security.drk</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>ISehDrk</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::ISehDrk/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.security.hdcp.keyprovisioning</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISehHdcpKeyProvisioning</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISehHdcpKeyProvisioning/default</fqname>
-    </hal>
-    <hal format="hidl" override="true">
-        <name>vendor.samsung.hardware.security.sem</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISehSem</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISehSem/default</fqname>
-    </hal>
-    <hal format="hidl" override="true">
-        <name>vendor.samsung.hardware.security.skpm</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISehSkpm</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISehSkpm/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.security.wsm</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISehWsm</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISehWsm/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.samsung.hardware.snap</name>
-        <fqname>ISehSnap/default</fqname>
-        <fqname>ISehSnap/secsnap</fqname>
     </hal>
     <kernel target-level="5"/>
 </manifest>
