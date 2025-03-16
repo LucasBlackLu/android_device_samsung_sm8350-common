@@ -180,7 +180,6 @@ BOARD_AVB_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
 # Wi-Fi
-BOARD_WLAN_BCMDHD_SAE                         := true
 BOARD_WLAN_DEVICE                             := bcmdhd
 BOARD_WPA_SUPPLICANT_DRIVER                   := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB              := lib_driver_cmd_bcmdhd
@@ -191,6 +190,7 @@ WIFI_AVOID_IFACE_RESET_MAC_CHANGE             := true
 WIFI_FEATURE_HOSTAPD_11AX                     := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE              := true
 WPA_SUPPLICANT_VERSION                        := VER_0_8_X
+$(call soong_config_set,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
 
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
