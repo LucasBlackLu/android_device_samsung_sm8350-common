@@ -948,6 +948,9 @@ vendor/lib64/vendor.samsung.hardware.radio@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 vendor/lib64/vendor.samsung.hardware.radio@2.2.so
 
+# Secure Element
+vendor/etc/libese-nxp.conf
+
 # Sensors
 vendor/bin/factory.ssc
 vendor/lib/libsensorslog.so
