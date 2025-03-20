@@ -49,7 +49,6 @@ type sysfs_input, sysfs_type, r_fs_type, fs_type;
 type sysfs_sec_key, sysfs_type, r_fs_type, fs_type;
 type sysfs_sensors, sysfs_type, r_fs_type, fs_type;
 type sysfs_sec_touchscreen, sysfs_type, r_fs_type, fs_type;
-type sysfs_virtual, sysfs_type, r_fs_type, fs_type;
 type sysfs_wifi, sysfs_type, r_fs_type, fs_type;
 
 # SysFS RW
