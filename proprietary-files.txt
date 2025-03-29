@@ -48,6 +48,10 @@ vendor/lib64/libSNPE.so
 vendor/lib64/libsnpe_wrapper.so
 vendor/lib64/libsnpe_dsp_domains_v3.so
 
+# ANT
+system_ext/lib/com.qualcomm.qti.ant@1.0.so
+system_ext/lib64/com.qualcomm.qti.ant@1.0.so
+
 # Audio
 vendor/lib/libaudioparsers.so
 vendor/lib/libsecaudioinfo.so
@@ -63,7 +67,7 @@ vendor/lib/libsamsungVoipResampler.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/librecordalive.so
-vendor/lib/lib_SamsungRec_07010.so
+vendor/lib/lib_SamsungRec_08020.so
 vendor/lib/libexthwplugin.so
 vendor/lib/libsndmonitor.so
 vendor/lib/libbatterylistener.so
@@ -118,29 +122,20 @@ system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 
 # Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
+vendor/bin/hw/android.hardware.bluetooth@1.0-service
 vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 vendor/lib/hw/vendor.samsung.hardware.bluetooth.a2dp@1.0-impl.so
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/vendor.samsung.hardware.bluetooth@2.0.so
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/etc/init/android.hardware.bluetooth@1.0-service.rc
 vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 vendor/lib64/hw/vendor.samsung.hardware.bluetooth.a2dp@1.0-impl.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so
 vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
 vendor/lib/libidl.so
 vendor/lib64/libidl.so
-vendor/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib/libqti_vndfwk_detect.so
 vendor/lib64/libqti_vndfwk_detect.so
 vendor/lib/libbthost_if.so
 vendor/lib64/libbthost_if.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
-
-# Bluetooth firmware
-vendor/firmware/msbtfw11.tlv
-vendor/firmware/msbtfw11.mbn
-vendor/firmware/msnv11.bin
 
 # Camera
 vendor/lib/libsensorndkbridge.so
@@ -157,12 +152,12 @@ vendor/lib/libjpegQtable_interface.so
 vendor/lib/libimagecodec_native.quram.so
 vendor/lib/libHandGesture.camera.samsung.so
 vendor/lib/libhand_interaction.uniplugin@1.0.so
-vendor/lib/libarcsoft_picportrait_video.so
+vendor/lib/libarcsoft_video_super_night.so
 vendor/lib/libcamxstatscore.so
 vendor/lib/libexifa.camera.samsung.so
 vendor/lib/libcamxfdengine.so
 vendor/lib/libcamxqsatalgo.so
-vendor/lib/libarcsoft_super_night_raw.so
+vendor/lib/libarcsoft_super_night_auto_raw.so
 vendor/lib/libjpegencoder_sw.unifunc.so
 vendor/lib/hw/camera.unihal.default.so
 vendor/lib/libbeautyshot.arcsoft.so
@@ -173,7 +168,6 @@ vendor/lib/libscaler_hw.unifunc.so
 vendor/lib/libFace_Landmark_API.camera.samsung.so
 vendor/lib/libOpenCv.camera.samsung.so
 vendor/lib/libscveCommon_stub.so
-vendor/lib/libqcwrappercommon.so
 vendor/lib/libscveObjectSegmentation_stub.so
 vendor/lib/libsocial_image_enhancement.uniplugin@1.0.so
 vendor/lib/libsegmentationeffect.uniplugin@1.0.so
@@ -187,6 +181,8 @@ vendor/lib/libimage_enhancement.arcsoft.so
 vendor/lib/libvideobeauty.uniplugin@1.0.so
 vendor/lib/libscveObjectSegmentation.so
 vendor/lib/liblivefocus_capture_engine.so
+vendor/lib/liblivefocus_preview_engine.so
+vendor/lib/liblivefocus_preview_interface.so
 vendor/lib/libsmartfocus_interface.so
 vendor/lib/libswregistrationalgo.so
 vendor/lib/libhandgesture.arcsoft.so
@@ -196,16 +192,14 @@ vendor/lib/libDualCamBokehCapture.camera.samsung.so
 vendor/lib/libhypermotion_interface.so
 vendor/lib/liblivefocus_preview_interface.so
 vendor/lib/libhigh_dynamic_range_bokeh.so
-vendor/lib/liblivefocus_capture_interface.so
 vendor/lib/libswldc_capture_core.camera.samsung.so
 vendor/lib/libIDDQD_interface.so
-vendor/lib/libSEF.quram.so
 vendor/lib/libcamxtintlessalgo.so
 vendor/lib/libmpbase.so
 vendor/lib/libLocalTM_capture_core.camera.samsung.so
 vendor/lib/libvdis_core.so
-vendor/lib/unihal_main@2.15.so
-vendor/lib/unihal_cutils@2.15.so
+vendor/lib/unihal_android.so
+vendor/lib/unihal_cutils.so
 vendor/lib/unihal_uniplugin@1.0.so
 vendor/lib/libface_landmark.arcsoft.so
 vendor/lib64/libsuper_night_interface.so
@@ -221,13 +215,12 @@ vendor/lib64/libjpegQtable_interface.so
 vendor/lib64/libimagecodec_native.quram.so
 vendor/lib64/libHandGesture.camera.samsung.so
 vendor/lib64/libhand_interaction.uniplugin@1.0.so
-vendor/lib64/libarcsoft_picportrait_video.so
 vendor/lib64/libDLInterface.camera.samsung.so
 vendor/lib64/libcamxstatscore.so
 vendor/lib64/libexifa.camera.samsung.so
 vendor/lib64/libcamxfdengine.so
 vendor/lib64/libcamxqsatalgo.so
-vendor/lib64/libarcsoft_super_night_raw.so
+vendor/lib64/libarcsoft_super_night_auto_raw.so
 vendor/lib64/libjpegencoder_sw.unifunc.so
 vendor/lib64/hw/camera.unihal.default.so
 vendor/lib64/libbeautyshot.arcsoft.so
@@ -239,7 +232,6 @@ vendor/lib64/libscaler_hw.unifunc.so
 vendor/lib64/libFace_Landmark_API.camera.samsung.so
 vendor/lib64/libOpenCv.camera.samsung.so
 vendor/lib64/libscveCommon_stub.so
-vendor/lib64/libqcwrappercommon.so
 vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libsocial_image_enhancement.uniplugin@1.0.so
 vendor/lib64/libsegmentationeffect.uniplugin@1.0.so
@@ -254,6 +246,8 @@ vendor/lib64/libimage_enhancement.arcsoft.so
 vendor/lib64/libvideobeauty.uniplugin@1.0.so
 vendor/lib64/libscveObjectSegmentation.so
 vendor/lib64/liblivefocus_capture_engine.so
+vendor/lib64/liblivefocus_preview_engine.so
+vendor/lib64/liblivefocus_preview_interface.so
 vendor/lib64/libsmartfocus_interface.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libhandgesture.arcsoft.so
@@ -263,16 +257,14 @@ vendor/lib64/libDualCamBokehCapture.camera.samsung.so
 vendor/lib64/libhypermotion_interface.so
 vendor/lib64/liblivefocus_preview_interface.so
 vendor/lib64/libhigh_dynamic_range_bokeh.so
-vendor/lib64/liblivefocus_capture_interface.so
 vendor/lib64/libswldc_capture_core.camera.samsung.so
 vendor/lib64/libIDDQD_interface.so
-vendor/lib64/libSEF.quram.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libLocalTM_capture_core.camera.samsung.so
 vendor/lib64/libvdis_core.so
-vendor/lib64/unihal_main@2.15.so
-vendor/lib64/unihal_cutils@2.15.so
+vendor/lib64/unihal_android.so
+vendor/lib64/unihal_cutils.so
 vendor/lib64/unihal_uniplugin@1.0.so
 vendor/lib64/libface_landmark.arcsoft.so
 vendor/lib/libofflinelog.so
@@ -299,8 +291,6 @@ vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib/libchilog.so
 vendor/lib64/libchilog.so
-vendor/lib/com.qti.settings.kodiak.so
-vendor/lib64/com.qti.settings.kodiak.so
 vendor/lib/com.qti.settings.mannar.so
 vendor/lib64/com.qti.settings.mannar.so
 vendor/lib/com.qti.settings.sdm865.so
@@ -329,8 +319,6 @@ vendor/lib/libcamerapostproc.so
 vendor/lib64/libcamerapostproc.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib64/libcamxexternalformatutils.so
-vendor/lib/libipebpsstriping170.so
-vendor/lib64/libipebpsstriping170.so
 vendor/lib/libipebpsstriping.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib/libcamxifestriping.so
@@ -430,7 +418,7 @@ vendor/lib/libsecnativefeature.so
 vendor/lib64/libsecnativefeature.so
 
 # Gatekeeper
-vendor/lib64/hw/gatekeeper.mdfpp.so|7b185aca7ae62e2b7104d36740587a351cc4867e
+vendor/lib64/hw/gatekeeper.mdfpp.so|fc74f75b74c307e4508b42e210dcec8175876203
 
 # GPS
 -vendor/app/CACertService/CACertService.apk
@@ -609,15 +597,13 @@ vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib64/egl/libGLESv2_adreno.so
 vendor/lib/libadreno_utils.so
 vendor/lib64/libadreno_utils.so
-
-# Display - from XQ-BC72 61.2.A.0.410
-vendor/lib64/libdpps.so|9caf32a0d3636af579ea6e1a6c5638a16ed19444
-vendor/lib64/librcmask.so|8feb479fe590b6aec282ce3342574d9113f80516
-vendor/lib64/libsdm-diag.so|393c9ad3e3ad3210515900627f65bf6e3633226e
-vendor/lib64/libsdmextension.so|4c32026ff8cb1270081881d4def7a2ad05ad0b80
-vendor/lib64/libdisplayskuutils.so|37e4d543c696a5c9f0c1b44fd7299a0bc7dba5e8
-vendor/lib64/libsdm-color.so|a83576915a146492d430711e273b9af9a95d4fed
-vendor/lib64/libqrtrclient.so|2474a708487c269c04afffbf755fff1686c6011c
+vendor/lib64/libdpps.so
+vendor/lib64/librcmask.so
+vendor/lib64/libsdm-diag.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libqrtrclient.so
 
 # Graphics firmware
 vendor/firmware/a660_gmu.bin
@@ -632,7 +618,7 @@ vendor/bin/hw/android.hardware.health@2.1-service-samsung
 vendor/etc/init/android.hardware.health@2.1-service-samsung.rc
 -vendor/etc/vintf/manifest/android.hardware.health@2.1-samsung.xml
 vendor/lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so
-vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so|5a07c2b5878f4bb96d8b37c8b46b4aa86d7c7268
+vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so|013425bf3bae272facfe0089de93f0c1556278a4
 vendor/lib/vendor.samsung.hardware.health@2.0.so
 vendor/lib64/vendor.samsung.hardware.health@2.0.so
 
@@ -659,7 +645,7 @@ vendor/etc/init/ipa_fws.rc
 
 # Keymaster
 vendor/lib64/libkeymaster_helper.so
--vendor/lib64/libskeymaster4device.so|de98a294927f45b84e41b88a2145c7771377715c
+-vendor/lib64/libskeymaster4device.so|246a253acdd4a4390819c305f868b1ff262c0102
 
 # Machine learning
 vendor/lib64/libreffeature.so
@@ -841,7 +827,7 @@ vendor/lib64/libdsi_netctrl.so
 vendor/lib/libqcmaputils.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libengmode_client.so
-vendor/lib64/libsec-ril.so|46d38d55ae2d050f4ee91d3f2fa809a970142ae7
+vendor/lib64/libsec-ril.so|9775f8f7ecb8a2194949a07363b149d2d86717d6
 vendor/lib/libsecril-client.so
 vendor/lib64/libsecril-client.so
 vendor/lib64/libril_sem.so
@@ -851,12 +837,9 @@ vendor/etc/init/dataadpl.rc
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/init/vendor.qti.rmt_storage.rc
-vendor/etc/plmn_delta_usagsm.bin
-vendor/etc/plmn_delta.bin
 vendor/etc/locale/plmn_delta_zh-rCN.bin
 vendor/etc/locale/plmn_delta_zh-rTW.bin
 vendor/etc/locale/plmn_delta_zh-rHK.bin
-vendor/etc/plmn_delta_attaio.bin
 vendor/etc/sec_config_oem
 vendor/etc/pdpcnt-conf.xml
 vendor/lib64/libnlnetmgr.so
@@ -875,17 +858,11 @@ vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/bin/factory.ssc
 vendor/bin/sscrpcd
 vendor/etc/init/vendor.sensors.sscrpcd.rc
-vendor/etc/sensors/config/kodiak_default_sensors.json
 vendor/etc/sensors/config/sns_amd.json
 vendor/etc/sensors/config/sns_amd_sw_disabled.json
 vendor/etc/sensors/config/sns_amd_sw_enabled.json
-vendor/etc/sensors/config/sns_aont.json
 vendor/etc/sensors/config/sns_basic_gestures.json
 vendor/etc/sensors/config/sns_bring_to_ear.json
-vendor/etc/sensors/config/sns_ccd.json
-vendor/etc/sensors/config/sns_ccd_v2_walk.json
-vendor/etc/sensors/config/sns_ccd_v3_1_walk.json
-vendor/etc/sensors/config/sns_ccd_v3_walk.json
 vendor/etc/sensors/config/sns_cm.json
 vendor/etc/sensors/config/sns_dae.json
 vendor/etc/sensors/config/sns_device_orient.json
@@ -897,7 +874,6 @@ vendor/etc/sensors/config/sns_fmv.json
 vendor/etc/sensors/config/sns_fmv_legacy.json
 vendor/etc/sensors/config/sns_geomag_rv.json
 vendor/etc/sensors/config/sns_gyro_cal.json
-vendor/etc/sensors/config/sns_heart_rate.json
 vendor/etc/sensors/config/sns_mag_cal.json
 vendor/etc/sensors/config/sns_mag_cal_legacy.json
 vendor/etc/sensors/config/sns_multishake.json
@@ -909,100 +885,6 @@ vendor/etc/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json
 vendor/etc/sensors/config/sns_tilt_sw_enabled.json
 vendor/etc/sensors/config/sns_tilt_to_wake.json
-vendor/etc/sensors/config/sns_wrist_pedo.json
-vendor/etc/sensors/proto/activities.proto
-vendor/etc/sensors/proto/auto_brightness.proto
-vendor/etc/sensors/proto/auto_rotation.proto
-vendor/etc/sensors/proto/descriptor.proto
-vendor/etc/sensors/proto/nanopb.proto
-vendor/etc/sensors/proto/qti_gravity.proto
-vendor/etc/sensors/proto/sns_accel_cal.proto
-vendor/etc/sensors/proto/sns_accel.proto
-vendor/etc/sensors/proto/sns_activity_recognition.proto
-vendor/etc/sensors/proto/sns_ambient_light.proto
-vendor/etc/sensors/proto/sns_ambient_temperature.proto
-vendor/etc/sensors/proto/sns_amd.proto
-vendor/etc/sensors/proto/sns_aont.proto
-vendor/etc/sensors/proto/sns_async_com_port.proto
-vendor/etc/sensors/proto/sns_basic_gestures.proto
-vendor/etc/sensors/proto/sns_bring_to_ear.proto
-vendor/etc/sensors/proto/sns_cal.proto
-vendor/etc/sensors/proto/sns_ccd_ttw.proto
-vendor/etc/sensors/proto/sns_ccd_walk.proto
-vendor/etc/sensors/proto/sns_client.proto
-vendor/etc/sensors/proto/sns_cmc.proto
-vendor/etc/sensors/proto/sns_cmd.proto
-vendor/etc/sensors/proto/sns_dae.proto
-vendor/etc/sensors/proto/sns_data_acquisition_engine.proto
-vendor/etc/sensors/proto/sns_da_test.proto
-vendor/etc/sensors/proto/sns_device_mode.proto
-vendor/etc/sensors/proto/sns_device_orient.proto
-vendor/etc/sensors/proto/sns_diag.proto
-vendor/etc/sensors/proto/sns_diag_sensor.proto
-vendor/etc/sensors/proto/sns_direct_channel.proto
-vendor/etc/sensors/proto/sns_distance_bound.proto
-vendor/etc/sensors/proto/sns_dpc.proto
-vendor/etc/sensors/proto/sns_ext_svc.proto
-vendor/etc/sensors/proto/sns_facing.proto
-vendor/etc/sensors/proto/sns_flicker.proto
-vendor/etc/sensors/proto/sns_fmv.proto
-vendor/etc/sensors/proto/sns_formatter.proto
-vendor/etc/sensors/proto/sns_free_fall_high_shock.proto
-vendor/etc/sensors/proto/sns_fw.proto
-vendor/etc/sensors/proto/sns_game_rv.proto
-vendor/etc/sensors/proto/sns_geomag_rv.proto
-vendor/etc/sensors/proto/sns_gravity.proto
-vendor/etc/sensors/proto/sns_gyro_cal.proto
-vendor/etc/sensors/proto/sns_gyro.proto
-vendor/etc/sensors/proto/sns_gyro_rot_matrix.proto
-vendor/etc/sensors/proto/sns_hall.proto
-vendor/etc/sensors/proto/sns_heart_beat.proto
-vendor/etc/sensors/proto/sns_heart_rate.proto
-vendor/etc/sensors/proto/sns_hinge_angle.proto
-vendor/etc/sensors/proto/sns_humidity.proto
-vendor/etc/sensors/proto/sns_interrupt.proto
-vendor/etc/sensors/proto/sns_mag_cal.proto
-vendor/etc/sensors/proto/sns_mag.proto
-vendor/etc/sensors/proto/sns_mcmd.proto
-vendor/etc/sensors/proto/sns_motion_detect.proto
-vendor/etc/sensors/proto/sns_multishake.proto
-vendor/etc/sensors/proto/sns_oem1.proto
-vendor/etc/sensors/proto/sns_offbody_detect.proto
-vendor/etc/sensors/proto/sns_pedometer.proto
-vendor/etc/sensors/proto/sns_pedometer_wrist.proto
-vendor/etc/sensors/proto/sns_physical_sensor_test.proto
-vendor/etc/sensors/proto/sns_pose_6dof.proto
-vendor/etc/sensors/proto/sns_ppg.proto
-vendor/etc/sensors/proto/sns_pressure.proto
-vendor/etc/sensors/proto/sns_proximity.proto
-vendor/etc/sensors/proto/sns_psmd.proto
-vendor/etc/sensors/proto/sns_registry.proto
-vendor/etc/sensors/proto/sns_remote_proc_state.proto
-vendor/etc/sensors/proto/sns_resampler.proto
-vendor/etc/sensors/proto/sns_rgb.proto
-vendor/etc/sensors/proto/sns_rmd.proto
-vendor/etc/sensors/proto/sns_rotv.proto
-vendor/etc/sensors/proto/sns_sar.proto
-vendor/etc/sensors/proto/sns_sensor_temperature.proto
-vendor/etc/sensors/proto/sns_sig_motion.proto
-vendor/etc/sensors/proto/sns_signal_sensor.proto
-vendor/etc/sensors/proto/sns_sim_legacy.proto
-vendor/etc/sensors/proto/sns_sim.proto
-vendor/etc/sensors/proto/sns_std_event_gated_sensor.proto
-vendor/etc/sensors/proto/sns_std.proto
-vendor/etc/sensors/proto/sns_std_sensor.proto
-vendor/etc/sensors/proto/sns_std_type.proto
-vendor/etc/sensors/proto/sns_step_detect.proto
-vendor/etc/sensors/proto/sns_suid.proto
-vendor/etc/sensors/proto/sns_thermopile.proto
-vendor/etc/sensors/proto/sns_threshold.proto
-vendor/etc/sensors/proto/sns_tilt.proto
-vendor/etc/sensors/proto/sns_tilt_to_wake.proto
-vendor/etc/sensors/proto/sns_timer.proto
-vendor/etc/sensors/proto/sns_ultra_violet.proto
-vendor/etc/sensors/proto/sns_wake_up_motion.proto
-vendor/etc/sensors/proto/sns_wrist_tilt_gesture.proto
-vendor/etc/sensors/proto/std_ss_algo.proto
 vendor/etc/sensors/sns_reg_config
 vendor/lib/libsensorslog.so
 vendor/lib/libsns_fastRPC_util.so
@@ -1085,14 +967,9 @@ vendor/lib64/libspl.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
 # Wifi
-vendor/bin/cnss-daemon
-vendor/bin/hw/macloader
-vendor/lib/libqsap_sdk.so
-vendor/lib64/libqsap_sdk.so
-vendor/firmware/Data.msc
-vendor/firmware/qca6750/qdss_trace_config.cfg
-vendor/firmware/qca6750/regdb.bin
-vendor/firmware/qca6750/bdwlan.elf1
-vendor/firmware/qca6750/bdwlan.elf2
-vendor/firmware/qca6750/bdwlan.elf
-vendor/firmware/qca6750/bdwlan.elf10
+vendor/firmware/bcmdhd_clm.blob
+vendor/firmware/bcmdhd_mfg.bin_b1
+vendor/firmware/bcmdhd_mon.bin_b1
+vendor/firmware/bcmdhd_sta.bin_b1
+vendor/firmware/nvram.txt_1rh_es43_b1
+vendor/firmware/nvram.txt_CS01_semco_b1
