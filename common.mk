@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/samsung/sm7325-common
+COMMON_PATH := device/samsung/sm8350-common
 
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
@@ -51,10 +51,10 @@ PRODUCT_PACKAGES += \
     vendor.samsung.rilchip.qcom.rc \
     init.vendor.rilcommon.rc \
     init.vendor.sensors.rc \
-    wifi_firmware.rc \
+    wifi_sm8350.rc \
     ueventd.qcom.rc \
     wifi_qcom_wcn6750.rc \
-    wifi_sec.rc
+    wifi_brcm.rc
 
 # Vendor scripts
 PRODUCT_PACKAGES += \
@@ -78,7 +78,7 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@7.0-impl.samsung-sm7325 \
+    android.hardware.audio@7.0-impl.samsung-sm8350 \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.soundtrigger@2.2-impl \
     audio.r_submix.default \
@@ -224,7 +224,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm7325
+    vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm8350
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -385,7 +385,7 @@ PRODUCT_PACKAGES += \
 
 # Touch features
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung_sm7325
+    vendor.lineage.touch@1.0-service.samsung_sm8350
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
@@ -455,4 +455,4 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 
 # Inherit proprietary blobs
-$(call inherit-product, vendor/samsung/sm7325-common/sm7325-common-vendor.mk)
+$(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)

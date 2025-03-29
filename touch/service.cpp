@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.touch@1.0-service.samsung_sm7325"
+#define LOG_TAG "vendor.lineage.touch@1.0-service.samsung_sm8350"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>

@@ -233,11 +233,11 @@ on property:persist.vendor.radio.port_index=""
     setprop sys.usb.config adb
 
 # light sensor
-on property:vendor.post_boot.parsed=1 && property:ro.product.device=m52xq
+on property:vendor.post_boot.parsed=1 && property:ro.product.device=01q
     write /sys/class/sensors/light_sensor/lcd_onoff 0
 
-on property:vendor.post_boot.parsed=1 && property:ro.product.device=a52sxq
+on property:vendor.post_boot.parsed=1 && property:ro.product.device=t2q
     write /sys/class/sensors/light_sensor/lcd_onoff 1
 
-on property:vendor.post_boot.parsed=1 && property:ro.product.device=a73xq
+on property:vendor.post_boot.parsed=1 && property:ro.product.device=p3q
     write /sys/class/sensors/light_sensor/lcd_onoff 0

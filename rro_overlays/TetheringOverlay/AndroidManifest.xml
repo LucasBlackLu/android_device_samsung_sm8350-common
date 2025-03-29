@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.networkstack.tethering.samsung_sm7325"
+    package="com.android.networkstack.tethering.samsung_sm8350"
     android:versionCode="1"
     android:versionName="1.0">
     <application android:hasCode="false" />
