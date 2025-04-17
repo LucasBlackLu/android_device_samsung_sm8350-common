@@ -1,0 +1,5 @@
+# Netflix
+ro.netflix.bsp_rev=Q4350-32962-1
+
+# RIL
+ro.telephony.default_network=33,33
