@@ -582,6 +582,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
 
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.samsung \
+
 # WiFi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
