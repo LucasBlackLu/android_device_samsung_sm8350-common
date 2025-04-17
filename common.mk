@@ -338,6 +338,19 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.1 \
     netutils-wrapper-1.0 \
 
+# OMX
+PRODUCT_PACKAGES += \
+    libmm-omxcore \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
+    libstagefright_softomx_plugin.vendor \
+    libstagefright_softomx.vendor \
+    libstagefrighthw \
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
