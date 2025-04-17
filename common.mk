@@ -378,6 +378,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungDAP \
 
+# SamsungDoze
+PRODUCT_PACKAGES += \
+    SamsungDoze \
+
 # Seccomp Policy
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/seccomp_policy,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy) \
