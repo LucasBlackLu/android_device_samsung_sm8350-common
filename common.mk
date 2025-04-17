@@ -104,6 +104,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
 
+# Automotive/Gearhead
+PRODUCT_PACKAGES += \
+    android.hardware.automotive.vehicle@2.0 \
+    android.hardware.automotive.vehicle@2.0.vendor \
+    android.hardware.automotive.vehicle@2.0-manager-lib \
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
