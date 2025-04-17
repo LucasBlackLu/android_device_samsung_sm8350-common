@@ -9,5 +9,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 COMMON_PATH := device/samsung/sm6375-common
 
+# API
+PRODUCT_SHIPPING_API_LEVEL := 31
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm6375-common/sm6375-common-vendor.mk)
