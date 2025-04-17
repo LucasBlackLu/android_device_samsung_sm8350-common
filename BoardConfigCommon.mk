@@ -114,5 +114,9 @@ DEVICE_MANIFEST_FILE := \
 DEVICE_MATRIX_FILE := \
     $(COMMON_PATH)/compatibility_matrix.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm6375
+TARGET_RECOVERY_DEVICE_MODULES := libinit_sm6375
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm6375-common/BoardConfigVendor.mk

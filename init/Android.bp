@@ -1,0 +1,18 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "libinit_sm6375",
+    recovery_available: true,
+    srcs: ["init_sm6375.cpp"],
+    whole_static_libs: ["libbase"],
+    include_dirs: [
+        "system/libbase/include",
+        "system/core/init"
+    ],
+    shared_libs: [
+        "libbase",
+    ],
+}
