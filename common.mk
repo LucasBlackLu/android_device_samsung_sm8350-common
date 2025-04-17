@@ -564,6 +564,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext \
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext \
+
 # WiFi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
