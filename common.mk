@@ -357,6 +357,8 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # QMI
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+
 PRODUCT_PACKAGES += \
     libcurl.vendor \
     libjson \

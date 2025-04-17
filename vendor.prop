@@ -194,6 +194,9 @@ vendor.pasr.activemode.enabled=false
 # Power
 vendor.power.pasr.enabled=true
 
+# QC Value Addons
+ro.vendor.qti.va_aosp.support=1
+
 # RIL
 keyguard.no_require_sim=true
 persist.sys.radio.force_lte_ca=true
