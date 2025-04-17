@@ -21,6 +21,13 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# ANT+
+PRODUCT_PACKAGES += \
+    AntHalService-Soong \
+    com.dsi.ant.antradio_library \
+    com.dsi.ant@1.0.vendor \
+    com.qualcomm.qti.ant@1.0 \
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.default \
