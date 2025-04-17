@@ -1,46 +1,3 @@
-<!--
-    Input:
-        vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/camera/provider/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/wifi/supplicant/3.1/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/wifi/2.3/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/snap/aidl/secure_device_framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/nfc/2.0/device_framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/media/converter/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/security/engmode/1.0/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/hyper/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/wifi/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/wifi/nan/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/authfw/1.0/vendor.samsung.hardware.authfw@1.0-matrix.xml
-        vendor/samsung/interfaces/authfw/aidl/vendor.samsung.hardware.authfw-matrix.xml
-        vendor/samsung/interfaces/biometrics/face/3.0/face_compatibility_matrix.xml
-        vendor/samsung/interfaces/biometrics/fingerprint/3.0/fingerprint_compatibility_matrix.xml
-        vendor/samsung/interfaces/sysinput/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/tlc/kg/1.1/vendor.samsung.hardware.tlc.kg@1.1-matrix.xml
-        vendor/samsung/system/security/drk/drk_hidl_framework_compatibility_matrix.xml
-        vendor/samsung/system/security/drk/drk_aidl_framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/tlc/payment/1.0/tlc_payment_compatibility_matrix.xml
-        vendor/samsung/interfaces/tlc/iccc/1.0/vendor.samsung.hardware.tlc.iccc@1.0-matrix.xml
-        vendor/samsung/interfaces/tlc/mpos_tui/1.0/vendor.samsung.hardware.tlc.mpos_tui@1.0-matrix.xml
-        vendor/samsung/interfaces/tlc/hdm/1.1/vendor.samsung.hardware.tlc.hdm@1.1-matrix.xml
-        vendor/samsung/interfaces/hyper/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/thermal/1.0/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/light/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/miscpower/2.0/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/vibrator/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/audio/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/security/widevine/keyprov/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/security/widevine/keyprov/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/tlc/ucm/2.0/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/security/wsm/service/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/security/vaultkeeper/2.0/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/security/fkeymaster/aidl/fkeymaster_framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/security/ssu/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/frameworks/av/media/vendor/mpp/aidl/framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/snap/aidl/secure_device_framework_compatibility_matrix.xml
-        vendor/samsung/interfaces/nfc/2.0/device_framework_compatibility_matrix.xml
-        vendor/samsung/hardware/ril/URC/fcm/radio_framework_compatibility_matrix.xml
--->
 <compatibility-matrix version="7.0" type="framework">
     <hal format="aidl" optional="true">
         <name>android.hardware.authsecret.qti.spu</name>
@@ -1699,16 +1656,4 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <sepolicy>
-        <kernel-sepolicy-version>30</kernel-sepolicy-version>
-        <sepolicy-version>29.0</sepolicy-version>
-        <sepolicy-version>30.0</sepolicy-version>
-        <sepolicy-version>31.0</sepolicy-version>
-        <sepolicy-version>32.0</sepolicy-version>
-        <sepolicy-version>33.0</sepolicy-version>
-        <sepolicy-version>34.0</sepolicy-version>
-    </sepolicy>
-    <avb>
-        <vbmeta-version>1.0</vbmeta-version>
-    </avb>
 </compatibility-matrix>
