@@ -59,5 +59,8 @@ TARGET_NO_RPC := true
 USE_CAMERA_STUB := false
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# Charger
+BOARD_CHARGER_ENABLE_SUSPEND := true
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm6375-common/BoardConfigVendor.mk
