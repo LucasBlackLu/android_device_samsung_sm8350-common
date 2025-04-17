@@ -371,6 +371,19 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
 
+# OMX
+PRODUCT_PACKAGES += \
+    libmm-omxcore \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxG711Enc \
+    libOmxQcelp13Enc \
+    libstagefright_softomx_plugin.vendor \
+    libstagefright_softomx.vendor \
+    libstagefrighthw \
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     device/samsung/qcom-common/overlay \
