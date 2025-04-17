@@ -318,6 +318,7 @@ PRODUCT_SOONG_NAMESPACES += \
 # WiFi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
+    WifiOverlay \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
