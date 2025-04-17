@@ -107,9 +107,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service \
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.gatekeeper=mdfpp \
-
 # GNSS/GPS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0 \
@@ -149,10 +146,6 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
     libkeymaster4support.vendor:64 \
     libkeymaster4_1support.vendor:64 \
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.keystore=mdfpp \
-    ro.security.keystore.keytype=sakv2,gak \
 
 # Media
 PRODUCT_COPY_FILES += \
