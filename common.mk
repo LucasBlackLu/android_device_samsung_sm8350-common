@@ -25,6 +25,10 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
 
+# Atrace
+PRODUCT_PACKAGES += \
+    android.hardware.atrace@1.0-service \
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.default \
