@@ -44,6 +44,7 @@ USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
+BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Get non-open-source specific aspects
 include vendor/samsung/sm6375-common/BoardConfigVendor.mk
