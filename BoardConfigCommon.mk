@@ -74,5 +74,8 @@ BOARD_USES_DPM := true
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
+# FM
+BOARD_HAVE_QCOM_FM := false
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm6375-common/BoardConfigVendor.mk
