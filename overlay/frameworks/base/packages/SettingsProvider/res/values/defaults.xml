@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * SPDX-FileCopyrightText: The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
+ */
+-->
+<resources>
+    <!-- Default for Settings.System.USER_ROTATION -->
+    <integer name="def_user_rotation">0</integer>
+</resources>
