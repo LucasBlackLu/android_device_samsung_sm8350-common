@@ -155,6 +155,9 @@ TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
 
+# NFC
+TARGET_USES_NQ_NFC := true
+
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
