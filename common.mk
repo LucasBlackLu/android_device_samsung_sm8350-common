@@ -215,6 +215,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
 
+# QMI
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(COMMON_PATH)/configs/qmi,$(TARGET_COPY_OUT_VENDOR)/etc/) \
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
