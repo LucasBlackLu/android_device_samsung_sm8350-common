@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Copyright (c) 2018-2021 Qualcomm Technologies, Inc.
+    All Rights Reserved.
+    Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+    Not a Contribution.
+
+    Copyright (C) 2012-2017 The Linux Foundation. All rights reserved.
+    Copyright (C) 2012-2013 The Android Open Source Project
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<MediaCodecs>
+    <Encoders>
+        <MediaCodec name="c2.qti.avc.encoder" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="238-238" />
+            <Limit name="measured-frame-rate-720x480" range="123-123" />
+            <Limit name="measured-frame-rate-1280x720" range="50-50" />
+            <Limit name="measured-frame-rate-1920x1080" range="13-20" />
+        </MediaCodec>
+        <MediaCodec name="c2.qti.hevc.encoder" type="video/hevc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="226-226" />
+            <Limit name="measured-frame-rate-720x480" range="121-121" />
+            <Limit name="measured-frame-rate-1280x720" range="49-49" />
+            <Limit name="measured-frame-rate-1920x1080" range="12-17" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.avc.encoder" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="124-176" />
+            <Limit name="measured-frame-rate-720x480" range="126-178" />
+            <Limit name="measured-frame-rate-1280x720" range="35-50" />
+            <Limit name="measured-frame-rate-1920x1080" range="19-28" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.hevc.encoder" type="video/hevc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="17-24" />
+            <Limit name="measured-frame-rate-720x480" range="7-10" />
+            <Limit name="measured-frame-rate-1280x720" range="3-6" />
+            <Limit name="measured-frame-rate-1920x1080" range="2-3" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.h263.encoder" type="video/3gpp" update="true">
+            <Limit name="measured-frame-rate-176x144" range="256-349" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.mpeg4.encoder" type="video/mp4v-es" update="true">
+            <Limit name="measured-frame-rate-176x144" range="250-377" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.vp8.encoder" type="video/x-vnd.on2.vp8" update="true">
+            <Limit name="measured-frame-rate-320x180" range="85-119" />
+            <Limit name="measured-frame-rate-640x360" range="94-133" />
+            <Limit name="measured-frame-rate-1280x720" range="21-30" />
+            <Limit name="measured-frame-rate-1920x1080" range="10-15" />
+        </MediaCodec>
+        <MediaCodec name="c2.qti.hevc.encoder.cq" type="video/hevc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="190-300"/>
+        </MediaCodec>
+        <MediaCodec name="c2.android.vp9.encoder" type="video/x-vnd.on2.vp9" update="true" variant="!slow-cpu">
+            <!-- measured [208-241] lower-upper [57-605] median * 1.5 [337] -->
+            <Limit name="measured-frame-rate-320x180" range="125-275" />
+            <!-- measured [83-96] lower-upper [23-242] median * 1.5 [134] -->
+            <Limit name="measured-frame-rate-640x360" range="50-110" />
+            <!-- measured [21-25] lower-upper [6-63] median * 1.5 [34] -->
+            <Limit name="measured-frame-rate-1280x720" range="13-28" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.av1.encoder" type="video/av01" update="true">
+            <!-- measured [196-255] lower-upper [57-607] median * 1.5 [338] -->
+            <Limit name="measured-frame-rate-320x240" range="125-276" />
+            <!-- measured [56-61] lower-upper [15-159] median * 1.5 [88] -->
+            <Limit name="measured-frame-rate-720x480" range="33-72" />
+            <!-- measured [22-23] lower-upper [6-63] median * 1.5 [35] -->
+            <Limit name="measured-frame-rate-1280x720" range="13-29" />
+        </MediaCodec>
+    </Encoders>
+    <Decoders>
+        <MediaCodec name="c2.qti.avc.decoder" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="480-510" />
+            <Limit name="measured-frame-rate-720x480" range="460-490" />
+            <Limit name="measured-frame-rate-1280x720" range="350-400" />
+            <Limit name="measured-frame-rate-1920x1088" range="180-190" />
+        </MediaCodec>
+        <MediaCodec name="c2.qti.avc.decoder.low_latency" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="320-517" />
+            <Limit name="measured-frame-rate-720x480" range="101-221" />
+            <Limit name="measured-frame-rate-1280x720" range="200-420" />
+            <Limit name="measured-frame-rate-1920x1080" range="76-167" />
+        </MediaCodec>
+        <MediaCodec name="c2.qti.hevc.decoder" type="video/hevc" update="true">
+            <Limit name="measured-frame-rate-352x288" range="510-530" />
+            <Limit name="measured-frame-rate-720x480" range="465-620" />
+            <Limit name="measured-frame-rate-1280x720" range="200-390" />
+            <Limit name="measured-frame-rate-1920x1080" range="210-230" />
+        </MediaCodec>
+        <MediaCodec name="c2.qti.hevc.decoder.low_latency" type="video/hevc" update="true">
+            <Limit name="measured-frame-rate-352x288" range="273-562" />
+            <Limit name="measured-frame-rate-720x480" range="440-600" />
+            <Limit name="measured-frame-rate-1280x720" range="215-425" />
+            <Limit name="measured-frame-rate-1920x1080" range="118-259" />
+        </MediaCodec>
+        <MediaCodec name="c2.qti.vp9.decoder" type="video/x-vnd.on2.vp9" update="true">
+            <Limit name="measured-frame-rate-320x240" range="377-377" />
+            <Limit name="measured-frame-rate-640x360" range="323-323" />
+            <Limit name="measured-frame-rate-1280x720" range="262-262" />
+            <Limit name="measured-frame-rate-1920x1080" range="220-220" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.av1.decoder" type="video/av01" update="true">
+            <!-- measured [208-264] lower-upper [60-635] median * 1.5 [354] -->
+            <Limit name="measured-frame-rate-352x288" range="131-289" />
+            <!-- measured [132-175] lower-upper [39-415] median * 1.5 [231] -->
+            <Limit name="measured-frame-rate-640x360" range="86-189" />
+            <!-- measured [101-120] lower-upper [28-299] median * 1.5 [166] -->
+            <Limit name="measured-frame-rate-720x480" range="62-136" />
+            <!-- measured [61-64] lower-upper [16-169] median * 1.5 [94] -->
+            <Limit name="measured-frame-rate-1280x720" range="35-77" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.avc.decoder" type="video/avc" update="true">
+            <!-- measured [185-323] lower-upper [64-684] median * 1.5 [381] -->
+            <Limit name="measured-frame-rate-320x240" range="141-311" />
+            <!-- measured [88-89] lower-upper [23-240] median * 1.5 [133] -->
+            <Limit name="measured-frame-rate-720x480" range="50-109" />
+            <!-- measured [38-39] lower-upper [10-105] median * 1.5 [58] -->
+            <Limit name="measured-frame-rate-1280x720" range="22-48" />
+            <!-- measured [21-21] lower-upper [5-57] median * 1.5 [32] -->
+            <Limit name="measured-frame-rate-1920x1080" range="12-26" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.hevc.decoder" type="video/hevc" update="true">
+            <!-- measured [201-293] lower-upper [62-665] median * 1.5 [370] -->
+            <Limit name="measured-frame-rate-352x288" range="137-302" />
+            <!-- measured [151-189] lower-upper [43-459] median * 1.5 [255] -->
+            <Limit name="measured-frame-rate-640x360" range="95-208" />
+            <!-- measured [164-188] lower-upper [44-473] median * 1.5 [264] -->
+            <Limit name="measured-frame-rate-720x480" range="98-215" />
+            <!-- measured [91-112] lower-upper [26-273] median * 1.5 [152] -->
+            <Limit name="measured-frame-rate-1280x720" range="56-124" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.h263.decoder" type="video/3gpp" update="true">
+            <!-- measured [706-979] lower-upper [213-2268] median * 1.5 [1264] -->
+            <Limit name="measured-frame-rate-176x144" range="469-1031" />
+            <!-- measured [468-869] lower-upper [169-1799] median * 1.5 [1003] -->
+            <Limit name="measured-frame-rate-352x288" range="372-818" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.mpeg4.decoder" type="video/mp4v-es" update="true">
+            <!-- measured [781-985] lower-upper [223-2375] median * 1.5 [1325] -->
+            <Limit name="measured-frame-rate-176x144" range="491-1080" />
+            <!-- measured [444-854] lower-upper [164-1746] median * 1.5 [973] -->
+            <Limit name="measured-frame-rate-480x360" range="361-794" />
+            <!-- measured [117-468] lower-upper [74-789] median * 1.5 [439] -->
+            <Limit name="measured-frame-rate-1280x720" range="163-358" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.vp8.decoder" type="video/x-vnd.on2.vp8" update="true">
+            <!-- measured [409-920] lower-upper [168-1788] median * 1.5 [997] -->
+            <Limit name="measured-frame-rate-320x180" range="369-813" />
+            <!-- measured [165-491] lower-upper [83-884] median * 1.5 [493] -->
+            <Limit name="measured-frame-rate-640x360" range="183-402" />
+            <!-- measured [45-139] lower-upper [23-249] median * 1.5 [139] -->
+            <Limit name="measured-frame-rate-1280x720" range="52-113" />
+            <!-- measured [55-55] lower-upper [14-149] median * 1.5 [83] -->
+            <Limit name="measured-frame-rate-1920x1080" range="31-68" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.vp9.decoder" type="video/x-vnd.on2.vp9" update="true">
+            <!-- measured [303-750] lower-upper [133-1417] median * 1.5 [790] -->
+            <Limit name="measured-frame-rate-320x180" range="293-644" />
+            <!-- measured [160-164] lower-upper [41-437] median * 1.5 [243] -->
+            <Limit name="measured-frame-rate-640x360" range="90-199" />
+            <!-- measured [83-123] lower-upper [26-279] median * 1.5 [155] -->
+            <Limit name="measured-frame-rate-1280x720" range="58-127" />
+        </MediaCodec>
+        <MediaCodec name="c2.sec.mpeg4.decoder" type="video/mp4v-es" update="true">
+            <!-- measured [578-916] lower-upper [189-2010] median * 1.5 [1121] -->
+            <Limit name="measured-frame-rate-176x144" range="415-914" />
+            <!-- measured [392-889] lower-upper [162-1724] median * 1.5 [961] -->
+            <Limit name="measured-frame-rate-480x360" range="356-784" />
+            <!-- measured [111-440] lower-upper [70-742] median * 1.5 [413] -->
+            <Limit name="measured-frame-rate-1280x720" range="153-337" />
+        </MediaCodec>
+    </Decoders>
+</MediaCodecs>
