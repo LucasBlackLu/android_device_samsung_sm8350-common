@@ -336,7 +336,9 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
 
 # Namespaces
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/samsung \
 
 # Net
 PRODUCT_PACKAGES += \
