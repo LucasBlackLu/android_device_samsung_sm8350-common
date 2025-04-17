@@ -1,5 +1,8 @@
 # Netflix
 ro.netflix.bsp_rev=Q4350-32962-1
 
+# QC Value Addons
+ro.vendor.qti.va_aosp.support=1
+
 # RIL
 ro.telephony.default_network=33,33
