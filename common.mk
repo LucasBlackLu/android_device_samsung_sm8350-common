@@ -58,5 +58,8 @@ PRODUCT_PACKAGES += \
     libion \
     libvulkan \
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := false
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm6375-common/sm6375-common-vendor.mk)
