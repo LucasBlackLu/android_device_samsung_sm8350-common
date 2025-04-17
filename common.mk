@@ -326,6 +326,12 @@ PRODUCT_PACKAGES += \
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
+# Net
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.0 \
+    android.system.net.netd@1.1 \
+    netutils-wrapper-1.0 \
+
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
