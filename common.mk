@@ -392,7 +392,6 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    device/samsung/qcom-common/overlay \
     $(COMMON_PATH)/overlay \
     $(COMMON_PATH)/overlay-lineage \
 
