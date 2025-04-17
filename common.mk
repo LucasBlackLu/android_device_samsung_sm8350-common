@@ -343,6 +343,9 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0:64 \
+    android.hardware.nfc@1.1:64 \
+    android.hardware.nfc@1.2:64 \
     android.hardware.nfc@1.2-service \
     com.android.nfc_extras \
     libchrome \
@@ -352,6 +355,8 @@ PRODUCT_PACKAGES += \
     NfcNci \
     SecureElement \
     Tag \
+    vendor.nxp.nxpese@1.0:64 \
+    vendor.nxp.nxpnfc@1.0:64 \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
