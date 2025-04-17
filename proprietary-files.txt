@@ -1001,7 +1001,6 @@ vendor/lib/libpdnotifier.so
 vendor/lib/libqcmaputils.so
 vendor/lib/libqrtr.so
 vendor/lib/libqsocket.so
-vendor/lib/librmnetctl.so
 vendor/lib/libxml.so
 vendor/lib/vendor.qti.hardware.data.connection@1.0.so
 vendor/lib/vendor.qti.hardware.data.connection@1.1.so
@@ -1019,7 +1018,6 @@ vendor/lib64/libqcmaputils.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libril_sem.so
-vendor/lib64/librmnetctl.so
 vendor/lib64/libsec-ril.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/libxml.so
