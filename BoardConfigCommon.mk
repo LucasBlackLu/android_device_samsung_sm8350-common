@@ -118,5 +118,29 @@ DEVICE_MATRIX_FILE := \
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm6375
 TARGET_RECOVERY_DEVICE_MODULES := libinit_sm6375
 
+# Kernel
+BOARD_DTB_OFFSET := 0x01f00000
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=4e00000.dwc3 swiotlb=0 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 cgroup.memory=nokmem,nosocket iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 console=null
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_OFFSET := 0x00008000
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_KERNEL_TAGS_OFFSET := 0x01e00000
+BOARD_RAMDISK_OFFSET := 0x02000000
+BOARD_MKBOOTIMG_ARGS := --dtb_offset $(BOARD_DTB_OFFSET) --kernel_offset $(BOARD_KERNEL_OFFSET) --pagesize $(BOARD_KERNEL_PAGESIZE) --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
+
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_SOURCE := kernel/samsung/sm6375
+TARGET_KERNEL_VERSION := 5.4
+
+# Kernel Modules
+BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(COMMON_PATH)/modules.blocklist
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(BOOT_KERNEL_MODULES)
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery))
+BOOT_KERNEL_MODULES := $(strip $(shell cat $(COMMON_PATH)/modules.load))
+TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm6375-common/BoardConfigVendor.mk
