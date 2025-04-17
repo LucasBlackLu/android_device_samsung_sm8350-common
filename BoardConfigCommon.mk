@@ -143,6 +143,8 @@ BOOT_KERNEL_MODULES := $(strip $(shell cat $(COMMON_PATH)/modules.load))
 TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
 
 # Partitions
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 BOARD_CACHEIMAGE_PARTITION_SIZE := 419430400
 BOARD_FLASH_BLOCK_SIZE := 262144
