@@ -1134,12 +1134,6 @@ vendor/lib64/libvkservice.so
 vendor/lib64/vendor.samsung.frameworks.security.dsms-V1-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so
 
-# Vibrator
-vendor/bin/hw/vendor.samsung.hardware.vibrator-service
-vendor/etc/init/vendor.samsung.hardware.vibrator-default.rc
--vendor/etc/vintf/manifest/vendor.samsung.hardware.vibrator-default.xml
-vendor/lib64/vendor.samsung.hardware.vibrator-V3-ndk_platform.so
-
 # Voice
 -system_ext/framework/vendor.qti.voiceprint-V1.0-java.jar
 system_ext/lib/vendor.qti.voiceprint@1.0.so

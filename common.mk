@@ -604,6 +604,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vndservicemanager \
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.impl \
+    vendor.qti.hardware.vibrator.service \
+
 # WiFi
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
