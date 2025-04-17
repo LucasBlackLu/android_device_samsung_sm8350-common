@@ -539,6 +539,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
