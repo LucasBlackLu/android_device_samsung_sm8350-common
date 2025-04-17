@@ -617,6 +617,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi-service \
     TetheringConfigOverlay \
     WifiOverlay \
 
