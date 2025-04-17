@@ -201,6 +201,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1 \
     android.hardware.gnss@2.0 \
     android.hardware.gnss@2.1 \
+    android.hardware.gnss@2.1.vendor \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
