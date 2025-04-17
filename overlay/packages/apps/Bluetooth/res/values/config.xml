@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * SPDX-FileCopyrightText: The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
+ */
+-->
+<resources>
+    <!-- If true, SCO sample rate will be reported via g_sco_samplerate audio parameter -->
+    <bool name="sco_report_samplerate">true</bool>
+</resources>
