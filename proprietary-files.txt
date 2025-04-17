@@ -819,9 +819,7 @@ vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
 # Light
 vendor/lib/hw/lights.holi.so
-vendor/lib/hw/lights.qcom.so
 vendor/lib64/hw/lights.holi.so
-vendor/lib64/hw/lights.qcom.so
 
 # Machine Learning
 vendor/etc/lm/AdaptLaunchFeature.xml
