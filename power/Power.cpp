@@ -48,13 +48,10 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     }
 #endif
     switch (type) {
-#ifdef TAP_TO_WAKE_NODE
         case Mode::DOUBLE_TAP_TO_WAKE:
-            ::android::base::WriteStringToFile(enabled ? "1" : "0", TAP_TO_WAKE_NODE, true);
+            ::android::base::WriteStringToFile(enabled ? "aot_enable,1" : "aot_enable,0", "/sys/class/sec/tsp/cmd");
             break;
-#else
-        case Mode::DOUBLE_TAP_TO_WAKE:
-#endif
+
         case Mode::LOW_POWER:
         case Mode::DEVICE_IDLE:
         case Mode::DISPLAY_INACTIVE:
@@ -101,9 +98,12 @@ ndk::ScopedAStatus Power::isModeSupported(Mode type, bool* _aidl_return) {
                 *_aidl_return = false;
             }
             break;
-#ifdef TAP_TO_WAKE_NODE
+
         case Mode::DOUBLE_TAP_TO_WAKE:
-#endif
+
+            *_aidl_return = true;
+            break;
+
         case Mode::LAUNCH:
         case Mode::INTERACTIVE:
         case Mode::SUSTAINED_PERFORMANCE:
