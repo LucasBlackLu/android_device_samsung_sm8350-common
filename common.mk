@@ -618,9 +618,15 @@ PRODUCT_PACKAGES += \
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
+    android.hardware.wifi.hostapd@1.0.vendor \
     hostapd \
+    libwifi-hal \
+    libwifi-hal-ctrl \
+    libwifi-hal-qcom \
+    libwpa_client \
     TetheringConfigOverlay \
     WifiOverlay \
+    wpa_cli \
     wpa_supplicant \
     wpa_supplicant.conf \
 
