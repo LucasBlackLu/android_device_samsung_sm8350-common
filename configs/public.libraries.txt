@@ -9,3 +9,4 @@ libqti-perfd-client.so
 libsdsprpc.so
 libprotobuf-cpp-full.so
 libprotobuf-cpp-lite.so
+sensors.samsung.so
