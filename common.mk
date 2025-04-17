@@ -19,6 +19,7 @@ PRODUCT_PACKAGES += \
     fs_config_files \
 
 # API
+PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Audio
