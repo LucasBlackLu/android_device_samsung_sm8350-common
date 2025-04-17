@@ -551,6 +551,9 @@ PRODUCT_COPY_FILES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.3-service.dual_role_usb \
+    android.hardware.usb.gadget@1.0-service-qti \
+    android.hardware.usb@1.0.vendor \
+    android.hardware.usb@1.1.vendor \
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
