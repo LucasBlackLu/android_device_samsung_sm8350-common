@@ -1,0 +1,22 @@
+# audio
+vendor.audio_hal.                                u:object_r:vendor_audio_prop:s0
+
+# Bluetooth
+vendor.bluetooth_fw_ver                          u:object_r:vendor_bluetooth_prop:s0
+vendor.bluetooth_nv_ver                          u:object_r:vendor_bluetooth_prop:s0
+persist.vendor.bt.                               u:object_r:vendor_bluetooth_prop:s0
+
+# NFC
+ro.vendor.nfc.                                   u:object_r:vendor_nfc_prop:s0
+
+# Perf
+ro.vendor.extension_library                      u:object_r:vendor_mpctl_prop:s0
+
+# Sensors
+vendor.sensor.file.permission                    u:object_r:vendor_sensors_prop:s0
+
+# Tee
+vendor.sys.qseecomd.enable                       u:object_r:vendor_qseecomd_prop:s0
+
+# wifi
+vendor.wifi.                                     u:object_r:vendor_wifi_prop:s0
