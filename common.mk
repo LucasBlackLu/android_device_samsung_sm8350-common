@@ -25,9 +25,6 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
-    com.dsi.ant.antradio_library \
-    com.dsi.ant@1.0.vendor \
-    com.qualcomm.qti.ant@1.0 \
 
 # Audio
 PRODUCT_PACKAGES += \
