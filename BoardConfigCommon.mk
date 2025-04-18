@@ -132,7 +132,7 @@ DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/manifest_lahaina.xml
 
 DEVICE_MATRIX_FILE := \
-    $(COMMON_PATH)/compatibility_matrix.xml
+    hardware/qcom-caf/common/compatibility_matrix.xml
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 3
