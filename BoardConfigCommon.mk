@@ -163,6 +163,9 @@ TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
 
+# Lights
+$(call soong_config_set,samsungVars,target_specific_header_path,$(COMMON_PATH)/include)
+
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
