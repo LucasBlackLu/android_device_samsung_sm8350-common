@@ -160,6 +160,7 @@ ro.frp.pst=/dev/block/persistent
 ro.hardware.gatekeeper=mdfpp
 
 # Graphics
+ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 
