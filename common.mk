@@ -360,18 +360,10 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0:64 \
-    android.hardware.nfc@1.1:64 \
-    android.hardware.nfc@1.2:64 \
-    android.hardware.nfc@1.2-service \
     com.android.nfc_extras \
     libchrome \
     libchrome.vendor \
-    libnfc-nci \
-    libnfc_nci_jni \
     Tag \
-    vendor.nxp.nxpese@1.0:64 \
-    vendor.nxp.nxpnfc@1.0:64 \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.ese.xml \

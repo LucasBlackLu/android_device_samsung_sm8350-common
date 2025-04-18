@@ -156,9 +156,6 @@ TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
 
-# NFC
-TARGET_USES_NQ_NFC := true
-
 # Lights
 $(call soong_config_set,samsungVars,target_specific_header_path,$(COMMON_PATH)/include)
 
