@@ -58,6 +58,8 @@ on post-fs
 on late-fs
 
 on post-fs-data
+    mkdir /data/vendor/gatekeeper 0770 system system
+
     # carrier partition
     chown system system /carrier
     chmod 0771 /carrier
