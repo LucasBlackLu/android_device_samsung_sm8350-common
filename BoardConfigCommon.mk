@@ -158,6 +158,9 @@ TARGET_KEYMASTER_VARIANT := samsung
 # NFC
 TARGET_USES_NQ_NFC := true
 
+# Lights
+$(call soong_config_set,samsungVars,target_specific_header_path,$(COMMON_PATH)/include)
+
 # Partitions
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
