@@ -249,5 +249,9 @@ sys.usb.mtp.batchcancel=1
 vendor.usb.diag.func.name=ffs
 vendor.usb.use_ffs_mtp=1
 
+# Vibrator
+ro.vendor.vibrator_hal.click_duration=80
+ro.vendor.vibrator_hal.tick_duration=40
+
 # WiFi
 wifi.aware.interface=wifi-aware0
