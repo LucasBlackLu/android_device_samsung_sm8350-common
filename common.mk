@@ -40,7 +40,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
-    android.hardware.audio.common-util \
     android.hardware.audio.common-util.vendor \
     android.hardware.audio.service \
     android.hardware.bluetooth.audio@2.0-impl \
@@ -51,7 +50,6 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     cplay \
     libaudiofoundation \
-    libaudioroute \
     libaudioroute.vendor \
     libaudioutils \
     libtinyalsa \
@@ -114,7 +112,6 @@ PRODUCT_COPY_FILES += \
 
 # Automotive/Gearhead
 PRODUCT_PACKAGES += \
-    android.hardware.automotive.vehicle@2.0 \
     android.hardware.automotive.vehicle@2.0.vendor \
     android.hardware.automotive.vehicle@2.0-manager-lib \
 
@@ -228,9 +225,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.face@1.0 \
     android.hardware.biometrics.face@1.0.vendor \
-    android.hardware.biometrics.fingerprint@2.1 \
     android.hardware.biometrics.fingerprint@2.1.vendor \
 
 PRODUCT_COPY_FILES += \
@@ -243,10 +238,6 @@ PRODUCT_PACKAGES += \
 
 # GNSS/GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0 \
-    android.hardware.gnss@1.1 \
-    android.hardware.gnss@2.0 \
-    android.hardware.gnss@2.1 \
     android.hardware.gnss@2.1.vendor \
 
 PRODUCT_COPY_FILES += \
@@ -453,7 +444,6 @@ TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 PRODUCT_PACKAGES += \
     libcurl.vendor \
     libjson \
-    libjsoncpp \
     libjsoncpp.vendor \
     libpng.vendor \
     libqti_vndfwk_detect \
@@ -655,9 +645,9 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     android.hardware.wifi.hostapd@1.0.vendor \
     hostapd \
+    libwfdaac_vendor \
     libwifi-hal \
     libwifi-hal-ctrl \
-    libwfdaac_vendor \
     libwifi-hal-qcom \
     libwpa_client \
     TetheringConfigOverlay \
