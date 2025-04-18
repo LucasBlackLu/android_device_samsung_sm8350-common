@@ -552,7 +552,7 @@ vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Gatekeeper
-vendor/lib64/hw/gatekeeper.mdfpp.so
+vendor/lib64/hw/gatekeeper.mdfpp.so|fc74f75b74c307e4508b42e210dcec8175876203
 
 # GPS
 -vendor/app/CACertService/CACertService.apk
