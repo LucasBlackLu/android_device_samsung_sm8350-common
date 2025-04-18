@@ -1148,5 +1148,6 @@ vendor/bin/cnss-daemon
 vendor/firmware/wlan/qca_cld/bdwlan.bin
 vendor/firmware/wlan/qca_cld/regdb.bin
 vendor/firmware/Data.msc
+vendor/firmware/wlanmdsp.mbn
 vendor/lib/libqsap_sdk.so
 vendor/lib64/libqsap_sdk.so
