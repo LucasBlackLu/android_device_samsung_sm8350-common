@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0-impl \
+    android.hardware.audio@6.0-impl.samsung-sm6375 \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.common-util.vendor \
     android.hardware.audio.service \
