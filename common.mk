@@ -148,6 +148,7 @@ PRODUCT_PACKAGES += \
     libgrallocusage.vendor \
     libstdc++ \
     libstdc++_vendor \
+    libutilscallstack.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor \
 
@@ -414,9 +415,14 @@ PRODUCT_COPY_FILES += \
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 PRODUCT_PACKAGES += \
+    libcurl.vendor \
     libjson \
+    libjsoncpp \
+    libjsoncpp.vendor \
+    libpng.vendor \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
+    libsqlite.vendor \
     libvndfwk_detect_jni.qti \
     libvndfwk_detect_jni.qti.vendor \
 
@@ -488,6 +494,10 @@ PRODUCT_COPY_FILES += \
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# RenderScripts
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl \
+
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
@@ -523,6 +533,7 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
+    libdumpstateutil.vendor:64 \
     sensors.samsung \
 
 PRODUCT_COPY_FILES += \
@@ -555,6 +566,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0.vendor \
+    android.hardware.thermal@1.0.vendor \
 
 # Touch
 PRODUCT_PACKAGES += \
