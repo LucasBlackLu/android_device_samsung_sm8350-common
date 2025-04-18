@@ -369,8 +369,6 @@ PRODUCT_PACKAGES += \
     libchrome.vendor \
     libnfc-nci \
     libnfc_nci_jni \
-    NfcNci \
-    SecureElement \
     Tag \
     vendor.nxp.nxpese@1.0:64 \
     vendor.nxp.nxpnfc@1.0:64 \
