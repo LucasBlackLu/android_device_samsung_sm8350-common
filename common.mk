@@ -360,6 +360,7 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2.vendor \
     com.android.nfc_extras \
     libchrome \
     libchrome.vendor \
