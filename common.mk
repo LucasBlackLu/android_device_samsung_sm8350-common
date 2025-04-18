@@ -495,10 +495,6 @@ PRODUCT_COPY_FILES += \
 # Storage
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
-# RenderScripts
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl \
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
