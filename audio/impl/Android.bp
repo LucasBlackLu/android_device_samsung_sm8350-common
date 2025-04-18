@@ -74,6 +74,7 @@ cc_library_shared {
         "android.hardware.audio@2.0-util",
         "android.hardware.audio.common@2.0",
         "android.hardware.audio.common@2.0-util",
+        "libcutils",
     ],
     cflags: [
         "-DMAJOR_VERSION=2",
@@ -91,6 +92,7 @@ cc_library_shared {
         "android.hardware.audio@4.0-util",
         "android.hardware.audio.common@4.0",
         "android.hardware.audio.common@4.0-util",
+        "libcutils",
     ],
     cflags: [
         "-DMAJOR_VERSION=4",
@@ -107,6 +109,7 @@ cc_library_shared {
         "android.hardware.audio@5.0-util",
         "android.hardware.audio.common@5.0",
         "android.hardware.audio.common@5.0-util",
+        "libcutils",
     ],
     cflags: [
         "-DMAJOR_VERSION=5",
@@ -123,6 +126,7 @@ cc_library_shared {
         "android.hardware.audio@6.0-util",
         "android.hardware.audio.common@6.0",
         "android.hardware.audio.common@6.0-util",
+        "libcutils",
     ],
     cflags: [
         "-DMAJOR_VERSION=6",
@@ -141,6 +145,7 @@ cc_library_shared {
         "android.hardware.audio.common@7.0-enums",
         "android.hardware.audio.common@7.0-util",
         "libbase",
+        "libcutils",
     ],
     cflags: [
         "-DMAJOR_VERSION=7",
