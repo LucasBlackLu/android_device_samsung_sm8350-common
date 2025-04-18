@@ -498,7 +498,7 @@ vendor/lib64/libsecnativefeature.so
 vendor/lib64/libsemnativecarrierfeature.so
 
 # Gatekeeper
-vendor/lib64/hw/gatekeeper.mdfpp.so
+vendor/lib64/hw/gatekeeper.mdfpp.so|fc74f75b74c307e4508b42e210dcec8175876203
 
 # GPS
 -vendor/app/CACertService/CACertService.apk
