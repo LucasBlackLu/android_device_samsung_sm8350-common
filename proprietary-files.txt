@@ -1022,7 +1022,6 @@ product/framework/uimservicelibrary.jar
 
 # Sensors
 vendor/bin/factory.ssc
-vendor/lib/libsensorndkbridge.so
 vendor/lib/libsensorslog.so
 vendor/lib/libsns_device_mode_stub.so
 vendor/lib/libsns_fastRPC_util.so
@@ -1036,7 +1035,6 @@ vendor/lib/sensors.flicker.so
 vendor/lib/sensors.grip.so
 vendor/lib/sensors.ssc.so
 vendor/lib64/libnanopb.so
-vendor/lib64/libsensorndkbridge.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so

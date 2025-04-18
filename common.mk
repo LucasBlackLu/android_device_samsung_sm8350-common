@@ -456,6 +456,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.multihal \
     libdumpstateutil.vendor:64 \
+    libsensorndkbridge \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
@@ -503,6 +504,7 @@ PRODUCT_COPY_FILES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libcrypto-v33 \
+    libshim_sensorndkbridge \
 
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
