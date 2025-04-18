@@ -993,7 +993,7 @@ vendor/lib64/libqcmaputils.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libril_sem.so
-vendor/lib64/libsec-ril.so|db5d359c61dc9f25a3b373390fa78f20c54890e1
+vendor/lib64/libsec-ril.so|1010449b9b4791589859bb465324b85d596d848e
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.hardware.data.connection@1.0.so
