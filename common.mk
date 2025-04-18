@@ -567,6 +567,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
     libdumpstateutil.vendor:64 \
+    libsensorndkbridge \
     sensors.samsung \
 
 PRODUCT_COPY_FILES += \
@@ -631,6 +632,7 @@ PRODUCT_COPY_FILES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libcrypto-v33 \
+    libshim_sensorndkbridge \
 
 # Vendor Service Manager
 PRODUCT_PACKAGES += \

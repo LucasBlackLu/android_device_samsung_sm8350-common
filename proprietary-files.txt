@@ -388,7 +388,7 @@ vendor/lib64/libvideobeauty.arcsoft.so
 vendor/lib64/libvideobeauty.uniplugin@1.0.so
 vendor/lib64/libvideobeauty_capture.uniplugin@1.0.so
 vendor/lib64/unihal_cutils@2.15.so
-vendor/lib64/unihal_main@2.15.so
+vendor/lib64/unihal_main@2.15.so|5e7dc927472828233bea5fddcaffda5ea1e1b6ce
 vendor/lib64/unihal_uniplugin@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
@@ -1009,7 +1009,6 @@ vendor/lib64/vendor.samsung.hardware.radio@2.2.so
 vendor/bin/factory.ssc
 vendor/bin/sensors.qti
 vendor/lib/libsensorlistener.so
-vendor/lib/libsensorndkbridge.so
 vendor/lib/libsensorslog.so
 vendor/lib/libsns_device_mode_stub.so
 vendor/lib/libsns_fastRPC_util.so
@@ -1021,7 +1020,6 @@ vendor/lib/libssc.so
 vendor/lib/libssc_default_listener.so
 vendor/lib64/libnanopb.so
 vendor/lib64/libsensorlistener.so
-vendor/lib64/libsensorndkbridge.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so
