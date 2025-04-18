@@ -606,6 +606,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     android.hardware.wifi.hostapd@1.0.vendor \
+    firmware_WCNSS_qcom_cfg.ini_symlink \
     hostapd \
     libwfdaac_vendor \
     libwifi-hal \
