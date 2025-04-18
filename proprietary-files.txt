@@ -814,7 +814,7 @@ vendor/lib64/vendor.qti.hardware.iop@2.0.so
 
 # Keymaster
 -vendor/lib64/libkeymaster_helper.so
--vendor/lib64/libskeymaster4device.so
+-vendor/lib64/libskeymaster4device.so|212916a4c8d6bded714fbf1ac8ec1fff5161de3c
 
 # Light
 vendor/lib/hw/lights.holi.so
