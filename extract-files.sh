@@ -34,6 +34,7 @@ function blob_fixup() {
             ;;
         vendor/lib64/unihal_android.so)
              ${PATCHELF} --add-needed "libshim_sensorndkbridge.so" "${2}"
+             ${PATCHELF} --add-needed "libui_shim.so" "${2}"
              ;;
     esac
 }
