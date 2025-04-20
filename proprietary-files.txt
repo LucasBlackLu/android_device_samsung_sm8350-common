@@ -1019,7 +1019,7 @@ vendor/lib/libsnsdiaglog.so
 vendor/lib/libssc.so
 vendor/lib/libssc_default_listener.so
 vendor/lib64/libnanopb.so
-vendor/lib64/libsensorlistener.so
+vendor/lib64/libsensorlistener.so|182a5b9d14769fb5324c9c46419c77f338ce7dde
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_fastRPC_util.so

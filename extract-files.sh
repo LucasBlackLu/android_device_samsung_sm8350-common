@@ -31,7 +31,7 @@ function blob_fixup() {
             xxd -p -c0 "${2}" | sed "s/600e40f9820c805224008052e10315aa080040f9e30314aa/600e40f9820c805224008052e10315aa080040f9030080d2/g" | xxd -r -p > "${2}".patched
             mv "${2}".patched "${2}"
             ;;
-        vendor/lib64/unihal_main@2.15.so)
+        vendor/lib64/libsensorlistener.so|vendor/lib64/unihal_main@2.15.so)
              ${PATCHELF} --add-needed "libshim_sensorndkbridge.so" "${2}"
              ;;
     esac
