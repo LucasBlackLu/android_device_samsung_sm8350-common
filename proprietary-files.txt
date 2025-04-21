@@ -165,6 +165,7 @@ vendor/lib/camera.device@3.4-impl.so
 vendor/lib/camera.device@3.5-external-impl.so
 vendor/lib/camera.device@3.5-impl.so
 vendor/lib/camera.device@3.6-external-impl.so
+vendor/lib/com.qti.chiusecaseselector.so
 vendor/lib/com.qti.feature2.anchorsync.so
 vendor/lib/com.qti.feature2.demux.so
 vendor/lib/com.qti.feature2.derivedoffline.so
@@ -192,7 +193,16 @@ vendor/lib/com.qti.feature2.serializer.so
 vendor/lib/com.qti.feature2.statsregeneration.so
 vendor/lib/com.qti.feature2.stub.so
 vendor/lib/com.qti.feature2.swmf.so
+vendor/lib/com.qti.settings.kamorta.so
+vendor/lib/com.qti.settings.kodiak.so
+vendor/lib/com.qti.settings.mannar.so
+vendor/lib/com.qti.settings.sdm865.so
+vendor/lib/com.qti.settings.sm8350.so
 vendor/lib/com.qti.stats.common.so
+vendor/lib/com.qualcomm.mcx.distortionmapper.so
+vendor/lib/com.qualcomm.mcx.linearmapper.so
+vendor/lib/com.qualcomm.mcx.policy.mfl.so
+vendor/lib/com.qualcomm.qti.mcx.usecase.extension.so
 vendor/lib/libBeauty_v4.camera.samsung.so
 vendor/lib/libDualCamBokehCapture.camera.samsung.so
 vendor/lib/libFaceService.so
@@ -204,6 +214,7 @@ vendor/lib/libI420colorconvert.so
 vendor/lib/libLocalTM_capture_core.camera.samsung.so
 vendor/lib/libLocalTM_wrapper.camera.samsung.so
 vendor/lib/libOpenCv.camera.samsung.so
+vendor/lib/libSEF.quram.so
 vendor/lib/libarcsoft_picportrait_video.so
 vendor/lib/libarcsoft_super_night_raw.so
 vendor/lib/libbitmlengine.so
@@ -243,11 +254,16 @@ vendor/lib/libmmcamera_lscv35.so
 vendor/lib/libmmcamera_mfnr.so
 vendor/lib/libmmcamera_mfnr_t4.so
 vendor/lib/libmmcamera_pdpc.so
+vendor/lib/libmmrtpdecoder_proprietary.so
+vendor/lib/libmmrtpencoder_proprietary.so
 vendor/lib/libmpbase.so
 vendor/lib/libofflinedump.so
 vendor/lib/libofflinelog.so
+vendor/lib/libopestriping.so
 vendor/lib/libqcwrappercommon.so
 vendor/lib/libqdMetaData.so
+vendor/lib/libqll10.so
+vendor/lib/libqllengine.so
 vendor/lib/libsavsac.so
 vendor/lib/libsavscmn.so
 vendor/lib/libsavsvc.so
@@ -257,6 +273,8 @@ vendor/lib/libscveObjectSegmentation.so
 vendor/lib/libscveObjectSegmentation_stub.so
 vendor/lib/libscveObjectTracker.so
 vendor/lib/libscveObjectTracker_stub.so
+vendor/lib/libsec2qc_conversion.so
+vendor/lib/libsuper_night_interface.so
 vendor/lib/libuniplugin.so
 vendor/lib/libvideobeauty.arcsoft.so
 vendor/lib/libvideobeauty.uniplugin@1.0.so
@@ -284,6 +302,7 @@ vendor/lib64/camera.device@3.4-impl.so
 vendor/lib64/camera.device@3.5-external-impl.so
 vendor/lib64/camera.device@3.5-impl.so
 vendor/lib64/camera.device@3.6-external-impl.so
+vendor/lib64/com.qti.chiusecaseselector.so
 vendor/lib64/com.qti.feature2.anchorsync.so
 vendor/lib64/com.qti.feature2.demux.so
 vendor/lib64/com.qti.feature2.derivedoffline.so
@@ -311,6 +330,11 @@ vendor/lib64/com.qti.feature2.serializer.so
 vendor/lib64/com.qti.feature2.statsregeneration.so
 vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
+vendor/lib64/com.qti.settings.kamorta.so
+vendor/lib64/com.qti.settings.kodiak.so
+vendor/lib64/com.qti.settings.mannar.so
+vendor/lib64/com.qti.settings.sdm865.so
+vendor/lib64/com.qti.settings.sm8350.so
 vendor/lib64/com.qti.stats.common.so
 vendor/lib64/libBeauty_v4.camera.samsung.so
 vendor/lib64/libDLInterface.camera.samsung.so
@@ -324,6 +348,7 @@ vendor/lib64/libI420colorconvert.so
 vendor/lib64/libLocalTM_capture_core.camera.samsung.so
 vendor/lib64/libLocalTM_wrapper.camera.samsung.so
 vendor/lib64/libOpenCv.camera.samsung.so
+vendor/lib64/libSEF.quram.so
 vendor/lib64/libarcsoft_picportrait_video.so
 vendor/lib64/libarcsoft_super_night_raw.so
 vendor/lib64/libbitmlengine.so
@@ -372,8 +397,11 @@ vendor/lib64/libmpbase.so
 vendor/lib64/libofflinedump.so
 vendor/lib64/libofflinelog.so
 vendor/lib64/libopencv.so
+vendor/lib64/libopestriping.so
 vendor/lib64/libqcwrappercommon.so
 vendor/lib64/libqdMetaData.so
+vendor/lib64/libqll10.so
+vendor/lib64/libqllengine.so
 vendor/lib64/libsavsac.so
 vendor/lib64/libsavscmn.so
 vendor/lib64/libsavsvc.so
@@ -383,6 +411,8 @@ vendor/lib64/libscveObjectSegmentation.so
 vendor/lib64/libscveObjectSegmentation_stub.so
 vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
+vendor/lib64/libsec2qc_conversion.so
+vendor/lib64/libsuper_night_interface.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/libvideobeauty.arcsoft.so
 vendor/lib64/libvideobeauty.uniplugin@1.0.so
@@ -755,18 +785,18 @@ vendor/gpu/kbc/unified_kbcs_64.bin
 vendor/gpu/kbc/unified_ksqs.bin
 
 # Graphics (Adreno)
-vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so
+vendor/lib/egl/eglSubDriverAndroid.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/libadreno_utils.so
-vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
 vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/libadreno_utils.so
 
