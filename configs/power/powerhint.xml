@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <!--
-/* Copyright (c) 2016-2018, 2020 The Linux Foundation. All rights reserved.
+/* Copyright (c) 2019, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -27,639 +27,329 @@
  * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
  * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * Tuned for Product OT
  */
 -->
 <HintConfigs>
     <Powerhint>
 
-        <!-- camera common -->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CPU Hispeed freq of 1190Mhz -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 50 -->
-        <!--CPUBW HWMON - Set io_percent 100 -->
-        <!--CPUBW HWMON - Set up_scale 0 -->
-        <!--L CPU core ctl min cpus 6 -->
+        <!-- POWER_HINT_ID_COMMON -->
+        <!-- llcc-ddr-bw hyst disable : MPCTLV3_LLCC_DDR_BW_HYST_OPT(0x43024000)   : 0    -->
+        <!-- llcc-ddr-bw sample_ms    : MPCTLV3_LLCC_DDR_BW_SAMPLE_MS(0x4300C000)  : 10   -->
+        <!-- llcc-ddr-bw min_freq     : MPCTLV3_LLCC_DDR_BW_MIN_FREQ(0x43010000)   : 3879 -->
+        <!-- cpu-llcc-bw hyst disable : MPCTLV3_CPU_LLCC_BW_HYST_OPT(0x41838000)   : 0    -->
+        <!-- cpu-llcc-bw sample_ms    : MPCTLV3_CPU_LLCC_BW_SAMPLE_MS(0x4183C000)  : 16   -->
+        <!-- cpu-llcc-bw min_freq     : MPCTLV3_CPU_LLCC_BW_MIN_FREQ(0x41828000)   : 9155 -->
+        <!-- cpu-llcc-bw io_percent   : MPCTLV3_CPU_LLCC_BW_IO_PERCENT(0x41834000) : 100  -->
+        <!-- CPU0 DDR memlat          : MPCTLV3_LLCC_MEMLAT_RATIO_CELL_0(0x43420000): 1   -->
+        <!-- CPU4 DDR memlat          : MPCTLV3_LLCC_MEMLAT_RATIO_CELL_0(0x43424000): 1   -->
+        <!-- silver cluster min freq  : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 998 -->
+        <!-- sched prefer spread      : MPCTLV3_SCHED_PREFER_SPREAD(0x40CA8000)            : 3   -->
         <Config
-            Id="0x00001332" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, -12, 0x40C68110, -12, 0x40C68120, -12,
-            0x40C68130, -12, 0x40C68000, -12, 0x40C68010, -12, 0x40C68020, -12, 0x40C68030, -12,
-            0x4143C100, 1190, 0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x32, 0x43020000, 0x64, 0x43014000, 0x0, 0x41000100, 6"/>
+            Id="0x00001331" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x43024000, 0, 0x43034000, 10, 0x43010000, 38,
+                       0x41838000, 0, 0x4183C000, 16, 0x41828000, 91, 0x41834000, 100,
+                       0x43420000, 1, 0x43424000, 1, 0x40800100, 998, 0x40CA8000, 3"/>
 
-        <!-- camera 30fps-->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 50 -->
-        <!--CPUBW HWMON - Set io_percent 100 -->
-        <!--CPUBW HWMON - Set up_scale 0 -->
-        <!--L CPU core ctl min cpus 6 -->
-        <!--L CPU core Fmin 1.1 GHz -->
-        <!--Set uclamp latency sensitivity to 1 -->
-        <!--Enable sched prefer spread 1 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x00001333" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, -10, 0x40C68110, -10, 0x40C68120, -10,
-            0x40C68130, -10, 0x40C68000, -10, 0x40C68010, -10, 0x40C68020, -10, 0x40C68030, -10,
-            0x41440100, 0x5F, 0x41440000, 0x4B, 0x43034000, 0x32, 0x43020000, 0x64, 0x43014000, 0x0, 0x41000100, 6,
-            0x40800100, 1190, 0x40CEC000, 0x1, 0x40CA8000, 0x1"/>
+            Id="0x00001332" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
 
-
-        <!-- camera 60 FPS -->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 20 -->
-        <!--L CPU core ctl min cpus 6 -->
-        <!--L CPU core Fmin 1.1 GHz -->
-        <!--Set uclamp latency sensitivity to 1 -->
-        <!--Enable sched prefer spread 1 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_30FPS -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x00001334" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, -10, 0x40C68110, -10, 0x40C68120, -10,
-            0x40C68130, -10, 0x40C68000, -10, 0x40C68010, -10, 0x40C68020, -10, 0x40C68030, -10,
-            0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x14, 0x41000100, 6,
-            0x40800100, 1190, 0x40CEC000, 0x1, 0x40CA8000, 0x1"/>
+            Id="0x00001333" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
 
-
-        <!-- camera HFR -->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CPU Hispeed freq of 1190Mhz -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 20 -->
-        <!--L CPU core ctl min cpus 6 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_8K_30FPS -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x00001335" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, 0xFFFFFFFA, 0x40C68110, 0xFFFFFFFA, 0x40C68120, 0xFFFFFFFA,
-            0x40C68130, 0xFFFFFFFA, 0x40C68000, 0xFFFFFFFA, 0x40C68010, 0xFFFFFFFA, 0x40C68020, 0xFFFFFFFA, 0x40C68030, 0xFFFFFFFA,
-            0x4143C100, 1190, 0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x14, 0x41000100, 6, 0x41000000, 2,0x40800000, 1517, 0x40800100, 1517"/>
+            Id="0x00001334" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
 
-
-        <!-- HFR 480fps -->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CPU Hispeed freq of 1190Mhz -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 20 -->
-        <!--L CPU core ctl min cpus 6 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS -->
+        <!-- silver cluster min freq  : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 998 -->
         <Config
-            Id="0x00001336" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, 0xFFFFFFFA, 0x40C68110, 0xFFFFFFFA, 0x40C68120, 0xFFFFFFFA,
-            0x40C68130, 0xFFFFFFFA, 0x40C68000, 0xFFFFFFFA, 0x40C68010, 0xFFFFFFFA, 0x40C68020, 0xFFFFFFFA, 0x40C68030, 0xFFFFFFFA,
-            0x4143C100, 1190, 0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x14, 0x41000100, 6"/>
-			
-        <!-- camera preview -->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CPU Hispeed freq of 1190Mhz -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 50 -->
-        <!--CPUBW HWMON - Set io_percent 100 -->
-        <!--CPUBW HWMON - Set up_scale 0 -->
-        <!--L CPU core ctl min cpus 6 -->
+            Id="0x00001335" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 998"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_60FPS -->
         <Config
-            Id="0x00001337" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, -12, 0x40C68110, -12, 0x40C68120, -12,
-            0x40C68130, -12, 0x40C68000, -12, 0x40C68010, -12, 0x40C68020, -12, 0x40C68030, -12,
-            0x4143C100, 1190, 0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x32, 0x43020000, 0x64, 0x43014000, 0x0, 0x41000100, 6"/>
+            Id="0x00001336" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612, 
+			0x40C20000, 65, 0x40C1C000, 75, 0x40800100, 1094, 0x40800000, 1075"/>
 
-        <!-- camera LiveFocus -->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CPU Hispeed freq of 1190Mhz -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 20 -->
-        <!--L CPU core ctl min cpus 6 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_FRONT -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x00001338" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, 0xFFFFFFFA, 0x40C68110, 0xFFFFFFFA, 0x40C68120, 0xFFFFFFFA,
-            0x40C68130, 0xFFFFFFFA, 0x40C68000, 0xFFFFFFFA, 0x40C68010, 0xFFFFFFFA, 0x40C68020, 0xFFFFFFFA, 0x40C68030, 0xFFFFFFFA,
-            0x4143C100, 1190, 0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x14, 0x41000100, 6"/>			
+            Id="0x00001337" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
 
-        <!-- same settings for all the qvr power levels intentionally -->
-        <!-- qvr level cpu1 gpu1 -->
-        <!-- B CPU - Cluster min freq ~.768 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.035 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.478 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_30FPS_FRONT -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x0000130A" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x300, 0x40804000, 0x7F3, 0x40800100, 0x240, 0x40804100, 0x5C6,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x00001338" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
 
-        <!-- qvr level cpu1 gpu2 -->
-        <!-- B CPU - Cluster min freq ~.768 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.035 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.478 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_FRONT -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x0000130B" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x300, 0x40804000, 0x7F3, 0x40800100, 0x240, 0x40804100, 0x5C6,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x00001339" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
 
-        <!-- qvr level cpu1 gpu3 -->
-        <!-- B CPU - Cluster min freq ~.768 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.035 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.478 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_60FPS_FRONT -->
+        <!-- silver pl : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_LITTLE(0x41444100)     : 0    -->
+        <!-- gold pl   : MPCTLV3_SCHEDUTIL_PREDICTIVE_LOAD_CLUSTER_BIG (0x41444000)       : 0    -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x0000130C" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x300, 0x40804000, 0x7F3, 0x40800100, 0x240, 0x40804100, 0x5C6,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000133A" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x41444100, 0, 0x41444000, 0, 0x40804100, 1612"/>
 
-        <!-- qvr level cpu2 gpu1 -->
-        <!-- B CPU - Cluster min freq ~.768 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.035 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.478 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_PRO -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x0000130D" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x300, 0x40804000, 0x7F3, 0x40800100, 0x240, 0x40804100, 0x5C6,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000133B" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
 
-        <!-- qvr level cpu2 gpu2 -->
-        <!-- B CPU - Cluster min freq ~.768 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.035 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.478 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_30FPS_PRO -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x0000130E" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x300, 0x40804000, 0x7F3, 0x40800100, 0x240, 0x40804100, 0x5C6,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000133C" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
 
-        <!-- qvr level cpu2 gpu3 -->
-        <!-- B CPU - Cluster min freq ~.768 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.035 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.478 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_8K_30FPS_PRO -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x0000130F" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x300, 0x40804000, 0x7F3, 0x40800100, 0x240, 0x40804100, 0x5C6,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000133D" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
 
-        <!-- qvr level cpu3 gpu1 -->
-        <!-- B CPU - Cluster min freq ~.768 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.035 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.478 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_PRO -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x00001310" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x300, 0x40804000, 0x7F3, 0x40800100, 0x240, 0x40804100, 0x5C6,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000133E" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
 
-        <!-- qvr level cpu3 gpu2 -->
-        <!-- B CPU - Cluster min freq ~.768 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.035 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.478 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_60FPS_PRO -->
         <Config
-            Id="0x00001311" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x300, 0x40804000, 0x7F3, 0x40800100, 0x240, 0x40804100, 0x5C6,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000133F" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612, 0x40C20000, 65, 0x40C1C000, 75, 0x40800100, 1094, 0x40800000, 1075"/>
 
-        <!-- qvr level cpu3 gpu3 -->
-        <!-- B CPU - Cluster min freq ~.768 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.035 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.478 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_120FPS_PRO -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)          : 1    -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1094 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 20   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 30   -->
         <Config
-            Id="0x00001312" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x300, 0x40804000, 0x7F3, 0x40800100, 0x240, 0x40804100, 0x5C6,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x00001340" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1094, 0x40800000, 1324, 0x40C20000, 20, 0x40C1C000, 30"/>
 
-         <!-- sustained performance -->
-         <!-- B CPU - Cluster min freq uncapped -->
-         <!-- L CPU - Cluster min freq uncapped -->
-         <!-- B CPU - Cluster max freq ~1.22 GHz -->
-         <!-- L CPU - Cluster max freq ~1.22 Ghz -->
-         <!-- GPU - min freq 275Mhz -->
-         <!-- GPU - max freq 400Mhz -->
-         <!-- GPUBW freq uncapped -->
-         <Config
-             Id="0x00001206" Enable="true" Timeout="0" Target="blair"
-             Resources="0x40800000, 0x0, 0x40800100, 0x0, 0x40804000, 0x4CC, 0x40804100, 0x4CC,
-             0X4280C000, 0x113, 0X42810000, 0x190, 0x42814000, 0x0"/>
-
-         <!-- vr mode -->
-         <!-- B CPU - Cluster min freq ~1.22 Ghz -->
-         <!-- L CPU - Cluster min freq ~0.940 Ghz -->
-         <!-- B CPU - Cluster max freq ~1.90 Ghz -->
-         <!-- L CPU - Cluster max freq ~1.70 Ghz -->
-         <!-- GPU - min freq 275Mhz -->
-         <!-- GPU - max freq 625Mhz -->
-         <!-- GPUBW uncapped -->
-         <Config
-             Id="0x00001207" Enable="true" Timeout="0" Target="blair"
-             Resources="0x40800000, 0x4CC, 0x40800100, 0x3AC, 0x40804000, 0x76C, 0x40804100, 0x6C0,
-             0X4280C000, 0x113, 0X4280C000, 0x271, 0x42814000, 0x0"/>
-
-         <!-- vr mode sustained performance -->
-         <!-- B CPU - Cluster min freq ~1.22 Ghz -->
-         <!-- L CPU - Cluster min freq ~1.22 Ghz -->
-         <!-- B CPU - Cluster max freq ~1.22 Ghz -->
-         <!-- L CPU - Cluster max freq ~1.22 Ghz -->
-         <!-- GPU - min freq 400Mhz -->
-         <!-- GPU - max freq 400Mhz -->
-         <!-- GPUBW uncapped  -->
-         <Config
-             Id="0x00001301" Enable="true" Timeout="0" Target="blair"
-             Resources="0x40800000, 0x4CC, 0x40800100, 0x4CC, 0x40804000, 0x4CC, 0x40804100, 0x4CC,
-             0X4280C000, 0x190, 0X42810000, 0x190, 0x42814000, 0x0"/>
-
-        <!-- multi camera 30fps-->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CPU cluster min freq of 1190Mhz -->
-        <!--CPUBW HWMON - Set sample_ms 50 -->
-        <!--CPUBW HWMON - Set io_percent 100 -->
-        <!--CPUBW HWMON - Set up_scale 0 -->
-        <!--L CPU core ctl min cpus 6 -->
-        <!--Set uclamp latency sensitivity to 1 -->
-        <!--Enable sched prefer spread 1 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_HFR -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)          : 1    -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1094 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 30   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 40   -->
         <Config
-            Id="0x00001336" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, -10, 0x40C68110, -10, 0x40C68120, -10,
-            0x40C68130, -10, 0x40C68000, -10, 0x40C68010, -10, 0x40C68020, -10, 0x40C68030, -10,
-            0x40800100, 1190, 0x43034000, 0x32, 0x43020000, 0x64, 0x43014000, 0x0, 0x41000100, 6,
-            0x40CEC000, 0x1, 0x40CA8000, 0x1"/>
+            Id="0x00001341" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1094, 0x40800000, 1324, 0x40C20000, 30, 0x40C1C000, 40"/>
 
-        <!-- camera preview -->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CPU Hispeed freq of 1113Mhz -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 50 -->
-        <!--CPUBW HWMON - Set io_percent 100 -->
-        <!--CPUBW HWMON - Set up_scale 0 -->
-        <!--L CPU core ctl min cpus 6 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_HFR_480FPS -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)          : 1    -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1094 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 20   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 30   -->
         <Config
-            Id="0x00001330" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, -12, 0x40C68110, -12, 0x40C68120, -12,
-            0x40C68130, -12, 0x40C68000, -12, 0x40C68010, -12, 0x40C68020, -12, 0x40C68030, -12,
-            0x4143C100, 1113, 0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x32, 0x43020000, 0x64, 0x43014000, 0x0, 0x41000100, 6"/>
+            Id="0x00001342" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1094, 0x40800000, 1324, 0x40C20000, 20, 0x40C1C000, 30"/>
 
-        <!-- camera 30fps-->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 50 -->
-        <!--CPUBW HWMON - Set io_percent 100 -->
-        <!--CPUBW HWMON - Set up_scale 0 -->
-        <!--L CPU core ctl min cpus 6 -->
-        <!--L CPU core Fmin 1.1 GHz -->
-        <!--Set uclamp latency sensitivity to 1 -->
-        <!--Enable sched prefer spread 1 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_BEAUTY -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
         <Config
-            Id="0x00001331" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, -10, 0x40C68110, -10, 0x40C68120, -10,
-            0x40C68130, -10, 0x40C68000, -10, 0x40C68010, -10, 0x40C68020, -10, 0x40C68030, -10,
-            0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x32, 0x43020000, 0x64, 0x43014000, 0x0, 0x41000100, 6,
-            0x40800100, 1113, 0x40CEC000, 0x1, 0x40CA8000, 0x1"/>
+            Id="0x00001343" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
 
-
-        <!-- camera 60 FPS -->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 20 -->
-        <!--L CPU core ctl min cpus 6 -->
-        <!--L CPU core Fmin 1.1 GHz -->
-        <!--Set uclamp latency sensitivity to 1 -->
-        <!--Enable sched prefer spread 1 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_30FPS_BEAUTY -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 30   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 40   -->
         <Config
-            Id="0x00001332" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, -10, 0x40C68110, -10, 0x40C68120, -10,
-            0x40C68130, -10, 0x40C68000, -10, 0x40C68010, -10, 0x40C68020, -10, 0x40C68030, -10,
-            0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x14, 0x41000100, 6,
-            0x40800100, 1113, 0x40CEC000, 0x1, 0x40CA8000, 0x1"/>
+            Id="0x00001344" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
 
-
-        <!-- camera HFR -->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CPU Hispeed freq of 1113Mhz -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 20 -->
-        <!--L CPU core ctl min cpus 6 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_BEAUTY -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 30   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 40   -->
         <Config
-            Id="0x00001333" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, 0xFFFFFFFA, 0x40C68110, 0xFFFFFFFA, 0x40C68120, 0xFFFFFFFA,
-            0x40C68130, 0xFFFFFFFA, 0x40C68000, 0xFFFFFFFA, 0x40C68010, 0xFFFFFFFA, 0x40C68020, 0xFFFFFFFA, 0x40C68030, 0xFFFFFFFA,
-            0x4143C100, 1113, 0x41440100, 0x5F, 0x41440000, 0x4B, 0x43034000, 0x14, 0x41000100, 6"/>
+            Id="0x00001345" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
 
-
-        <!-- HFR 480fps -->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CPU Hispeed freq of 1113Mhz -->
-        <!--L CLUSTER_LITTLE - Set hispeed load 95 -->
-        <!--L CLUSTER_BIG - Set hispeed load 95 -->
-        <!--CPUBW HWMON - Set sample_ms 20 -->
-        <!--L CPU core ctl min cpus 6 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_BEAUTY_FRONT -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
         <Config
-            Id="0x00001334" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, 0xFFFFFFFA, 0x40C68110, 0xFFFFFFFA, 0x40C68120, 0xFFFFFFFA,
-            0x40C68130, 0xFFFFFFFA, 0x40C68000, 0xFFFFFFFA, 0x40C68010, 0xFFFFFFFA, 0x40C68020, 0xFFFFFFFA, 0x40C68030, 0xFFFFFFFA,
-            0x4143C100, 1113, 0x41440100, 0x5F, 0x41440000, 0x5F, 0x43034000, 0x14, 0x41000100, 6"/>
+            Id="0x00001346" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
 
-
-        <!-- same settings for all the qvr power levels intentionally -->
-        <!-- qvr level cpu1 gpu1 -->
-        <!-- B CPU - Cluster min freq ~.691 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.2 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.516 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_BEAUTY_FRONT -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
         <Config
-            Id="0x0000130A" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x2B3, 0x40804000, 0x8A0, 0x40800100, 0x240, 0x40804100, 0x5EC,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x00001347" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
 
-        <!-- qvr level cpu1 gpu2 -->
-        <!-- B CPU - Cluster min freq ~.691 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.2 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.516 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_HDR10 -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
         <Config
-            Id="0x0000130B" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x2B3, 0x40804000, 0x8A0, 0x40800100, 0x240, 0x40804100, 0x5EC,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x00001348" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1324, 0x40C20000, 30, 0x40C1C000, 40"/>
 
-        <!-- qvr level cpu1 gpu3 -->
-        <!-- B CPU - Cluster min freq ~.691 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.2 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.516 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_UHD_30FPS_HDR10 -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)		  : 1	 -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <!-- gpu min lock            : MPCTLV3_GPU_MIN_POWER_LEVEL(0x42804000)            : 0x6(490Mhz)-->
         <Config
-            Id="0x0000130C" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x2B3, 0x40804000, 0x8A0, 0x40800100, 0x240, 0x40804100, 0x5EC,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x00001349" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1497, 0x40800000, 1324, 0x40C20000, 30, 0x40C1C000, 40 , 0x42804000 , 0x6"/>
 
-        <!-- qvr level cpu2 gpu1 -->
-        <!-- B CPU - Cluster min freq ~.691 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.2 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.516 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_HDR10 -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)		  : 1	 -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <!-- gpu min lock            : MPCTLV3_GPU_MIN_POWER_LEVEL(0x42804000)            : 0x6(490Mhz)-->
         <Config
-            Id="0x0000130D" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x2B3, 0x40804000, 0x8A0, 0x40800100, 0x240, 0x40804100, 0x5EC,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000134A" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1497, 0x40800000, 1324, 0x40C20000, 30, 0x40C1C000, 40 , 0x42804000 , 0x6"/>
 
-        <!-- qvr level cpu2 gpu2 -->
-        <!-- B CPU - Cluster min freq ~.691 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.2 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.516 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_HYPER_LAPSE -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
         <Config
-            Id="0x0000130E" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x2B3, 0x40804000, 0x8A0, 0x40800100, 0x240, 0x40804100, 0x5EC,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000134B" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
 
-        <!-- qvr level cpu2 gpu3 -->
-        <!-- B CPU - Cluster min freq ~.691 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.2 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.516 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_30FPS_SUPER_STEADY -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)		  : 1	 -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1440 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <!-- gpu min lock            : MPCTLV3_GPU_MIN_POWER_LEVEL(0x42804000)            : 0x6(490Mhz)-->
         <Config
-            Id="0x0000130F" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x2B3, 0x40804000, 0x8A0, 0x40800100, 0x240, 0x40804100, 0x5EC,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000134C" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1497, 0x40800000, 1440, 0x40C20000, 30, 0x40C1C000, 40 , 0x42804000 , 0x6"/>
 
-        <!-- qvr level cpu3 gpu1 -->
-        <!-- B CPU - Cluster min freq ~.691 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.2 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.516 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_FHD_60FPS_SUPER_STEADY -->
+        <!-- low power mode disable  : MPCTLV3_ALL_CPUS_PWR_CLPS_DIS(0x40400000)		  : 1	 -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1440 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
+        <!-- gpu min lock            : MPCTLV3_GPU_MIN_POWER_LEVEL(0x42804000)            : 0x6(490Mhz)-->
         <Config
-            Id="0x00001310" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x2B3, 0x40804000, 0x8A0, 0x40800100, 0x240, 0x40804100, 0x5EC,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000134D" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40400000, 0x1, 0x40800100, 1497, 0x40800000, 1440, 0x40C20000, 30, 0x40C1C000, 40 , 0x42804000 , 0x6"/>
 
-        <!-- qvr level cpu3 gpu2 -->
-        <!-- B CPU - Cluster min freq ~.768 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.2 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.516 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_TRACKING_ZOOM -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1075 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              :   30 -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                :   40 -->
         <Config
-            Id="0x00001311" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x2B3, 0x40804000, 0x8A0, 0x40800100, 0x240, 0x40804100, 0x5EC,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000134E" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1075, 0x40C20000, 30, 0x40C1C000, 40"/>
 
-        <!-- qvr level cpu3 gpu3 -->
-        <!-- B CPU - Cluster min freq ~.768 Ghz -->
-        <!-- B CPU - Cluster max freq ~2.2 Ghz -->
-        <!-- L CPU - Cluster min freq ~.576 Ghz -->
-        <!-- L CPU - Cluster max freq ~1.516 Ghz -->
-        <!-- GPU - min pwrlevel 6 (freq 180 Mhz) -->
-        <!-- GPU - max pwrlevel 0 (freq 825 Mhz) -->
-        <!-- Idefinite Duration -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_LIVE_FOCUS_VIDEO -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1305 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <!-- Sched downmigrate       : MPCTLV3_SCHED_DOWNMIGRATE(0x40C20000)              : 30   -->
+        <!-- Sched upmigrate         : MPCTLV3_SCHED_UPMIGRATE(0x40C1C000)                : 40   -->
         <Config
-            Id="0x00001312" Enable="true" Target="blair" Timeout="0"
-            Resources="0x40800000, 0x2B3, 0x40804000, 0x8A0, 0x40800100, 0x240, 0x40804100, 0x5EC,
-            0x42804000, 0x6, 0x42808000, 0x0"/>
+            Id="0x0000134F" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1305, 0x40800000, 1324, 0x40C20000, 30, 0x40C1C000, 40"/>
 
-         <!-- sustained performance -->
-         <!-- B CPU - Cluster min freq uncapped -->
-         <!-- L CPU - Cluster min freq uncapped -->
-         <!-- B CPU - Cluster max freq ~1.22 GHz -->
-         <!-- L CPU - Cluster max freq ~1.22 Ghz -->
-         <!-- GPU - min freq 275Mhz -->
-         <!-- GPU - max freq 400Mhz -->
-         <!-- GPUBW freq uncapped -->
-         <Config
-             Id="0x00001206" Enable="true" Timeout="0" Target="blair"
-             Resources="0x40800000, 0x0, 0x40800100, 0x0, 0x40804000, 0x4CC, 0x40804100, 0x4CC,
-             0X4280C000, 0x113, 0X42810000, 0x190, 0x42814000, 0x0"/>
-
-         <!-- vr mode -->
-         <!-- B CPU - Cluster min freq ~1.22 Ghz -->
-         <!-- L CPU - Cluster min freq ~0.940 Ghz -->
-         <!-- B CPU - Cluster max freq ~1.90 Ghz -->
-         <!-- L CPU - Cluster max freq ~1.70 Ghz -->
-         <!-- GPU - min freq 275Mhz -->
-         <!-- GPU - max freq 625Mhz -->
-         <!-- GPUBW uncapped -->
-         <Config
-             Id="0x00001207" Enable="true" Timeout="0" Target="blair"
-             Resources="0x40800000, 0x4CC, 0x40800100, 0x3AC, 0x40804000, 0x76C, 0x40804100, 0x6C0,
-             0X4280C000, 0x113, 0X4280C000, 0x271, 0x42814000, 0x0"/>
-
-         <!-- vr mode sustained performance -->
-         <!-- B CPU - Cluster min freq ~1.22 Ghz -->
-         <!-- L CPU - Cluster min freq ~1.22 Ghz -->
-         <!-- B CPU - Cluster max freq ~1.22 Ghz -->
-         <!-- L CPU - Cluster max freq ~1.22 Ghz -->
-         <!-- GPU - min freq 400Mhz -->
-         <!-- GPU - max freq 400Mhz -->
-         <!-- GPUBW uncapped  -->
-         <Config
-             Id="0x00001301" Enable="true" Timeout="0" Target="blair"
-             Resources="0x40800000, 0x4CC, 0x40800100, 0x4CC, 0x40804000, 0x4CC, 0x40804100, 0x4CC,
-             0X4280C000, 0x190, 0X42810000, 0x190, 0x42814000, 0x0"/>
-
-        <!-- multi camera 30fps-->
-        <!--L CPU CORE 0 SCHED LOAD BOOST -->
-        <!--L CPU CORE 1 SCHED LOAD BOOST -->
-        <!--L CPU CORE 2 SCHED LOAD BOOST -->
-        <!--L CPU CORE 3 SCHED LOAD BOOST -->
-        <!--L CPU CORE 4 SCHED LOAD BOOST -->
-        <!--L CPU CORE 5 SCHED LOAD BOOST -->
-        <!--L CPU CORE 6 SCHED LOAD BOOST -->
-        <!--L CPU CORE 7 SCHED LOAD BOOST -->
-        <!--L CPU cluster min freq of 1113Mhz -->
-        <!--CPUBW HWMON - Set sample_ms 50 -->
-        <!--CPUBW HWMON - Set io_percent 100 -->
-        <!--CPUBW HWMON - Set up_scale 0 -->
-        <!--L CPU core ctl min cpus 6 -->
-        <!--Set uclamp latency sensitivity to 1 -->
-        <!--Enable sched prefer spread 1 -->
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_DIRECTORS_VIEW -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
         <Config
-            Id="0x00001336" Enable="true" Timeout="0" Target="blair"
-            Resources="0x40C68100, -10, 0x40C68110, -10, 0x40C68120, -10,
-            0x40C68130, -10, 0x40C68000, -10, 0x40C68010, -10, 0x40C68020, -10, 0x40C68030, -10,
-            0x40800100, 1113, 0x43034000, 0x32, 0x43020000, 0x64, 0x43014000, 0x0, 0x41000100, 6,
-            0x40CEC000, 0x1, 0x40CA8000, 0x1"/>
+            Id="0x00001350" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_VIDEO_ENCODE_AR_DOODLE -->
+        <!-- silver cluster max freq : MPCTLV3_MAX_FREQ_CLUSTER_LITTLE_CORE_0(0x40804100) : 1612 -->
+        <Config
+            Id="0x00001351" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_FHD_30FPS_UW -->
+        <Config
+            Id="0x00001352" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_FHD_30FPS_TELE -->
+        <Config
+            Id="0x00001353" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_UHD_30FPS_UW -->
+        <Config
+            Id="0x00001354" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_UHD_30FPS_TELE -->
+        <Config
+            Id="0x00001355" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_SUPER_NIGHT -->
+        <Config
+            Id="0x00001356" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VIDEO_ENCODE_SUPER_NIGHT_BEAUTY -->
+        <Config
+            Id="0x00001357" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
+
+        <!-- POWER_HINT_ID_PERF_VT_CALL -->
+        <Config
+            Id="0x00001358" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40804100, 1612"/>
+
+        <!-- POWER_HINT_ID_PERF_CTS -->
+        <!-- silver cluster min freq : MPCTLV3_MIN_FREQ_CLUSTER_LITTLE_CORE_0(0x40800100) : 1497 -->
+        <!-- gold cluster min freq   : MPCTLV3_MIN_FREQ_CLUSTER_BIG_CORE_0(0x40800000)    : 1324 -->
+        <Config
+            Id="0x00001359" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 1497, 0x40800000, 1324"/>
+
+        <!-- POWER_HINT_ID_LIVE_FOCUS -->
+        <Config
+            Id="0x0000135A" Enable="true" Timeout="0" Target="lahaina"
+            Resources="0x40800100, 691"/>
 
     </Powerhint>
 </HintConfigs>
+

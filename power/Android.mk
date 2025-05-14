@@ -43,7 +43,7 @@ else
 # Include target-specific files.
 
 ifeq ($(call is-board-platform-in-list,sdm845), true)
-LOCAL_SRC_FILES += power-holi.c
+LOCAL_SRC_FILES += power-lahaina.c
 endif
 
 endif # End of board specific list
@@ -66,12 +66,12 @@ ifeq ($(TARGET_USES_INTERACTION_BOOST),true)
     LOCAL_CFLAGS += -DINTERACTION_BOOST
 endif
 
-LOCAL_MODULE := android.hardware.power-service-qti.sm6375
-LOCAL_INIT_RC := android.hardware.power-service-qti.sm6375.rc
+LOCAL_MODULE := android.hardware.power-service-qti.sm8350
+LOCAL_INIT_RC := android.hardware.power-service-qti.sm8350.rc
 LOCAL_MODULE_TAGS := optional
 LOCAL_CFLAGS += -Wno-unused-parameter -Wno-unused-variable
 LOCAL_VENDOR_MODULE := true
-LOCAL_VINTF_FRAGMENTS := android.hardware.power-service-qti.sm6375.xml
+LOCAL_VINTF_FRAGMENTS := android.hardware.power-service-qti.sm8350.xml
 
 include $(BUILD_EXECUTABLE)
 endif
