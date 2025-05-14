@@ -466,8 +466,8 @@ PRODUCT_PACKAGES += \
     init.qti.media.rc \
     init.ramplus.rc \
     init.samsung.bsp.rc \
+    init.samsung.connector.rc \
     init.samsung.display.rc \
-    init.samsung.power.rc \
     init.samsung.rc \
     init.target.rc \
     init.vendor.onebinary.rc \
@@ -479,8 +479,8 @@ PRODUCT_PACKAGES += \
     vendor.samsung.rilchip.qcom.rc \
     vendor.sensors.qti.rc \
     vendor.sensors.sscrpcd.rc \
-    wifi_qcom.rc \
-    wifi_sm6375.rc \
+    wifi_brcm.rc \
+    wifi_sm8350.rc \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/vendor/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
@@ -490,8 +490,7 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.crda.sh \
     init.kernel.post_boot.sh \
-    init.kernel.post_boot-blair.sh \
-    init.kernel.post_boot-holi.sh \
+    init.kernel.post_boot-lahaina.sh \
     init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
@@ -505,9 +504,6 @@ PRODUCT_PACKAGES += \
     init.qti.chg_policy.sh \
     init.qti.display_boot.sh \
     init.qti.early_init.sh \
-    init.qti.kernel.debug.sh \
-    init.qti.kernel.debug-blair.sh \
-    init.qti.kernel.debug-holi.sh \
     init.qti.kernel.sh \
     init.qti.media.sh \
     init.qti.qcv.sh \

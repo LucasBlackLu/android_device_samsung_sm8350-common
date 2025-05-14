@@ -102,8 +102,7 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,adb
 		      ;;
 	              "msmnile" | "sm6150" | "trinket" | "lito" | "atoll" | "bengal" | "lahaina" | "holi")
-			  #setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
-		          setprop persist.vendor.usb.config diag,adb
+			  setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
 		      ;;
 	              "monaco")
 		          setprop persist.vendor.usb.config diag,qdss,rmnet,adb
@@ -160,7 +159,7 @@ if [ -d /config/usb_gadget ]; then
 		echo $serialno > /config/usb_gadget/g1/strings/0x409/serialnumber
 	fi
 	setprop vendor.usb.configfs 1
-
+	
 	persist_comp=`getprop persist.sys.usb.config`
 	comp=`getprop sys.usb.config`
 	echo $persist_comp

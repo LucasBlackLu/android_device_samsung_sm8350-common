@@ -1,5 +1,6 @@
 //
-// SPDX-FileCopyrightText: The LineageOS Project
+// Copyright (C) 2025 The LineageOS Project
+//
 // SPDX-License-Identifier: Apache-2.0
 //
 
@@ -48,7 +49,7 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.samsung.power.rc",
+    name: "init.samsung.connector.rc",
     src: "vendor/etc/init/hw/init.samsung.power.rc",
     sub_dir: "init/hw",
     vendor: true,
@@ -69,15 +70,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "fingerprint_common.rc",
-    src: "vendor/etc/init/fingerprint_common.rc",
+    name: "init.audio.samsung.rc",
+    src: "vendor/etc/init/init.audio.samsung.rc",
     sub_dir: "init/",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "init.audio.samsung.rc",
-    src: "vendor/etc/init/init.audio.samsung.rc",
+    name: "fingerprint_common.rc",
+    src: "vendor/etc/init/fingerprint_common.rc",
     sub_dir: "init/",
     vendor: true,
 }
@@ -160,15 +161,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "wifi_qcom.rc",
-    src: "vendor/etc/init/wifi_qcom.rc",
+    name: "wifi_brcm.rc",
+    src: "vendor/etc/init/wifi_brcm.rc",
     sub_dir: "init/",
     vendor: true,
 }
 
 prebuilt_etc {
-    name: "wifi_sm6375.rc",
-    src: "vendor/etc/init/wifi_sm6375.rc",
+    name: "wifi_sm8350.rc",
+    src: "vendor/etc/init/wifi_sm8350.rc",
     sub_dir: "init/",
     vendor: true,
 }
@@ -193,15 +194,10 @@ sh_binary {
     vendor: true,
 }
 
-sh_binary {
-    name: "init.kernel.post_boot-blair.sh",
-    src: "vendor/bin/init.kernel.post_boot-blair.sh",
-    vendor: true,
-}
 
 sh_binary {
-    name: "init.kernel.post_boot-holi.sh",
-    src: "vendor/bin/init.kernel.post_boot-holi.sh",
+    name: "init.kernel.post_boot-lahaina.sh",
+    src: "vendor/bin/init.kernel.post_boot-lahaina.sh",
     vendor: true,
 }
 
@@ -266,32 +262,14 @@ sh_binary {
 }
 
 sh_binary {
-    name: "init.qti.chg_policy.sh",
-    src: "vendor/bin/init.qti.chg_policy.sh",
-    vendor: true,
-}
-
-sh_binary {
     name: "init.qti.early_init.sh",
     src: "vendor/bin/init.qti.early_init.sh",
     vendor: true,
 }
 
 sh_binary {
-    name: "init.qti.kernel.debug.sh",
-    src: "vendor/bin/init.qti.kernel.debug.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qti.kernel.debug-blair.sh",
-    src: "vendor/bin/init.qti.kernel.debug-blair.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.qti.kernel.debug-holi.sh",
-    src: "vendor/bin/init.qti.kernel.debug-holi.sh",
+    name: "init.qti.chg_policy.sh",
+    src: "vendor/bin/init.qti.chg_policy.sh",
     vendor: true,
 }
 
