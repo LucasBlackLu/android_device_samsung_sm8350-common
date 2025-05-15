@@ -1,0 +1,68 @@
+<compatibility-matrix version="7.0" type="framework">
+    <hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.biometrics.face</name>
+        <version>3.0</version>
+        <version>2.0</version>
+        <interface>
+            <name>ISehBiometricsFace</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.ifaa</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISehIfaa</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.security.drk</name>
+        <version>2.0</version>
+        <interface>
+            <name>ISehDrk</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.security.hdcp.keyprovisioning</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISehHdcpKeyProvisioning</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+	<hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.security.sem</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISehSem</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+	<hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.security.skpm</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISehSkpm</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+	<hal format="hidl" optional="true">
+        <name>vendor.samsung.hardware.security.wsm</name>
+        <version>1.0</version>
+        <interface>
+            <name>ISehWsm</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.samsung.hardware.snap</name>
+        <version>1</version>
+        <interface>
+            <name>ISehSnap</name>
+            <instance>default</instance>
+            <instance>secsnap</instance>
+        </interface>
+    </hal>
+</compatibility-matrix>
