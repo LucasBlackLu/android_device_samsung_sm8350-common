@@ -321,6 +321,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    debug.rc \
     fstab.qcom \
     fstab.ramplus \
     fingerprint_common.rc \
