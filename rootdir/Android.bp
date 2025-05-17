@@ -70,6 +70,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "debug.rc",
+    src: "vendor/etc/init/debug.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "fingerprint_common.rc",
     src: "vendor/etc/init/fingerprint_common.rc",
     sub_dir: "init/",

@@ -367,6 +367,7 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    debug.rc \
     fstab.qcom \
     fstab.qcom_ramdisk \
     fstab.ramplus \
