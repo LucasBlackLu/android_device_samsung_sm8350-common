@@ -6,37 +6,37 @@
     "Video": {
     // feature list used for enable/disable
         "Features": {
+            //This enables c2 custom filters.
+            "pipelining": true,
             // This is used for encoder color space conversion with custom matrix.
             // custom matrix is defined in kernel driver
             // this triggers to enable CSC to 709LR with custom matrix
-            "enc_csc_custom_matrix": false,
+            "enc_csc_custom_matrix": true,
             // this enables adaptive blur if possible by encoder.
             // this is preprocessing of encoder input YUV buffers
-            "enc_auto_blur": false,
+            "enc_auto_blur": true,
             // this enables encoding rotate by C2D. it is used for some low tier end chipsets which
             // don't support rotate feature in video core. TODO - Rename as enc_vpss_rotation
-            "enc_c2d_rotation": true,
-            "platform_disable_ubwc": true,
+            "enc_c2d_rotation": false,
+            // target supports cvp for all encode usecases.
+            "enc_cvp_enable": true,
+            // encoder csc enable
+            "enc_csc_enable": false,
+            // perf hints support for decoder and encoder
+            "perf_control_enable": false,
             // It is used to enable fastCV engine for flip support in the absence of VPSS hardware
             // support.
-            "enc_vpss_flip": false,
+            "enc_vpss_flip": true,
             // This is used to limit secure usecase buffer count. Changes dynamic to static count
-            "dec_secure_static_count": true
+            "dec_secure_static_count": false
         },
         "Presets": {
-            // platform value to force HDR disable. if this value is enabled
-            // then HDR is disabled. this value acts as a bit mask.
-            //  0x0 : no over ride,
-            //  0x1 : disables decoder HDR,
-            //  0x2 : disbaled encoder HDR,
-            //  0x3 : disables both decoder and encoder HDR.
-            "vidc_disable_hdr" : 3,
             // this is used for secure decoding performance boost handling
             // prefech sizes of internal & output buffers
-            // internal : 0 MB
-            // output   : 0 MB
-            "dec_sec_prefetch_size_internal": 0,
-            "dec_sec_prefetch_size_output": 0,
+            // internal : 200 MB (200 X 1)
+            // output   : 200 MB (12.5 X 16)
+            "dec_sec_prefetch_size_internal": 209715200,
+            "dec_sec_prefetch_size_output": 13434880,
             // control to force enable linear color format for decoder
             // if this is enable, then decoder will produce linear color format output.
             // it is bitmask:
@@ -49,12 +49,30 @@
             // if it is within capability of B frame encode case
             // this is used only in MediaRecorder path
             // max B frame count between two P
-            "enc_default_bframe_count": 0,
-            // maximum MB/sec for default B frame enablement case
-            "enc_max_b_frame_mbs_per_sec": 0,
+            "enc_default_bframe_count": 1,
+            // maximum MB/sec for default adaptive b-frame enablement case
+            // 3840x2160@60fps
+            "enc_adaptive_b_max_mbs_per_sec": 1944000,
+            // maximum MB/frame for default adaptive b-frame enablement case
+            // 3840x2160/256
+            "enc_adaptive_b_max_mbs_per_frame": 32400,
+            // maximum width for default adaptive b-frame enablement case
+            // Max Width=3840, Max Height=3840
+            "enc_adaptive_b_max_width": 3840,
+            // maximum MB/sec for default Hier-B enablement case
+            // 1920x1088@60fps
+            "enc_hier_b_max_mbs_per_sec": 489600,
+            // maximum MB/frame for default Hier-B enablement case
+            // 1920x1088/256
+            "enc_hier_b_max_mbs_per_frame": 8160,
+            // maximum width for default Hier-B enablement case
+            // Max Width=1920, Max Height=1920
+            "enc_hier_b_max_width": 1920,
             // maximum decoder output rate if it is Nuplayer path and
             // player sets max refresh rate
             "max_supported_render_rate": 120,
+            // maximum all intra frame rate
+            "max_supported_all_intra_framerate": 240,
             // control to force enable linear color format for encoder
             // if this is enable, then encoder will ask camera via
             // consumer flag to inform usage of linear color format.
@@ -68,23 +86,29 @@
             // override chroma qp offset value for 8 and 10 bits:
             // default: 0
             // allowed override value: -12
-            "enc_chroma_qp_offset_10_bit": 0,
-            "enc_chroma_qp_offset_8_bit": 0,
+            "enc_chroma_qp_offset_10_bit": -12,
+            "enc_chroma_qp_offset_8_bit": -12,
             //encoder bitrate savings control (CAC) - content adaptive coding feature
             // it is bitmask.
             //  0x0: disable CAC
             //  0x1: 8 bit: enable.  10 bit: disable
             //  0x2: 8 bit: disable. 10 bit: enable
             //  0x3: 8 bit: enable.  10 bit: enable
-            "enc_bitrate_savings": 1,
+            "enc_bitrate_savings": 0,
             // minimum encoder bitrate boost
-            "enc_bitrate_boost": 15,
+            "enc_bitrate_boost": 0,
+            // maximum and minimum QPs for Encoders
+            // default: 10 - 40
+            // allowed override value: 0 - 51
+            "enc_bitrate_boost_qp_min": 10,
+            "enc_bitrate_boost_qp_max": 40,
+            // additional buffers to be added while computing pipeline delays
+            "pipeline_extra_output_buffers": 2,
             // time threshold of output buffer allocation loop since last input buffer queued(ms)
             // 0 --> no such limitation (loop until allocation done)
-            "max_retry_alloc_output_timeout": 0,
+            "max_retry_alloc_output_timeout": 1000,
             // override default primaries to BT709 for >=UHD decode
-            "default_primaries_override" : 0,
-
+            "default_primaries_override" : 1,
             // WARNING:
             //    Please DON'T change these values, if you don't know what you are doing.
             // These are the Video HAL capabilities. Video HAL may not function properly with wrong values.
@@ -94,14 +118,18 @@
             // maximum LTR cont for encoder
             "ltr_max_count": 2,
             // Encoder preprocessing: maximum encoder downscalar factor possible in width or height or both direction
-            "preprocess_max_downscale_factor": 0,
+            "preprocess_max_downscale_factor": 8,
             // encoder support rotation as preprocessing
             "preprocess_rotation": 1,
-            // encoder maxium Hier-P layer count: 6
-            "max_temporal_layer_pframe_count": 6,
-            // encoder maximum Hier-B layer count: 0
-            "max_temporal_layer_bframe_count": 0
+            // encoder Hier-P maximum layer count: 6
+            "enc_hier_p_max_temporal_layer_count": 6,
+            // encoder Hier-B maximum layer count: 4
+            "enc_hier_b_max_temporal_layer_count": 4
         },
+        // list of codec plugin libraries to be loaded into codec registry
+        "QC2CodecPlugins": [
+            "libqc2imageformatfilter.so"
+        ],
 
         // List of HW codecs enabled for this target
         "codecs-available": {
@@ -114,14 +142,21 @@
                 "c2.qti.hevc.decoder.secure",
                 "c2.qti.vp9.decoder",
                 "c2.qti.vp9.decoder.secure"
+                //,"c2.qti.mpeg2.decoder"
             ],
             "encoders": [
                 "c2.qti.avc.encoder",
-				"c2.qti.avc.encoder.secure",
+                "c2.qti.avc.encoder.secure",
                 "c2.qti.hevc.encoder",
-				"c2.qti.hevc.encoder.secure",
+                "c2.qti.hevc.encoder.secure",
                 "c2.qti.hevc.encoder.cq",
                 "c2.qti.heic.encoder"
+            ]
+        },
+        "filters-available": {
+            "filters": [
+                "c2.qti.vpp.filter",
+                "c2.qti.vpp.filter.secure"
             ]
         }
     }
