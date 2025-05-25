@@ -1062,3 +1062,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_brcm.rc
 vendor/etc/wifi/indoorchannel.info
+
+# Wi-Fi Display
+vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc
+vendor/etc/init/wfdvndservice.rc
