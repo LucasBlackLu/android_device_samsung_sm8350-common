@@ -123,16 +123,21 @@ vendor/lib64/soundfx/libswspatializer.so
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service
 vendor/etc/init/android.hardware.bluetooth@1.0-service.rc
-vendor/lib/hw/vendor.samsung.hardware.bluetooth.a2dp@1.0-impl.so
-vendor/lib/libbthost_if.so
-vendor/lib/libidl.so
-vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so
-vendor/lib64/hw/vendor.samsung.hardware.bluetooth.a2dp@1.0-impl.so
-vendor/lib64/libbthost_if.so
-vendor/lib64/libidl.so
-vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
+vendor/lib64/libbt-vendor.so
 vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
+
+# Bluetooth (A2DP)
+system_ext/lib/com.qualcomm.qti.bluetooth_audio@1.0.so
+system_ext/lib64/com.qualcomm.qti.bluetooth_audio@1.0.so
+vendor/lib/hw/audio.bluetooth.default.so
+vendor/lib/libsehbluetooth_audio_session.so
+vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.0.so
+vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.1.so
+vendor/lib64/hw/audio.bluetooth.default.so
+vendor/lib64/libsehbluetooth_audio_session.so
+vendor/lib64/vendor.samsung.hardware.bluetooth.audio@2.0.so
+vendor/lib64/vendor.samsung.hardware.bluetooth.audio@2.1.so
 
 # Camera
 vendor/lib/hw/camera.unihal.default.so
