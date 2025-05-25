@@ -1061,7 +1061,9 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
+vendor/lib64/vendor.samsung.hardware.radio@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio@2.1.so
+vendor/lib64/vendor.samsung.hardware.radio@2.2.so
 
 # Wi-Fi
 vendor/etc/init/wifi.rc
