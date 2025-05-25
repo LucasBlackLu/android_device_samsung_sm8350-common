@@ -104,18 +104,14 @@
         </interface>
         <fqname>@1.0::IMemtrack/default</fqname>
     </hal>
-    <hal format="hidl" override="true">
-        <name>android.hardware.radio</name>
-        <transport>hwbinder</transport>
-    </hal>
-    <hal format="hidl" override="true">
+    <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
         <fqname>@1.5::IRadio/slot2</fqname>
     </hal>
-    <hal format="hidl" override="true">
+    <hal format="hidl">
         <name>android.hardware.radio.config</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -124,10 +120,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.1::IRadioConfig/default</fqname>
-    </hal>
-    <hal format="hidl" override="true">
-        <name>android.hardware.radio.deprecated</name>
-        <transport>hwbinder</transport>
     </hal>
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>

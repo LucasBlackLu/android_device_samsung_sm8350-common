@@ -8,13 +8,8 @@ vendor.samsung.hardware.qchdcpkprov_server::Iqchdcpkprov_server    u:object_r:ha
 vendor.samsung.security.drk::IDrkService                           u:object_r:hal_drk_hwservice:s0
 vendor.samsung.security.proca::IProcaDaemon                        u:object_r:hal_proca_hwservice:s0
 vendor.samsung.hardware.radio.bridge::ISehBridge                   u:object_r:hal_telephony_hwservice:s0
-vendor.samsung.hardware.radio.bridge@2.0::ISehBridge/slot1         u:object_r:hal_telephony_hwservice:s0
-vendor.samsung.hardware.radio.channel.V2_0::ISehChannel            u:object_r:hal_telephony_hwservice:s0
-vendor.samsung.hardware.radio.channel::ISehChannel                 u:object_r:hal_telephony_hwservice:s0
-vendor.samsung.hardware.radio.channel@2.0::ISehChannel/imsd        u:object_r:hal_telephony_hwservice:s0
-vendor.samsung.hardware.radio.channel@2.0::ISehChannel/imsd2       u:object_r:hal_telephony_hwservice:s0
 vendor.samsung.hardware.radio::ISehRadio                           u:object_r:hal_telephony_hwservice:s0
-vendor.samsung.hardware.radio@2.2::ISehRadio/slot1                 u:object_r:hal_telephony_hwservice:s0
+vendor.samsung.hardware.radio.channel::ISehChannel                 u:object_r:hal_telephony_hwservice:s0
 vendor.samsung.security.sem::ISem                                  u:object_r:hal_sem_hwservice:s0
 vendor.samsung.security.skpm::ISkpm                                u:object_r:hal_skpm_hwservice:s0
 vendor.samsung.security.wvkprov_server::Iwvkprov_server            u:object_r:hal_wvkprov_hwservice:s0
