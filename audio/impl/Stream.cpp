@@ -103,7 +103,7 @@ Return<void> Stream::getSupportedSampleRates(AudioFormat format,
     SampleRateSet halSampleRates;
     if (result == Result::OK) {
         halSampleRates =
-                samplingRatesFromString(halListValue.c_str(), AudioParameter::valueListSeparator);
+            samplingRatesFromString(halListValue.string(), AudioParameter::valueListSeparator);
         sampleRates = hidl_vec<uint32_t>(halSampleRates.begin(), halSampleRates.end());
         // Legacy get_parameter does not return a status_t, thus can not advertise of failure.
         // Note that this method must succeed (non empty list) if the format is supported.
@@ -129,7 +129,7 @@ Return<void> Stream::getSupportedChannelMasks(AudioFormat format,
     ChannelMaskSet halChannelMasks;
     if (result == Result::OK) {
         halChannelMasks =
-                channelMasksFromString(halListValue.c_str(), AudioParameter::valueListSeparator);
+            channelMasksFromString(halListValue.string(), AudioParameter::valueListSeparator);
         channelMasks.resize(halChannelMasks.size());
         size_t i = 0;
         for (auto channelMask : halChannelMasks) {
@@ -171,7 +171,7 @@ Return<void> Stream::getSupportedFormats(getSupportedFormats_cb _hidl_cb) {
     hidl_vec<AudioFormat> formats;
     FormatVector halFormats;
     if (result == Result::OK) {
-        halFormats = formatsFromString(halListValue.c_str(), AudioParameter::valueListSeparator);
+        halFormats = formatsFromString(halListValue.string(), AudioParameter::valueListSeparator);
         formats.resize(halFormats.size());
         for (size_t i = 0; i < halFormats.size(); ++i) {
             formats[i] = AudioFormat(halFormats[i]);
@@ -215,7 +215,7 @@ Return<void> Stream::getSupportedProfiles(getSupportedProfiles_cb _hidl_cb) {
     // Ensure that the separator is one character, despite that it's defined as a C string.
     static_assert(sizeof(AUDIO_PARAMETER_VALUE_LIST_SEPARATOR) == 2);
     std::vector<std::string> halFormats =
-            splitString(halListValue.c_str(), AUDIO_PARAMETER_VALUE_LIST_SEPARATOR[0]);
+            splitString(halListValue.string(), AUDIO_PARAMETER_VALUE_LIST_SEPARATOR[0]);
     hidl_vec<AudioFormat> formats;
     (void)HidlUtils::audioFormatsFromHal(halFormats, &formats);
     std::vector<AudioProfile> tempProfiles;
@@ -230,7 +230,7 @@ Return<void> Stream::getSupportedProfiles(getSupportedProfiles_cb _hidl_cb) {
         result = getParam(AudioParameter::keyStreamSupportedSamplingRates, &halListValue, context);
         if (result != Result::OK) break;
         std::vector<std::string> halSampleRates =
-                splitString(halListValue.c_str(), AUDIO_PARAMETER_VALUE_LIST_SEPARATOR[0]);
+                splitString(halListValue.string(), AUDIO_PARAMETER_VALUE_LIST_SEPARATOR[0]);
         hidl_vec<uint32_t> sampleRates;
         sampleRates.resize(halSampleRates.size());
         for (size_t i = 0; i < sampleRates.size(); ++i) {
@@ -240,7 +240,7 @@ Return<void> Stream::getSupportedProfiles(getSupportedProfiles_cb _hidl_cb) {
         result = getParam(AudioParameter::keyStreamSupportedChannels, &halListValue, context);
         if (result != Result::OK) break;
         std::vector<std::string> halChannelMasks =
-                splitString(halListValue.c_str(), AUDIO_PARAMETER_VALUE_LIST_SEPARATOR[0]);
+                splitString(halListValue.string(), AUDIO_PARAMETER_VALUE_LIST_SEPARATOR[0]);
         hidl_vec<AudioChannelMask> channelMasks;
         (void)HidlUtils::audioChannelMasksFromHal(halChannelMasks, &channelMasks);
         // Create a profile.
