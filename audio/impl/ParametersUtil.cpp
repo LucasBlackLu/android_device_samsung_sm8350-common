@@ -96,7 +96,7 @@ std::unique_ptr<AudioParameter> ParametersUtil::getParams(const AudioParameter& 
     String8 paramsAndValues;
     char* halValues = halGetParameters(keys.keysToString().c_str());
     if (halValues != NULL) {
-        paramsAndValues = halValues;
+        paramsAndValues.setTo(halValues);
         free(halValues);
     } else {
         paramsAndValues.clear();
