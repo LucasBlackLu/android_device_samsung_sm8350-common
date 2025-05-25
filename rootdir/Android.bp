@@ -167,20 +167,6 @@ prebuilt_etc {
     vendor: true,
 }
 
-prebuilt_etc {
-    name: "wifi_brcm.rc",
-    src: "vendor/etc/init/wifi_brcm.rc",
-    sub_dir: "init/",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "wifi_sm8350.rc",
-    src: "vendor/etc/init/wifi_sm8350.rc",
-    sub_dir: "init/",
-    vendor: true,
-}
-
 // Ramdisk's Scripts
 
 sh_binary {

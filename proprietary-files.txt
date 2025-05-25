@@ -1059,9 +1059,6 @@ vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
 
 # Wi-Fi
-vendor/firmware/bcmdhd_clm.blob
-vendor/firmware/bcmdhd_mfg.bin_b1
-vendor/firmware/bcmdhd_mon.bin_b1
-vendor/firmware/bcmdhd_sta.bin_b1
-vendor/firmware/nvram.txt_1rh_es43_b1
-vendor/firmware/nvram.txt_CS01_semco_b1
+vendor/etc/init/wifi.rc
+vendor/etc/init/wifi_brcm.rc
+vendor/etc/wifi/indoorchannel.info

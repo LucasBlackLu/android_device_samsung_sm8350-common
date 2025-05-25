@@ -426,8 +426,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.rilchip.qcom.rc \
     vendor.sensors.qti.rc \
     vendor.sensors.sscrpcd.rc \
-    wifi_brcm.rc \
-    wifi_sm8350.rc \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/vendor/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
@@ -580,23 +578,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     android.hardware.wifi.hostapd@1.0.vendor \
-    firmware_WCNSS_qcom_cfg.ini_symlink \
     hostapd \
     libwfdaac_vendor \
     libwifi-hal \
-    libwifi-hal-ctrl \
-    libwifi-hal-qcom \
     libwpa_client \
     TetheringConfigOverlay \
     WifiOverlay \
     wpa_cli \
+    wpa_supplicant \
+    wpa_supplicant.conf \
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
-    $(COMMON_PATH)/configs/wifi/indoorchannel.info:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/indoorchannel.info \
     $(COMMON_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(COMMON_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
-    $(COMMON_PATH)/configs/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
 
 PRODUCT_COPY_FILES += \
