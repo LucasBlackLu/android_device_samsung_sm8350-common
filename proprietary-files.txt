@@ -172,6 +172,17 @@ vendor/lib64/libsehbluetooth_audio_session.so
 vendor/lib64/vendor.samsung.hardware.bluetooth.audio@2.0.so
 vendor/lib64/vendor.samsung.hardware.bluetooth.audio@2.1.so
 
+# Bluetooth (A2DPSINK)
+vendor/etc/a2dpsink_audio_policy_configuration.xml
+vendor/lib/hw/audio.a2dpsink.default.so
+vendor/lib/hw/vendor.samsung.hardware.bluetooth.a2dpsink@1.0-impl.so
+vendor/lib/libbluetooth_a2dpsink_session.so
+vendor/lib/vendor.samsung.hardware.bluetooth.a2dpsink@1.0.so
+vendor/lib64/hw/audio.a2dpsink.default.so
+vendor/lib64/hw/vendor.samsung.hardware.bluetooth.a2dpsink@1.0-impl.so
+vendor/lib64/libbluetooth_a2dpsink_session.so
+vendor/lib64/vendor.samsung.hardware.bluetooth.a2dpsink@1.0.so
+
 # Camera
 vendor/lib/hw/camera.unihal.default.so
 vendor/lib/com.qti.chiusecaseselector.so
