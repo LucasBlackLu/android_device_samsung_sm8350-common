@@ -918,6 +918,7 @@ vendor/lib64/libdiag.so
 vendor/lib64/libdsutils.so
 vendor/lib64/libidl.so
 vendor/lib64/libqc2imageformatfilter.so
+vendor/lib64/libqc2imageformatfilter.so
 vendor/lib64/libqdi.so
 vendor/lib64/libqdp.so
 vendor/lib64/libqmi.so
