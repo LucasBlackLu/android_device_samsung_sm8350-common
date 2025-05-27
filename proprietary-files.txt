@@ -2,6 +2,14 @@
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
+vendor/etc/audconf/OPEN/Bluetooth_cal.acdb
+vendor/etc/audconf/OPEN/General_cal.acdb
+vendor/etc/audconf/OPEN/Global_cal.acdb
+vendor/etc/audconf/OPEN/Handset_cal.acdb
+vendor/etc/audconf/OPEN/Hdmi_cal.acdb
+vendor/etc/audconf/OPEN/Headset_cal.acdb
+vendor/etc/audconf/OPEN/Speaker_cal.acdb
+vendor/etc/audconf/OPEN/workspaceFile.qwsp
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
