@@ -133,10 +133,8 @@ vendor/etc/audio_effects_common.conf
 vendor/etc/audio_effects_sec.xml
 vendor/etc/audio_effects_spatializer.xml
 vendor/etc/audio_io_policy.conf
-vendor/etc/audio_platform_info.xml
 vendor/etc/audio_platform_info_diff.xml
 vendor/etc/audio_platform_info_hdk.xml
-vendor/etc/audio_platform_info_intcodec.xml
 vendor/etc/audio_platform_info_qrd.xml
 vendor/etc/audio_policy_configuration.xml
 vendor/etc/audio_policy_configuration_base.xml
@@ -145,7 +143,6 @@ vendor/etc/audio_tuning_mixer.txt
 vendor/etc/bluetooth_audio_policy_configuration.xml
 vendor/etc/default_volume_tables.xml
 vendor/etc/hearing_aid_audio_policy_configuration.xml
-vendor/etc/mixer_paths.xml
 vendor/etc/mixer_paths_cdp.xml
 vendor/etc/mixer_paths_hdk.xml
 vendor/etc/mixer_paths_hhg.xml
