@@ -73,6 +73,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl:64 \
     android.hardware.bluetooth@1.0-service \
+    android.hardware.bluetooth.audio-impl \
     libbt-vendor:64
 
 PRODUCT_COPY_FILES += \
@@ -246,6 +247,7 @@ PRODUCT_PACKAGES += \
     libcodec2_vndk \
     libcodec2_vndk.vendor \
     libsfplugin_ccodec \
+    libstagefright_softomx_plugin.vendor \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
