@@ -9,4 +9,3 @@ libsdsprpc.so
 libswldc_capture_core.camera.samsung.so
 libprotobuf-cpp-full.so
 libprotobuf-cpp-lite.so
-sensors.samsung.so
