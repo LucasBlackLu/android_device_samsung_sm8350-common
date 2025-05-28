@@ -426,7 +426,6 @@ PRODUCT_PACKAGES += \
     init.crda.sh \
     init.kernel.post_boot.sh \
     init.kernel.post_boot-lahaina.sh \
-    init.mdm.sh \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
     init.qcom.early_boot.sh \
