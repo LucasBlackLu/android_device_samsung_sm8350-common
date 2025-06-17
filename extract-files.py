@@ -4,14 +4,49 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.fixups_blob import (
+    blob_fixup,
+    blob_fixups_user_type,
+)
+from extract_utils.fixups_lib import (
+    lib_fixup_vendorcompat,
+    lib_fixups_user_type,
+)
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+        'hardware/qcom-caf/sm8350',
+        'hardware/qcom-caf/wlan',
+        'hardware/samsung',
+        "vendor/qcom/opensource/dataservices",
+        'vendor/qcom/opensource/commonsys-intf/display',
+        'vendor/qcom/opensource/commonsys/display',
+        'vendor/qcom/opensource/display',
+        'vendor/samsung/sm8350-common',
+]
+
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
+lib_fixups: lib_fixups_user_type = {
+} # fmt: skip
+
+blob_fixups: blob_fixups_user_type = {
+    ('vendor/lib/mediadrm/libwvdrmengine.so', 'vendor/lib/libwvhidl.so'): blob_fixup()
+        .add_needed('libcrypto_shim.so'),
+    ('vendor/lib64/hw/gatekeeper.mdfpp.so', 'vendor/lib64/libkeymaster_helper.so', 'vendor/lib64/libskeymaster4device.so'): blob_fixup()
+        .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
+}  # fmt: skip
+
 module = ExtractUtilsModule(
     'sm8350-common',
     'samsung',
+    namespace_imports=namespace_imports,
+    blob_fixups=blob_fixups,
+    lib_fixups=lib_fixups,
 )
 
 if __name__ == '__main__':

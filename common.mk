@@ -22,7 +22,86 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
-# Init 
+## Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.soundtrigger@2.2-impl \
+    audio.r_submix.default \
+    audio.usb.default
+
+PRODUCT_PACKAGES += \
+    libaudiopreprocessing \
+    libbatterylistener \
+    libcirrusspkrprot \
+    libbundlewrapper \
+    libreverbwrapper \
+    libcomprcapture \
+    libeffectproxy \
+    libexthwplugin \
+    libhdmiedid \
+    libdownmix \
+    libdynproc \
+    libhfp \
+    libldnhncr \
+    libspkrprot \
+    libsndmonitor \
+    libvisualizer \
+    liba2dpoffload \
+    libtinycompress \
+    libvolumelistener \
+
+PRODUCT_PACKAGES += \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+
+PRODUCT_PACKAGES += \
+    SamsungDAP
+
+## Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl:64 \
+    android.hardware.bluetooth@1.0-service \
+    libbt-vendor:64
+
+## Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider-service.samsung
+
+## Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@3.0-impl-qti-display \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
+
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.memtrack-service
+
+PRODUCT_PACKAGES += \
+    AdvancedDisplay
+
+## DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey \
+    libdrmclearkeyplugin
+
+## Doze
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
+## Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
+## Health
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.samsung \
+    android.hardware.health-service.samsung-recovery
+
+## Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.class_main.sh \
@@ -70,6 +149,45 @@ PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
     vendor_dsp_mountpoint \
     vendor_firmware_mnt_mountpoint
+
+## Keymaster
+$(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/sm8350-common:libpuresoftkeymasterdevice)
+
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service.samsung
+
+## Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.pixel-libperfmgr
+
+## RIL
+PRODUCT_PACKAGES += \
+    secril_config_svc \
+    sehradiomanager
+
+## Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors-service.samsung-multihal
+
+PRODUCT_PACKAGES += \
+    init.vendor.sensors.rc \
+
+## Tether
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+
+## USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.qti \
+
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
+
+## Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.samsung
 
 # Recovery
 PRODUCT_COPY_FILES += \
