@@ -111,6 +111,19 @@ on post-fs-data
 on early-boot
     start vendor.sensors
 
+## Device specific properties
+    setprop bluetooth.device.default_name "Galaxy S21"
+
+on property:ro.boot.em.model=SM-G9910
+    setprop bluetooth.device.default_name "Galaxy S21 5G"
+
+on property:ro.boot.em.model=SM-G9960
+    setprop bluetooth.device.default_name "Galaxy S21+ 5G"
+
+on property:ro.boot.em.model=SM-G9980
+    setprop bluetooth.device.default_name "Galaxy S21 Ultra 5G"
+
+
 on boot
     write /dev/cpuset/audio-app/cpus 1-2
     # Add a cpuset for the camera daemon
