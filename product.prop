@@ -1,0 +1,9 @@
+#
+# common product properties for SM6375 devices
+#
+
+## FRP Define
+ro.frp.pst=/dev/block/persistent
+
+## Partition Build Property Order
+ro.product.property_source_order=odm,vendor,product,system_ext,system
