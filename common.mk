@@ -101,6 +101,16 @@ PRODUCT_PACKAGES += \
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+    libxml2 \
+    librilutils \
+    librmnetctl \
+    secril_config_svc
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
