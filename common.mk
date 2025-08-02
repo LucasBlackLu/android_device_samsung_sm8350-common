@@ -77,7 +77,9 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor
 
 # Namespaces
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/samsung
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
