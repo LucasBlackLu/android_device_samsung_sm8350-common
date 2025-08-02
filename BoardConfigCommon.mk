@@ -30,6 +30,32 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
 
+# Kernel
+BOARD_BOOT_HEADER_VERSION := 3
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_CMDLINE := \
+    androidboot.hardware=qcom androidboot.memcg=1 \
+    androidboot.selinux=permissive \
+    androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 \
+    cgroup.memory=nokmem,nosocket \
+    cpuinfo.chipname=SM8350 \
+    console=null \
+    loop.max_part=7 \
+    lpm_levels.sleep_disabled=1 \
+    msm_rtb.filter=0x237 \
+    panic=4 \
+    pcie_ports=compat \
+    printk.devkmsg=on \
+    service_locator.enable=1
+
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_MKBOOTIMG_ARGS :=  --header_version $(BOARD_BOOT_HEADER_VERSION)
+TARGET_KERNEL_SOURCE := kernel/samsung/sm8350
+TARGET_MODULE_ALIASES += wlan.ko:qca_cld3_wlan.ko
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 QCOM_BOARD_PLATFORMS += lahaina
