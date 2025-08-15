@@ -251,5 +251,17 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 # Treble
 BOARD_VNDK_VERSION := current
 
+# WiFi
+BOARD_WLAN_BCMDHD_SAE            := true
+BOARD_WLAN_DEVICE                := bcmdhd
+BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
+BOARD_HOSTAPD_DRIVER             := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd
+WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+WPA_SUPPLICANT_VERSION           := VER_0_8_X
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
