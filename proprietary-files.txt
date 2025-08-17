@@ -961,7 +961,7 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libril_sem.so
-vendor/lib64/libsec-ril.so|8f24d1e52e80b6a20f6c6e6c33b63a9826a15986
+vendor/lib64/libsec-ril.so|9775f8f7ecb8a2194949a07363b149d2d86717d6
 vendor/lib64/libxml.so
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
 vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
