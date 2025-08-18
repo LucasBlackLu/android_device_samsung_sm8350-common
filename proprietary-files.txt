@@ -346,7 +346,7 @@ vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/libvideobeauty.arcsoft.so
 vendor/lib64/libvideobeauty.uniplugin@1.0.so
-vendor/lib64/unihal_android.so|31beb795108f8be25912273bf092d4fa8b533ca7
+vendor/lib64/unihal_android.so
 vendor/lib64/unihal_cutils.so
 vendor/lib64/unihal_entry.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
@@ -981,7 +981,7 @@ vendor/lib/libsnsdiaglog.so
 vendor/lib/libssc.so
 vendor/lib/libssc_default_listener.so
 vendor/lib64/libnanopb.so
-vendor/lib64/libsensorlistener.so|d6d64b875c1053c7550792a513d9459bd6eb6797
+vendor/lib64/libsensorlistener.so
 vendor/lib64/libsensorndkbridge.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_device_mode_stub.so

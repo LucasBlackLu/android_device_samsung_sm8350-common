@@ -598,7 +598,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcrypto-v33 \
     libshim_sensorndkbridge \
-    libui_shim.vendor \
 
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
