@@ -12,6 +12,30 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # Init 
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.class_main.sh \
+    init.mdm.sh \
+    init.qcom.class_core.sh \
+    init.qcom.coex.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.efs.sync.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sh \
+    init.qcom.usb.sh \
+    init.qti.display_boot.sh \
+    init.qti.qcv.sh
+
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.qcom.rc \
+    init.qti.display_boot.rc \
+    init.recovery.qcom.rc \
+    init.samsung.bsp.rc \
+    init.samsung.rc \
+    init.target.rc \
+    init.vendor.rilcommon.rc \
+    ueventd.qcom.rc \
+    wifi_brcm.rc \
+    wifi_sm8350.rc
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/init/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom \
