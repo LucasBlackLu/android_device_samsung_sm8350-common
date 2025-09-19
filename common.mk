@@ -58,6 +58,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_ENABLE_UFFD_GC := true
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/media/media_codecs_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_lahaina.xml \
+    $(COMMON_PATH)/media/media_codecs_performance_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_lahaina.xml
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
