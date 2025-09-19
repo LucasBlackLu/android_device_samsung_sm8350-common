@@ -167,5 +167,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 AB_OTA_UPDATER := false
 
+# WiFi
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    $(COMMON_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
+    $(COMMON_PATH)/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
