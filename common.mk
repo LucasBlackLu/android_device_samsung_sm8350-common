@@ -61,6 +61,11 @@ PRODUCT_ENABLE_UFFD_GC := false
 # Keymaster
 $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/sm8350-common:libskeymaster4device)
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/media/media_codecs_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_lahaina.xml \
+    $(COMMON_PATH)/media/media_codecs_performance_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_lahaina.xml
+
 # Partitions
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
