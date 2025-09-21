@@ -46,6 +46,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+     'vendor/etc/vintf/manifest/sec_c2_manifest_default0.xml': blob_fixup()
+        .regex_replace('default0', 'software'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
