@@ -56,6 +56,9 @@ PRODUCT_COPY_FILES += \
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
+# Keymaster
+$(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/sm8350-common:libskeymaster4device)
+
 # Partitions
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 $(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
