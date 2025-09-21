@@ -85,6 +85,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# QMI
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/qmi/btcon.json:$(TARGET_COPY_OUT_VENDOR)/etc/btcon.json \
+    $(COMMON_PATH)/configs/qmi/mercury.json:$(TARGET_COPY_OUT_VENDOR)/etc/mercury.json \
+    $(COMMON_PATH)/configs/qmi/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
+    $(COMMON_PATH)/configs/qmi/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
+    $(COMMON_PATH)/configs/qmi/sec_config_oem:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config_oem \
+
 # Ramdisk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
