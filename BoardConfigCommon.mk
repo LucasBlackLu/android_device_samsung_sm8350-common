@@ -78,6 +78,10 @@ TARGET_USES_HWC2 := true
 USE_OPENGL_RENDERER := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 
+# HIDL
+DEVICE_MANIFEST_FILE := \
+    $(COMMON_PATH)/vintf/manifest_lahaina.xml
+
 # Media
 TARGET_USES_ION := true
 
