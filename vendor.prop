@@ -167,6 +167,9 @@ persist.vendor.dpm.idletimer.mode=default
 # DRM
 drm.service.enabled=true
 
+# Fastbootd
+ro.fastbootd.available=true
+
 # FRP
 ro.frp.pst=/dev/block/persistent
 
