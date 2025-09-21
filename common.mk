@@ -16,6 +16,48 @@ PRODUCT_PACKAGES += \
     com.android.vndk.v30
 
 # Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.common-util.vendor \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    audio.primary.lahaina:32 \
+    audio.r_submix.default \
+    audio.usb.default \
+    liba2dpoffload \
+    libaudiofoundation \
+    libaudiopreprocessing \
+    libaudioroute \
+    libaudioutils \
+    libbatterylistener \
+    libbundlewrapper \
+    libcirrusspkrprot \
+    libcomprcapture \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
+    libldnhncr \
+    libreverbwrapper \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libsndmonitor \
+    libspkrprot \
+    libtinyalsa \
+    libtinycompress \
+    libvisualizer \
+    libvolumelistener \
+    sound_trigger.primary.lahaina:32 \
+    tinycap \
+    tinymix \
+    tinypcminfo \
+    tinyplay
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/audio/configs/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
     $(COMMON_PATH)/audio/configs/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
