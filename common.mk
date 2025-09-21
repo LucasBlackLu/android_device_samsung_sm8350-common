@@ -12,6 +12,7 @@ PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
     vendor_dsp_mountpoint \
     vendor_firmware_mnt_mountpoint \
+    vendor_firmware-modem_mountpoint
 
 # Shipping API
 BOARD_SHIPPING_API_LEVEL := 30
