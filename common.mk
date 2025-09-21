@@ -365,6 +365,7 @@ PRODUCT_COPY_FILES += \
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
+    bootable/deprecated-ota \
     hardware/samsung
 
 # Storages
