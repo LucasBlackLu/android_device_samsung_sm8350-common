@@ -1,0 +1,49 @@
+# Data
+type biometrics_vendor_data_file, data_file_type, file_type;
+type gatekeeper_vendor_data_file, file_type, data_file_type;
+type radio_vendor_data_file, file_type, data_file_type;
+type vendor_audiopcm_data_file, data_file_type, file_type;
+type vendor_convergence_data_file, data_file_type, file_type;
+type vendor_gps_file, data_file_type, file_type;
+
+# EFS
+type app_efs_file, file_type;
+type audio_efs_file, file_type;
+type battery_efs_file, file_type;
+type biometrics_efs_file, file_type;
+type cpk_efs_file, file_type;
+type imei_efs_file, file_type;
+type nfc_efs_file, file_type;
+type pfw_efs_file, file_type;
+type prov_efs_file, file_type;
+type sec_efs_file, file_type;
+type sec_poc_file, file_type;
+type wifi_efs_file, file_type;
+
+# Proc
+type proc_last_kmsg, fs_type, proc_type;
+
+# Rootfs
+type carrier_file, fs_type;
+allow carrier_file labeledfs:filesystem associate;
+
+type dqmdbgblk_file, fs_type;
+allow dqmdbgblk_file labeledfs:filesystem associate;
+
+type keydata_data_file, fs_type;
+allow keydata_data_file labeledfs:filesystem associate;
+
+type keyrefuge_data_file, fs_type;
+allow keyrefuge_data_file labeledfs:filesystem associate;
+
+type omr_file, file_type, mlstrustedobject;
+
+type spu_file, fs_type;
+allow spu_file labeledfs:filesystem associate;
+
+# SysFS
+type sysfs_wifi, sysfs_type, r_fs_type, fs_type;
+
+# SysFS RW
+type sysfs_audio_writable, sysfs_type, rw_fs_type, fs_type;
+type sysfs_wifi_writable, sysfs_type, rw_fs_type, fs_type;
