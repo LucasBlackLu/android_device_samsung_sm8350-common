@@ -61,6 +61,9 @@
 /mnt/vendor/efs/prov_data(/.*)?              u:object_r:prov_efs_file:s0
 /mnt/vendor/efs/wifi(/.*)?                   u:object_r:wifi_efs_file:s0
 
+# HALs
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@[0-9]\.[0-9]-service\.samsung                    u:object_r:hal_lineage_fastcharge_default_exec:s0
+
 # Radio
 /dev/drb                                     u:object_r:drb_device:s0
 
