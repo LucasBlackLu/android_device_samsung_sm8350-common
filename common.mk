@@ -31,6 +31,9 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # Fastboot
 TARGET_BOARD_FASTBOOT_INFO_FILE := $(COMMON_PATH)/fastboot-info.txt
 
+# File System
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+
 # Samsung AdvancedDisplay
 PRODUCT_PACKAGES += \
     AdvancedDisplay
