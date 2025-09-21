@@ -97,6 +97,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
 # Camera
+$(call soong_config_set,samsungCameraVars,extra_ids,54)
+$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung
 
