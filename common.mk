@@ -8,10 +8,6 @@ COMMON_PATH := device/samsung/sm8350-common
 # 64 Bit
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-# ANT+
-PRODUCT_PACKAGES += \
-    AntHalService-Soong
-
 # API
 BOARD_SHIPPING_API_LEVEL := 31
 PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
