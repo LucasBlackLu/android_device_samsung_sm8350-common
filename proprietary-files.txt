@@ -56,7 +56,6 @@ vendor/lib/libprofileparamstorage.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib/libspatializerparamstorage.so
-vendor/lib/hw/audio.primary.lahaina.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
@@ -112,7 +111,6 @@ vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 
 # Camera
-vendor/lib64/libsecril-client.so
 vendor/lib64/libcvp2_1.so
 vendor/lib64/libatccore.so
 vendor/lib64/libqcbor.so
@@ -209,6 +207,10 @@ vendor/lib64/camera/uw_dual_calibration.bin
 vendor/lib64/camera/w_dual_calibration.bin
 
 # Camera
+vendor/lib64/D12QS_libTsAe.so;FIX_SONAME
+vendor/lib64/D12QS_libTsAwb.so;FIX_SONAME
+vendor/lib64/N10QS_libTsAeFront.so;FIX_SONAME
+vendor/lib64/N10QS_libTsAwbFront.so;FIX_SONAME
 vendor/lib64/libopencv.so
 vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
@@ -624,8 +626,6 @@ vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
 vendor/lib/libmulawdec.so
-vendor/lib/hw/sound_trigger.primary.lahaina.so
-vendor/lib64/hw/sound_trigger.primary.lahaina.so
 
 ## Media
 vendor/bin/init.qti.media.sh
@@ -682,12 +682,6 @@ system_ext/etc/seccomp_policy/perfservice.policy
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
-
-## Protobuf 
-vendor/lib/libprotobuf-cpp-full-3.9.1.so
-vendor/lib/libprotobuf-cpp-lite-3.9.1.so
-vendor/lib64/libprotobuf-cpp-full-3.9.1.so
-vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
 
 ## QCC
 vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
@@ -748,6 +742,7 @@ vendor/lib64/libqsocket.so
 
 
 # Radio
+vendor/lib64/libsecril-client.so;MODULE_SUFFIX=_vendor
 vendor/bin/adpl
 vendor/bin/hw/rild
 vendor/bin/netmgrd

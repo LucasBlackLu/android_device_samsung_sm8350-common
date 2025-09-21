@@ -112,17 +112,13 @@ PRODUCT_PACKAGES += \
     init.qcom.efs.sync.sh \
     init.qcom.post_boot.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
-    init.qti.display_boot.sh \
-    init.qti.qcv.sh
 
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.rc \
-    init.qti.display_boot.rc \
-    init.recovery.qcom.rc \
     init.samsung.bsp.rc \
     init.samsung.rc \
+	init.t2q.rc \
     init.target.rc \
     init.vendor.rilcommon.rc \
     ueventd.qcom.rc \
@@ -139,8 +135,8 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/media/media_codecs_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_lahaina.xml \
-    $(COMMON_PATH)/media/media_codecs_performance_blair.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_lahaina.xml
+    $(COMMON_PATH)/media/media_codecs_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_lahaina.xml \
+    $(COMMON_PATH)/media/media_codecs_performance_lahaina.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_lahaina.xml
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -226,14 +222,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal
 
-PRODUCT_PACKAGES += \
-    init.vendor.sensors.rc \
-
 ## SOONG namespaces
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc \
     hardware/google/interfaces \
     hardware/google/pixel \
+    hardware/qcom-caf/sm8350-common \
     hardware/samsung \
     $(COMMON_PATH) \
 
