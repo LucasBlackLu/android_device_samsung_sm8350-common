@@ -166,6 +166,10 @@ TARGET_BOARD_FASTBOOT_INFO_FILE := $(COMMON_PATH)/fastboot-info.txt
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Fastcharge
+PRODUCT_PACKAGES += \
+    vendor.lineage.fastcharge@1.0-service.samsung 
+
 # File System
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
