@@ -136,6 +136,8 @@ BOARD_AVB_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
 # SEPolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \
     dqmdbg \
