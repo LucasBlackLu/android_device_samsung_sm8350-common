@@ -42,6 +42,7 @@ $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/s
 
 # Partitions
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
+$(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
