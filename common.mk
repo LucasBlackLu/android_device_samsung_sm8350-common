@@ -329,6 +329,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AdvancedDisplay
 
+# Samsung DAP
+PRODUCT_PACKAGES += \
+    SamsungDAP
+
 # Samsung Doze
 PRODUCT_PACKAGES += \
     SamsungDoze
