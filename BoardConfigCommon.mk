@@ -88,6 +88,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/vintf/manifest_lahaina.xml
 
+DEVICE_MATRIX_FILE := \
+    hardware/qcom-caf/common/compatibility_matrix.xml
+
 # Media
 TARGET_USES_ION := true
 
