@@ -163,6 +163,9 @@ PRODUCT_PACKAGES += \
 # Fastboot
 TARGET_BOARD_FASTBOOT_INFO_FILE := $(COMMON_PATH)/fastboot-info.txt
 
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # File System
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 

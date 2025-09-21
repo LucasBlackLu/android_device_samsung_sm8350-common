@@ -18,6 +18,8 @@
 /dev/block/platform/soc/4804000\.ufshc/by-name/ssd           					  u:object_r:ssdblk_device:s0
 /dev/block/platform/soc/4804000\.ufshc/by-name/steady        					  u:object_r:steady_block_device:s0
 /dev/block/platform/soc/4804000\.ufshc/by-name/userdata      					  u:object_r:userdata_block_device:s0
+/dev/block/platform/soc/4804000\.ufshc/by-name/vbmeta                                             u:object_r:boot_block_device:s0
+/dev/block/platform/soc/4804000\.ufshc/by-name/vendor                                             u:object_r:system_block_device:s0
 
 # Data
 /data/vendor/biometrics(/.*)?                u:object_r:biometrics_vendor_data_file:s0
