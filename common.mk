@@ -254,6 +254,9 @@ PRODUCT_ENABLE_UFFD_GC := false
 # Keymaster
 $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/sm8350-common:libskeymaster4device)
 
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service.samsung
+
 # Media
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/media/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
