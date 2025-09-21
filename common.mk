@@ -330,7 +330,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3.vendor
+    android.hardware.power-service.pixel-libperfmgr
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
@@ -402,6 +402,8 @@ PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     bootable/deprecated-ota \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/samsung
 
 # Storages
