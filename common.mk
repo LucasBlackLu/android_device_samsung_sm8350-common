@@ -420,6 +420,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
     TetheringConfigOverlay \
+    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 
