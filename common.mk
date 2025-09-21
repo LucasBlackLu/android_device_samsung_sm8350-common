@@ -183,6 +183,10 @@ PRODUCT_PACKAGES += \
 # File System
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.samsung
+
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
