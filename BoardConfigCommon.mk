@@ -208,6 +208,7 @@ BOARD_HOSTAPD_PRIVATE_LIB                     := lib_driver_cmd_bcmdhd
 CONFIG_IEEE80211AX                            := true
 WIFI_AVOID_IFACE_RESET_MAC_CHANGE             := true
 WIFI_FEATURE_HOSTAPD_11AX                     := true
+WIFI_HIDL_FEATURE_AWARE                       := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE              := true
 WPA_SUPPLICANT_VERSION                        := VER_0_8_X
 $(call soong_config_set,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
