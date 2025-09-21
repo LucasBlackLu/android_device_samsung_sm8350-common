@@ -36,6 +36,9 @@ $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/s
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Ramdisk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
 # Samsung AdvancedDisplay
 PRODUCT_PACKAGES += \
     AdvancedDisplay
