@@ -196,6 +196,9 @@ vendor.power.pasr.enabled=true
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
+# QC Value Addons
+ro.vendor.qti.va_aosp.support=1
+
 # RIL
 keyguard.no_require_sim=true
 persist.sys.radio.force_lte_ca=true
