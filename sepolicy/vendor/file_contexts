@@ -63,6 +63,7 @@
 
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.camera\.provider-service\.samsung                         u:object_r:hal_camera_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@[0-9]\.[0-9]-service\.samsung                    u:object_r:hal_lineage_fastcharge_default_exec:s0
 
 # Radio
 /dev/drb                                     u:object_r:drb_device:s0

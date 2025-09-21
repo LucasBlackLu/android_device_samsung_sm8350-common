@@ -176,6 +176,10 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
+# Fastcharge
+PRODUCT_PACKAGES += \
+    vendor.lineage.fastcharge@1.0-service.samsung 
+
 # File System
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
