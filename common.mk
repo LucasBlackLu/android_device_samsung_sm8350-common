@@ -9,6 +9,8 @@ COMMON_PATH := device/samsung/sm8350-common
 PRODUCT_ENABLE_UFFD_GC := false
 
 # Partitions
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Shipping API
