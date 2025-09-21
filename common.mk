@@ -37,6 +37,9 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
+# Keymaster
+$(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/sm8350-common:libskeymaster4device)
+
 # Samsung AdvancedDisplay
 PRODUCT_PACKAGES += \
     AdvancedDisplay
