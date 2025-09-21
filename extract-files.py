@@ -47,6 +47,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+     'vendor/etc/vintf/manifest/sec_c2_manifest_default0.xml': blob_fixup()
+        .regex_replace('default0', 'software'),
      'vendor/lib64/libsec-ril.so': blob_fixup()
         .binary_regex_replace(b'ril.dds.call.ongoing', b'vendor.calls.slot_id')
         .sig_replace('E1 03 15 AA 08 00 40 F9 E3 03 14 AA 08 09 40 F9', 'E1 03 15 AA 08 00 40 F9 03 00 80 D2 08 09 40 F9'),
