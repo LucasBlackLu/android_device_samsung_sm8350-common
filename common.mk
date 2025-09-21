@@ -306,9 +306,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# Power
+# QTI fwk-detect
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3.vendor
+    libqti_vndfwk_detect \
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti \
+    libvndfwk_detect_jni.qti.vendor
 
 # Ramdisk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
