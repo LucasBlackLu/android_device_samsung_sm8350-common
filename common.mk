@@ -23,6 +23,19 @@ AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
 # Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.soundtrigger@2.2-impl \
+    audio.r_submix.default \
+    audio.usb.default \
+    libtinycompress \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libqcompostprocbundle \
+    libvolumelistener
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/audio/configs/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
     $(COMMON_PATH)/audio/configs/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
