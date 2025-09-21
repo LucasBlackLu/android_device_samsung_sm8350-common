@@ -15,6 +15,9 @@ persist.vendor.data.mode=concurrent
 # Netflix
 ro.netflix.bsp_rev=Q875-32408-1
 
+# QC Value Addons
+ro.vendor.qti.va_odm.support=1
+
 # Radio
 ril.subscription.types=NV,RUIM
 

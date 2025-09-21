@@ -217,6 +217,9 @@ vendor.pasr.activemode.enabled=false
 # Power
 vendor.power.pasr.enabled=true
 
+# QC Value Addons
+ro.vendor.qti.va_aosp.support=1
+
 # RIL
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.enableadvancedscan=true
