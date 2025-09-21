@@ -328,6 +328,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc
 
+# RIL
+PRODUCT_PACKAGES += \
+    secril_config_svc \
+
 # Samsung DAP
 PRODUCT_PACKAGES += \
     SamsungDAP
