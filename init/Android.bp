@@ -3,9 +3,197 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+// Ramdisk's Hw
+
+prebuilt_etc {
+    name: "init.qcom.factory.rc",
+    src: "etc/hw/init.qcom.factory.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.rc",
+    src: "etc/hw/init.qcom.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.qcom.usb.rc",
+    src: "etc/hw/init.qcom.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.bsp.rc",
+    src: "etc/hw/init.samsung.bsp.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.display.rc",
+    src: "etc/hw/init.samsung.display.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.connector.rc",
+    src: "etc/hw/init.samsung.connector.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.samsung.rc",
+    src: "etc/hw/init.samsung.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.target.rc",
+    src: "etc/hw/init.target.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fingerprint_common.rc",
+    src: "etc/fingerprint_common.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "fstab.qcom",
     src: "etc/fstab.qcom",
     soc_specific: true,
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.ramplus",
+    src: "etc/fstab.ramplus",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.audio.samsung.rc",
+    src: "etc/init.audio.samsung.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.fingerprint.rc",
+    src: "etc/init.fingerprint.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.nfc.samsung.rc",
+    src: "etc/init.nfc.samsung.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.vendor.rilcommon.rc",
+    src: "etc/init.vendor.rilcommon.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.vendor.sysfw.rc",
+    src: "etc/init.vendor.sysfw.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    filename: "ueventd.rc",
+    name: "ueventd.qcom.rc",
+    src: "etc/ueventd.qcom.rc",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "vendor.samsung.rilchip.qcom.rc",
+    src: "etc/vendor.samsung.rilchip.qcom.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "wifi_brcm.rc",
+    src: "etc/wifi_brcm.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "wifi_sm8350.rc",
+    src: "etc/wifi_sm8350.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.class_main.sh",
+    src: "bin/init.class_main.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.crda.sh",
+    src: "bin/init.crda.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.coex.sh",
+    src: "bin/init.qcom.coex.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.early_boot.sh",
+    src: "bin/init.qcom.early_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.efs.sync.sh",
+    src: "bin/init.qcom.efs.sync.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sdio.sh",
+    src: "bin/init.qcom.sdio.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.sh",
+    src: "bin/init.qcom.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.qcom.usb.sh",
+    src: "bin/init.qcom.usb.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "qca6234-service.sh",
+    src: "bin/qca6234-service.sh",
     vendor: true,
 }
