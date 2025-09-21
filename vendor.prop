@@ -253,5 +253,6 @@ ro.vendor.vibrator_hal.click_duration=80
 ro.vendor.vibrator_hal.tick_duration=40
 
 # WiFi
+wifi.aware.interface=wifi-aware0
 wifi.direct.interface=p2p0
 ro.boot.wificountrycode=00
