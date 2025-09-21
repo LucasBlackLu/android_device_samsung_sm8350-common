@@ -5,6 +5,14 @@
 
 COMMON_PATH := device/samsung/sm8350-common
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.qcom
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/init/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom \
+    $(COMMON_PATH)/init/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
@@ -21,6 +29,10 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc
 
 # Shipping API
 BOARD_SHIPPING_API_LEVEL := 30
