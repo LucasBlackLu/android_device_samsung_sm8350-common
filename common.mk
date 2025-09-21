@@ -46,6 +46,11 @@ $(call soong_config_set,rfs,mpss_firmware_symlink_target,firmware_modem)
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint \
+
 # Ramdisk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
