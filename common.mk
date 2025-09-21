@@ -413,5 +413,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.samsung
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/sm8350-common/sm8350-common-vendor.mk)
