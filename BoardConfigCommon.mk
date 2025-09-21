@@ -193,5 +193,21 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# SEPolicy
+BOARD_ROOT_EXTRA_FOLDERS := \
+    carrier \
+    dqmdbg \
+    efs \
+    keydata \
+    keyrefuge \
+    metadata \
+    omr \
+    optics \
+    prism \
+    spu
+
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
