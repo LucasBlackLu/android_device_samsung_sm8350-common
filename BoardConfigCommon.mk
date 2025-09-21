@@ -194,6 +194,8 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # SEPolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 BOARD_ROOT_EXTRA_FOLDERS := \
     carrier \
     dqmdbg \
