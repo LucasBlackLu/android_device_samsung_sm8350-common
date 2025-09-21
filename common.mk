@@ -41,6 +41,8 @@ PRODUCT_ENABLE_UFFD_GC := false
 $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/sm8350-common:libskeymaster4device)
 
 # Partitions
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Ramdisk
