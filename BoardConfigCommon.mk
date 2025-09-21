@@ -49,6 +49,16 @@ TARGET_NO_RADIOIMAGE := true
 TARGET_NO_RPC := true
 
 # Camera
+SOONG_CONFIG_NAMESPACES += samsungCameraVars
+SOONG_CONFIG_samsungCameraVars += \
+    extra_ids \
+    needs_sec_reserved_field
+
+# ID=54 is macro
+SOONG_CONFIG_samsungCameraVars_extra_ids := 54
+
+SOONG_CONFIG_samsungCameraVars_needs_sec_reserved_field := true
+
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Charger
