@@ -19,6 +19,9 @@ PRODUCT_SHIPPING_API_LEVEL := $(BOARD_SHIPPING_API_LEVEL)
 PRODUCT_PACKAGES += \
     com.android.vndk.v30
 
+# Dalvik
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # Samsung AdvancedDisplay
 PRODUCT_PACKAGES += \
     AdvancedDisplay
