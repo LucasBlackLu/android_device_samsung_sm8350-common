@@ -28,6 +28,9 @@ TARGET_NO_RPC := true
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# File System
+TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := lahaina
