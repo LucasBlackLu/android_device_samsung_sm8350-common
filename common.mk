@@ -6,6 +6,48 @@
 COMMON_PATH := device/samsung/sm8350-common
 
 # Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.common-util.vendor \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    audio.primary.lahaina:32 \
+    audio.r_submix.default \
+    audio.usb.default \
+    liba2dpoffload \
+    libaudiofoundation \
+    libaudiopreprocessing \
+    libaudioroute \
+    libaudioutils \
+    libbatterylistener \
+    libbundlewrapper \
+    libcirrusspkrprot \
+    libcomprcapture \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
+    libldnhncr \
+    libreverbwrapper \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libsndmonitor \
+    libspkrprot \
+    libtinyalsa \
+    libtinycompress \
+    libvisualizer \
+    libvolumelistener \
+    sound_trigger.primary.lahaina:32 \
+    tinycap \
+    tinymix \
+    tinypcminfo \
+    tinyplay
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/audio/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     $(COMMON_PATH)/audio/configs/a2dpsink_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dpsink_audio_policy_configuration.xml \
