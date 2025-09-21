@@ -288,6 +288,12 @@ PRODUCT_COPY_FILES += \
 # QMI
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect \
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti \
+    libvndfwk_detect_jni.qti.vendor
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/qmi/btcon.json:$(TARGET_COPY_OUT_VENDOR)/etc/btcon.json \
     $(COMMON_PATH)/configs/qmi/mercury.json:$(TARGET_COPY_OUT_VENDOR)/etc/mercury.json \
