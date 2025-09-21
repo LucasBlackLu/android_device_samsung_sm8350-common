@@ -349,6 +349,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc
 
+# RIL
+PRODUCT_PACKAGES += \
+    secril_config_svc \
+
 # Samsung AdvancedDisplay
 PRODUCT_PACKAGES += \
     AdvancedDisplay
