@@ -153,6 +153,9 @@ external_storage.casefold.enabled=1
 external_storage.projid.enabled=1
 external_storage.sdcardfs.enabled=0
 
+# Fastbootd
+ro.fastbootd.available=true
+
 # FRP
 ro.frp.pst=/dev/block/persistent
 

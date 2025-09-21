@@ -174,6 +174,7 @@ TARGET_BOARD_FASTBOOT_INFO_FILE := $(COMMON_PATH)/fastboot-info.txt
 
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
+    fastbootd
 
 # File System
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
