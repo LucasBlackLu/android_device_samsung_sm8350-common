@@ -1,0 +1,8 @@
+# NFC
+vendor_internal_prop(vendor_nfc_prop)
+
+# Power
+vendor_internal_prop(vendor_power_prop)
+
+# Qseecom
+vendor_internal_prop(vendor_qseecomd_prop)

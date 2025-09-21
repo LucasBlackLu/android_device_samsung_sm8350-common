@@ -1,0 +1,10 @@
+# Proc
+genfscon proc /last_kmsg                                                                                    u:object_r:proc_last_kmsg:s0
+
+# WiFi
+genfscon sysfs /wifi                                                                                        u:object_r:sysfs_wifi:s0
+genfscon sysfs /wifi/mac_addr                                                                               u:object_r:sysfs_wifi_writable:s0
+genfscon sysfs /wifi/memdump                                                                                u:object_r:sysfs_wifi_writable:s0
+
+# Wlan
+genfscon sysfs /kernel/boot_wlan/                                                                           u:object_r:sysfs_wifi_writable:s0
