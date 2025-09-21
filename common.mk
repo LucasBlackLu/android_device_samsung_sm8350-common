@@ -251,6 +251,11 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.sh \
     qca6234-service.sh
 
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml
+
 # Kernel
 PRODUCT_ENABLE_UFFD_GC := false
 
