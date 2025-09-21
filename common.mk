@@ -245,6 +245,10 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhidltransport.vendor
 
+# Samsung DAP
+PRODUCT_PACKAGES += \
+    SamsungDAP
+
 # Sensor
 PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0.vendor:64 \
