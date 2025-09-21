@@ -171,6 +171,9 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # Keymaster
 $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/sm8350-common:libskeymaster4device)
 
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service.samsung
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
