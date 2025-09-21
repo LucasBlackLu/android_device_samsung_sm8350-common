@@ -197,6 +197,7 @@ vendor.pasr.activemode.enabled=false
 
 # Power
 vendor.power.pasr.enabled=true
+vendor.powerhal.disp.idle_support=false
 
 # RIL
 keyguard.no_require_sim=true

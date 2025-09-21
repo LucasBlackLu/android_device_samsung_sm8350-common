@@ -176,6 +176,8 @@ on boot
     chown root system /sys/devices/platform/soc/soc:aop-sysfs-msg-client/aop_send_message
     chmod 0660 /sys/devices/platform/soc/soc:aop-sysfs-msg-client/aop_send_message
 
+    setprop vendor.powerhal.init 1
+
     # System Performance TA Booster Permission
     chown root system /dev/cpuctl/top-app/cpu.uclamp.min
     chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.min
