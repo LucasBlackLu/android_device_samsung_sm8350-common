@@ -429,6 +429,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 AB_OTA_UPDATER := false
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.3-service.dual_role_usb \
+
 # WiFi
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
