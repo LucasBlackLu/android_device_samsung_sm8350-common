@@ -411,6 +411,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.samsung
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
