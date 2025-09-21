@@ -73,6 +73,8 @@ PRODUCT_SOONG_NAMESPACES += \
 # Storages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+PRODUCT_CHARACTERISTICS := nosdcard
+
 # Telephony
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
