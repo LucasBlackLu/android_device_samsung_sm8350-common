@@ -286,6 +286,8 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # QMI
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/qmi/btcon.json:$(TARGET_COPY_OUT_VENDOR)/etc/btcon.json \
     $(COMMON_PATH)/configs/qmi/mercury.json:$(TARGET_COPY_OUT_VENDOR)/etc/mercury.json \
