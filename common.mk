@@ -5,6 +5,9 @@
 
 COMMON_PATH := device/samsung/sm8350-common
 
+# DebugFS
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
 # Init
 PRODUCT_PACKAGES += \
     fingerprint_common.rc \
