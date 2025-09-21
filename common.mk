@@ -126,6 +126,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.cas@1.2-service-lazy
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
