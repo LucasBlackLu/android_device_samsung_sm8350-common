@@ -14,6 +14,10 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # Fastboot
 TARGET_BOARD_FASTBOOT_INFO_FILE := $(COMMON_PATH)/fastboot-info.txt
 
+# HotwordEnrollement
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+
 # Init
 PRODUCT_PACKAGES += \
     fingerprint_common.rc \
