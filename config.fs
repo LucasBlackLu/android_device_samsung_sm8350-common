@@ -25,6 +25,12 @@ value:2908
 [AID_VENDOR_QTR]
 value:2909
 
+[AID_VENDOR_SECDIR]
+value:5050
+
+[AID_VENDOR_SYSTEM_RESERVED_STORAGE]
+value:5678
+
 [vendor/bin/wcnss_filter]
 mode: 0755
 user: AID_BLUETOOTH
