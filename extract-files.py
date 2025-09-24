@@ -23,7 +23,7 @@ from extract_utils.main import (
 namespace_imports = [
     'device/samsung/sm8350-common',
     'hardware/qcom-caf/sm8350',
-    'hardware/qcom-caf/wlan',
+    'hardware/broadcom/wlan',
     'hardware/samsung',
     'vendor/qcom/opensource/dataservices',
     'vendor/qcom/opensource/commonsys/display',
