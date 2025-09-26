@@ -157,6 +157,12 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.mdm.sh",
+    src: "bin/init.mdm.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.qcom.coex.sh",
     src: "bin/init.qcom.coex.sh",
     vendor: true,
