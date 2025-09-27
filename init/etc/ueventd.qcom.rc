@@ -575,6 +575,7 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware-modem/image/ /
 /sys/class/camera/rear    rear_frs_test             0444    system    system
 /sys/class/camera/rear    cam_ln_test               0444    system    system
 /sys/class/camera/rear    supported_cameraIds       0664    system    system
+/sys/class/camera/rear    rear_aperture_halltest    0444    system    system
 /sys/class/camera/rear    rear_tofcal               0444    system    system
 /sys/class/camera/rear    rear_tofcal_extra         0444    system    system
 /sys/class/camera/rear    rear_tofcal_size          0444    system    system
@@ -730,13 +731,8 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware-modem/image/ /
 /sys/class/camera/secure    iris_caminfo           0664    system    system
 /sys/class/camera/secure    iris_hwparam           0664    system    system
 
-
-# Camera::Front End
-
 # Camera::Flash
-/sys/class/camera/flash                                 rear_flash                      0664    system  camera
-/sys/class/leds/led:switch_0                            brightness                      0664    system  system
-/sys/class/leds/led:torch_0                             brightness                      0664    system  system
+/sys/class/camera/flash    rear_flash              0664    system    camera
 
 # Camera::Ois
 /sys/class/camera/ois    selftest                       0444    system    system
@@ -779,7 +775,7 @@ firmware_directories /vendor/firmware_mnt/image/ /vendor/firmware-modem/image/ /
 /sys/class/camera/dual    fallback           0664    system    system
 
 # Camera::Adaptive mipi
-/sys/class/camera/test    adaptive_test           0664    system    
+/sys/class/camera/test    adaptive_test           0664    system    system
 
 #Camera SVC
 /sys/devices/svc/Camera    SVC_rear_module            0444    system    system
