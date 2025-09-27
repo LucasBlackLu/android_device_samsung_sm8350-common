@@ -427,13 +427,6 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor \
     android.frameworks.cameraservice.service@2.1.vendor
 
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.samsung
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
-
 # Updater
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
