@@ -103,8 +103,10 @@
 -->
 
 <MediaCodecs>
+    <Include href="media_codecs_google_audio.xml" />
+    <Include href="media_codecs_vendor_audio.xml" />
+    <Include href="media_codecs_google_telephony.xml" />
     <Settings>
-        <Domain name="telephony" enabled="true" />
         <Setting name="max-video-encoder-input-buffers" value="11" />
     </Settings>
     <Decoders>
@@ -277,10 +279,6 @@
             <Limit name="frame-rate" range="1-960" />
             <Limit name="complexity" range="0-100"  default="100" />
             <Limit name="concurrent-instances" max="16" />
-			<Tuning name="vq-target-bpp-1920x1080" value="3.80" />
-			<Tuning name="vq-target-bpp-1280x720" value="4.50" />
-			<Tuning name="vq-target-bpp-960x540" value="4.63" />
-			<Tuning name="vq-target-bpp-640x480" value="5.25" />
             <Limit name="performance-point-1280x720" value="960" />
             <Limit name="performance-point-1920x1080" value="480" />
             <Limit name="performance-point-1920x1080" value="240" />
@@ -316,7 +314,6 @@
             <Limit name="complexity" range="0-100"  default="100" />
             <Limit name="concurrent-instances" max="16" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
-			<Tuning name="vq-target-bpp-1920x1080" value="3" />
             <Limit name="performance-point-1280x720" value="960" />
             <Limit name="performance-point-1920x1080" value="480" />
             <Limit name="performance-point-1920x1080" value="240" />
