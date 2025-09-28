@@ -31,90 +31,52 @@ vendor/lib/rfsa/adsp/libscveT2T_skel.so
 # Audio
 system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
-vendor/lib/hw/audio.primary.lahaina.so:vendor/lib/hw/audio.primary.qcom.so;FIX_SONAME
-vendor/lib/hw/audio.sec_primary.default.so
-vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
+vendor/etc/audio_tuning_mixer.txt
 vendor/lib/lib_SamsungRec_08020.so
-vendor/lib/lib_SoundAlive_3DPosition_ver202.so
-vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
-vendor/lib/lib_SoundAlive_play_plus_ver500.so
-vendor/lib/lib_SoundBooster_ver1050.so
-vendor/lib/lib_lvacfs.so
 vendor/lib/lib_soundaliveresampler.so
-vendor/lib/libacdb-fts.so
-vendor/lib/libacdbloader.so
-vendor/lib/libacdbrtac.so
-vendor/lib/libadiertac.so
+vendor/lib/liba2dpoffload.so;MODULE_SUFFIX=_vendor
 vendor/lib/libadm.so
-vendor/lib/libaudcal.so
 vendor/lib/libaudio_log_utils.so
-vendor/lib/libaudioalsa.so
 vendor/lib/libaudioconfigstore.so
 vendor/lib/libaudioparsers.so
+vendor/lib/libbatterylistener.so;MODULE_SUFFIX=_vendor
+vendor/lib/libcirrusspkrprot.so;MODULE_SUFFIX=_vendor
+vendor/lib/libcomprcapture.so;MODULE_SUFFIX=_vendor
 vendor/lib/libdrc.so
+vendor/lib/libexthwplugin.so;MODULE_SUFFIX=_vendor
+vendor/lib/libhdmiedid.so;MODULE_SUFFIX=_vendor
+vendor/lib/libhdmipassthru.so;MODULE_SUFFIX=_vendor
+vendor/lib/libhfp.so;MODULE_SUFFIX=_vendor
 vendor/lib/libprofileparamstorage.so
 vendor/lib/libqtigef.so
 vendor/lib/librecordalive.so
 vendor/lib/libsamsungVoipResampler.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
+vendor/lib/libsndmonitor.so;MODULE_SUFFIX=_vendor
+vendor/lib/libaudio_soundtrigger.so
 vendor/lib/libspatializerparamstorage.so
-vendor/lib/libspeakercalibration.so
+vendor/lib/libspkrprot.so;MODULE_SUFFIX=_vendor
 vendor/lib/libsurround_3mic_proc.so
+vendor/lib/spatializer-aidl-V1-cpp.so
 vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
-vendor/lib/vendor.samsung.hardware.audio@1.0.so
-vendor/lib64/hw/audio.sec_primary.default.so
-vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
-vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
-vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
-vendor/lib64/lib_SoundAlive_play_plus_ver500.so
-vendor/lib64/lib_SoundBooster_ver1050.so
-vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbloader.so
-vendor/lib64/libacdbrtac.so
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudioconfigstore.so
-vendor/lib64/libaudioparsers.so
-vendor/lib64/libprofileparamstorage.so
-vendor/lib64/libqtigef.so
-vendor/lib64/libsecaudiocoreutils.so
-vendor/lib64/libsecaudioinfo.so
-vendor/lib64/libspatializerparamstorage.so
-vendor/lib64/libspeakercalibration.so
-vendor/lib64/vendor.samsung.hardware.audio@1.0.so
+vendor/lib/lib_lvacfs.so
 
 # Audio (SoundFX)
 vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libaudioeffectoffload.so
-vendor/lib/soundfx/libaudiosaplus_sec.so
-vendor/lib/soundfx/libmyspace.so
-vendor/lib/soundfx/libplaybackrecorder.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
-vendor/lib/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib/soundfx/libshoebox.so
-vendor/lib/soundfx/libswdap.so
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libaudioeffectoffload.so
-vendor/lib64/soundfx/libaudiosaplus_sec.so
-vendor/lib64/soundfx/libmyspace.so
-vendor/lib64/soundfx/libplaybackrecorder.so
-vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcreverb.so
-vendor/lib64/soundfx/libqcvirt.so
-vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
-vendor/lib64/soundfx/libshoebox.so
-vendor/lib64/soundfx/libswdap.so
+vendor/lib/soundfx/libswspatializer.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service
 vendor/etc/init/android.hardware.bluetooth@1.0-service.rc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so
 vendor/lib/libbthost_if.so
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so
 vendor/lib64/libbt-vendor.so
 vendor/lib64/libbthost_if.so
 
@@ -244,16 +206,16 @@ vendor/lib64/libtinyxml2_1.so
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/bin/ppd
 vendor/etc/init/vendor.display.color@1.0-service.rc
+vendor/lib/libcolor-default.so
 vendor/lib/libdisp-aba.so
 vendor/lib/vendor.display.color@1.0.so
-vendor/lib/libcolor-default.so
-vendor/lib64/libcolor-default.so
 vendor/lib/vendor.display.color@1.1.so
 vendor/lib/vendor.display.color@1.2.so
 vendor/lib/vendor.display.color@1.3.so
 vendor/lib/vendor.display.color@1.4.so
 vendor/lib/vendor.display.color@1.5.so
 vendor/lib/vendor.display.postproc@1.0.so
+vendor/lib64/libcolor-default.so
 vendor/lib64/libdisp-aba.so
 vendor/lib64/vendor.display.color@1.0.so
 vendor/lib64/vendor.display.color@1.1.so
@@ -351,11 +313,11 @@ vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_32.bin
 vendor/gpu/kbc/unified_kbcs_64.bin
 vendor/gpu/kbc/unified_ksqs.bin
-vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so;SYMLINK=vendor/lib/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so
+vendor/lib/egl/eglSubDriverAndroid.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/libC2D2.so
 vendor/lib/libCB.so
@@ -369,11 +331,11 @@ vendor/lib/libkcl.so
 vendor/lib/libkernelmanager.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
-vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
 vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libCB.so
@@ -437,16 +399,16 @@ vendor/bin/init.qti.kernel.sh
 vendor/bin/vendor_modprobe.sh
 vendor/etc/init/hw/init.qti.kernel.rc
 
- # Keymaster
+# Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti
 vendor/etc/init/android.hardware.keymaster@4.0-strongbox-service-qti.rc
 vendor/lib64/libhermes_cred.so
-vendor/lib64/libqtikeymaster4.so
+vendor/lib64/libkeymaster_helper.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterutils.so
-vendor/lib64/libspcom.so
-vendor/lib64/libkeymaster_helper.so
+vendor/lib64/libqtikeymaster4.so
 vendor/lib64/libskeymaster4device.so
+vendor/lib64/libspcom.so
 
 # Machine Learning
 vendor/etc/lm/AdaptLaunchFeature.xml
@@ -721,21 +683,6 @@ vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 vendor/etc/floating_feature.xml
 vendor/lib/libsecnativefeature.so
 vendor/lib64/libsecnativefeature.so
-
-# Soundtrigger
-vendor/lib/libaudio_soundtrigger.so
-vendor/lib/libcapiv2svacnn.so
-vendor/lib/libcapiv2vop.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
-vendor/lib64/libcapiv2svacnn.so
-vendor/lib64/libcapiv2vop.so
-vendor/lib64/libgcs-calwrapper.so
-vendor/lib64/libgcs-ipc.so
-vendor/lib64/libgcs-osal.so
-vendor/lib64/libgcs.so
 
 # Thermal
 vendor/bin/hw/vendor.samsung.hardware.thermal@1.0-service
