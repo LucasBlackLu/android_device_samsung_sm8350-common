@@ -227,15 +227,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery 
 
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
-
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
@@ -252,9 +243,7 @@ PRODUCT_ENABLE_UFFD_GC := false
 $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/sm8350-common:libskeymaster4device)
 
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0-service.samsung \
-    libkeymaster4support.vendor \
-    libkeymaster4_1support.vendor
+    android.hardware.keymaster@4.0-service.samsung
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -321,24 +310,6 @@ PRODUCT_PACKAGES += \
 # Public Libraries
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
-# QMI
-TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
-
-PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor \
-    libvndfwk_detect_jni.qti \
-    libvndfwk_detect_jni.qti.vendor
-
-PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/qmi/btcon.json:$(TARGET_COPY_OUT_VENDOR)/etc/btcon.json \
-    $(COMMON_PATH)/configs/qmi/mercury.json:$(TARGET_COPY_OUT_VENDOR)/etc/mercury.json \
-    $(COMMON_PATH)/configs/qmi/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
-    $(COMMON_PATH)/configs/qmi/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
-    $(COMMON_PATH)/configs/qmi/sec_config_oem:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config_oem \
-    system/core/libprocessgroup/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
-    system/core/libprocessgroup/profiles/task_profiles_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Ramdisk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)

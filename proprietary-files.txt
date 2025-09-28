@@ -443,21 +443,16 @@ vendor/bin/init.qti.kernel.sh
 vendor/bin/vendor_modprobe.sh
 vendor/etc/init/hw/init.qti.kernel.rc
 
-# Keymaster
+ # Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0-strongbox-service-qti
-vendor/bin/sec_nvm
-vendor/bin/spdaemon
 vendor/etc/init/android.hardware.keymaster@4.0-strongbox-service-qti.rc
-vendor/etc/init/init.spdaemon.rc
-vendor/lib/libkeymasterdeviceutils.so
-vendor/lib/libspcom.so
 vendor/lib64/libhermes_cred.so
-vendor/lib64/libkeymaster_helper.so
+vendor/lib64/libqtikeymaster4.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterutils.so
-vendor/lib64/libqtikeymaster4.so
-vendor/lib64/libskeymaster4device.so
 vendor/lib64/libspcom.so
+vendor/lib64/libkeymaster_helper.so
+vendor/lib64/libskeymaster4device.so
 
 # Machine Learning
 vendor/etc/lm/AdaptLaunchFeature.xml
