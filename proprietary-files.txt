@@ -113,23 +113,17 @@ vendor/lib64/soundfx/libswdap.so
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service
 vendor/etc/init/android.hardware.bluetooth@1.0-service.rc
-vendor/lib/libbthost_if.so
-vendor/lib/libsehbluetooth_audio_session.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl.so
+vendor/lib/libbthost_if.so
+vendor/lib64/libbt-vendor.so
 vendor/lib64/libbthost_if.so
-vendor/lib64/libsehbluetooth_audio_session.so
 
 # Bluetooth (A2DP)
 vendor/lib/hw/vendor.samsung.hardware.bluetooth.a2dp@1.0-impl.so
-vendor/lib/hw/vendor.samsung.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
-vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.0.so
-vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.1.so
 vendor/lib64/hw/vendor.samsung.hardware.bluetooth.a2dp@1.0-impl.so
-vendor/lib64/hw/vendor.samsung.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 vendor/lib64/vendor.samsung.hardware.bluetooth.audio@2.0.so
-vendor/lib64/vendor.samsung.hardware.bluetooth.audio@2.1.so
 vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
 
 # Charger
