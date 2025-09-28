@@ -256,6 +256,7 @@ $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/s
 
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
+    libkeymaster4support.vendor \
     libkeymaster4_1support.vendor
 
 # Lights
