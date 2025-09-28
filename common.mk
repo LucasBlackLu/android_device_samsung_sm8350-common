@@ -484,10 +484,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
 
-# Weaver
-PRODUCT_PACKAGES += \
-    android.hardware.weaver@1.0.vendor
-
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
