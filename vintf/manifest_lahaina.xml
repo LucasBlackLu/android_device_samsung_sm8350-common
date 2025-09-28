@@ -37,7 +37,6 @@
             <name>IBiometricsFingerprint</name>
             <instance>default</instance>
         </interface>
-        <fqname>@2.1::IBiometricsFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
@@ -68,15 +67,12 @@
             <instance>default</instance>
             <instance>strongbox</instance>
         </interface>
-        <fqname>@4.0::IKeymasterDevice/default</fqname>
-        <fqname>@4.0::IKeymasterDevice/strongbox</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
-        <fqname>@1.5::IRadio/slot1</fqname>
         <fqname>@1.5::IRadio/slot2</fqname>
     </hal>
     <hal format="hidl">
@@ -127,7 +123,6 @@
             <name>IWeaver</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IWeaver/default</fqname>
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.imscmservice</name>
