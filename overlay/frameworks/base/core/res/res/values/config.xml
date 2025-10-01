@@ -100,57 +100,6 @@
          auto-brightness. If unset, then it just gets the default sensor of type TYPE_LIGHT. -->
     <string name="config_displayLightSensorType">com.samsung.sensor.autobrightness</string>
 
-    <!-- Amount of time it takes for the light sensor to warm up in milliseconds.
-         For this time after the screen turns on, the Power Manager
-         will not debounce light sensor readings -->
-    <integer name="config_lightSensorWarmupTime">200</integer>
-
-    <!-- Array of light sensor LUX values to define our levels for auto backlight brightness
-     support.
-      The N entries of this array define N  1 zones as follows:
-         Zone 0:        0 <= LUX < array[0]
-         Zone 1:        array[0] <= LUX < array[1]
-         ...
-         Zone N:        array[N - 1] <= LUX < array[N]
-         Zone N + 1     array[N] <= LUX < infinity
-         Must be overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessLevels">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>10</item>
-        <item>30</item>
-        <item>50</item>
-        <item>135</item>
-        <item>250</item>
-        <item>600</item>
-        <item>1000</item>
-        <item>2000</item>
-        <item>2999</item>
-        <item>3000</item>
-        <item>3999</item>
-        <item>4000</item>
-        <item>4999</item>
-        <item>5000</item>
-        <item>9999</item>
-        <item>10000</item>
-        <item>19999</item>
-        <item>20000</item>
-        <item>29999</item>
-        <item>30000</item>
-        <item>39999</item>
-        <item>40000</item>
-        <item>49999</item>
-        <item>50000</item>
-        <item>59999</item>
-        <item>60000</item>
-        <item>79999</item>
-        <item>80000</item>
-        <item>99999</item>
-        <item>100000</item>
-    </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the lux values
          in the config_autoBrightnessLevels array.  This array should have size one greater
@@ -158,17 +107,17 @@
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>20</item>
-        <item>23</item>
-        <item>26</item>
-        <item>31</item>
+        <item>22</item>
+        <item>25</item>
+        <item>28</item>
         <item>33</item>
         <item>35</item>
-        <item>38</item>
-        <item>38</item>
-        <item>50</item>
-        <item>57</item>
+        <item>37</item>
+        <item>49</item>
         <item>64</item>
+        <item>64</item>
+        <item>65</item>
+        <item>67</item>
         <item>72</item>
         <item>98</item>
         <item>145</item>
@@ -196,10 +145,68 @@
         <item>255</item>
     </integer-array>
 
+    <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
+         The N entries of this array define N + 1 control points as follows:
+         (1-based arrays)
+
+         Point 1:            (0, value[1]):             lux <= 0
+         Point 2:     (level[1], value[2]):  0        < lux <= level[1]
+         Point 3:     (level[2], value[3]):  level[2] < lux <= level[3]
+         ...
+         Point N+1: (level[N], value[N+1]):  level[N] < lux
+
+         The control points must be strictly increasing.  Each control point
+         corresponds to an entry in the brightness backlight values arrays.
+         For example, if lux == level[1] (first element of the levels array)
+         then the brightness will be determined by value[2] (second element
+         of the brightness values array).
+
+         Spline interpolation is used to determine the auto-brightness
+         backlight values for lux levels between these control points.
+
+         Must be overridden in platform specific overlays -->
+    <integer-array name="config_autoBrightnessLevels">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>10</item>
+        <item>30</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>2999</item>
+        <item>3000</item>
+        <item>3999</item>
+        <item>4000</item>
+        <item>4999</item>
+        <item>5000</item>
+        <item>9999</item>
+        <item>10000</item>
+        <item>19999</item>
+        <item>20000</item>
+        <item>29999</item>
+        <item>30000</item>
+        <item>39999</item>
+        <item>40000</item>
+        <item>49999</item>
+        <item>50000</item>
+        <item>59999</item>
+        <item>60000</item>
+        <item>79999</item>
+        <item>80000</item>
+        <item>99999</item>
+        <item>100000</item>
+    </integer-array>
+
     <!-- An array describing the screen's backlight values corresponding to the brightness
          values in the config_screenBrightnessNits array.
 
-         This array should be equal in size to config_screenBrightnessNits. -->
+         This array should be equal in size to config_screenBrightnessBacklight. -->
     <integer-array name="config_screenBrightnessBacklight">
         <item>0</item>
         <item>1</item>
@@ -524,45 +531,45 @@
         <item>9</item>
         <item>9.5</item>
         <item>10</item>
-        <item>10.5</item>
+        <item>10.6</item>
         <item>11</item>
         <item>11.5</item>
         <item>12</item>
-        <item>12.5</item>
+        <item>12.6</item>
         <item>13</item>
-        <item>13.5</item>
+        <item>13.6</item>
         <item>14</item>
-        <item>14.5</item>
+        <item>14.6</item>
         <item>15</item>
         <item>15.5</item>
         <item>16</item>
-        <item>16.5</item>
+        <item>16.6</item>
         <item>17</item>
-        <item>18.5</item>
+        <item>18.1</item>
         <item>19</item>
         <item>20</item>
-        <item>20.5</item>
+        <item>20.6</item>
         <item>21</item>
-        <item>21.5</item>
+        <item>21.6</item>
         <item>22</item>
-        <item>23.5</item>
+        <item>23.1</item>
         <item>24</item>
-        <item>24.5</item>
+        <item>24.6</item>
         <item>25</item>
-        <item>26.5</item>
+        <item>26.1</item>
         <item>27</item>
-        <item>28.5</item>
+        <item>28.2</item>
         <item>29</item>
         <item>30</item>
-        <item>31.5</item>
+        <item>31.2</item>
         <item>32</item>
-        <item>33.5</item>
+        <item>33.2</item>
         <item>34</item>
-        <item>35.5</item>
+        <item>35.7</item>
         <item>37</item>
         <item>38</item>
         <item>39</item>
-        <item>40.5</item>
+        <item>40.2</item>
         <item>41</item>
         <item>42.5</item>
         <item>44</item>
@@ -572,13 +579,13 @@
         <item>50</item>
         <item>51.5</item>
         <item>53</item>
-        <item>54.5</item>
+        <item>54.8</item>
         <item>56</item>
         <item>58</item>
         <item>60</item>
         <item>62</item>
         <item>64</item>
-        <item>66.5</item>
+        <item>66.3</item>
         <item>68</item>
         <item>70</item>
         <item>72</item>
@@ -586,15 +593,15 @@
         <item>77</item>
         <item>79.5</item>
         <item>82</item>
-        <item>84.5</item>
+        <item>84.9</item>
         <item>87</item>
         <item>90</item>
         <item>93</item>
-        <item>95.5</item>
+        <item>95.9</item>
         <item>98</item>
         <item>101.5</item>
         <item>105</item>
-        <item>108.5</item>
+        <item>108.4</item>
         <item>111</item>
         <item>115</item>
         <item>119</item>
@@ -854,6 +861,14 @@
          that can be set by the user. -->
     <integer name="config_screenBrightnessDoze">25</integer>
     <item name="config_screenBrightnessDozeFloat" format="float" type="dimen">0.08627451</item>
+
+    <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
+         for debouncing the light sensor.  Different constants are used to debounce the light sensor
+         when adapting to brighter or darker environments.  This parameter controls how quickly
+         brightness changes occur in response to an observed change in light level that exceeds the
+         hysteresis threshold. -->
+    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">6000</integer>
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
