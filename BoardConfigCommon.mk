@@ -31,6 +31,10 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 # File System
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
+# HIDL
+DEVICE_MANIFEST_FILE := \
+    $(COMMON_PATH)/vintf/manifest_lahaina.xml
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := lahaina
