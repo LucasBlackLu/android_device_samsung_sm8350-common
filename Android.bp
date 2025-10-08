@@ -5,3 +5,10 @@
 
 soong_namespace {
 }
+
+prebuilt_hidl_interfaces {
+    name: "vendor.bluetooth-1-0",
+    interfaces: [
+        "vendor.samsung.hardware.bluetooth@2.0::ISehBluetooth",
+    ],
+}
