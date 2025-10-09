@@ -289,6 +289,10 @@
     <!-- End of Modules section -->
 
     <!-- Volume section -->
+
+    <xi:include href="audio_policy_volumes.xml"/>
+    <xi:include href="default_volume_tables.xml"/>
+
     <!-- End of Volume section -->
 
 </audioPolicyConfiguration>
