@@ -194,6 +194,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0.vendor:64
 
+# QTI fwk-detect
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect.vendor:32
+
 # Recovery
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc
