@@ -1,0 +1,19 @@
+# CNE
+persist.vendor.cne.feature=1
+
+# DPM
+persist.vendor.dpm.feature=11
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.media.recorder-max-base-layer-fps=60
+vendor.mm.enable.qcom_parser=16777215
+
+# Netmgr
+persist.vendor.data.mode=concurrent
+
+# Netflix
+ro.netflix.bsp_rev=Q875-32408-1
+
+# Radio
+ril.subscription.types=NV,RUIM
