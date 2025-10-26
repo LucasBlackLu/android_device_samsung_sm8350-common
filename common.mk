@@ -231,7 +231,8 @@ PRODUCT_PACKAGES += \
     init.vendor.rilcommon.rc \
     init.vendor.sysfw.rc \
     ueventd.qcom.rc \
-    vendor.samsung.rilchip.qcom.rc
+    vendor.samsung.rilchip.qcom.rc \
+    vendor.samsung.rild.rc
 
 PRODUCT_PACKAGES += \
     init.class_main.sh \

@@ -128,6 +128,13 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "vendor.samsung.rild.rc",
+    src: "etc/vendor.samsung.rild.rc",
+    sub_dir: "init/",
+    vendor: true,
+}
+
 sh_binary {
     name: "init.class_main.sh",
     src: "bin/init.class_main.sh",
