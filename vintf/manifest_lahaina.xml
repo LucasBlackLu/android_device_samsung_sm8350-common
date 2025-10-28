@@ -71,6 +71,22 @@
         <fqname>@4.0::IKeymasterDevice/default</fqname>
         <fqname>@4.0::IKeymasterDevice/strongbox</fqname>
     </hal>
+    <hal format="aidl">
+        <name>vendor.lineage.touch</name>
+        <version>1</version>
+        <interface>
+            <name>IGloveMode</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IHighTouchPollingRate</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>ITouchscreenGesture</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
