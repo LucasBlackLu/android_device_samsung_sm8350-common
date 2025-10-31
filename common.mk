@@ -232,6 +232,7 @@ PRODUCT_PACKAGES += \
     fingerprint_common.rc \
     fstab.qcom \
     fstab.ramplus \
+    init.udfps.rc \
     init.audio.samsung.rc \
     init.fingerprint.rc \
     init.nfc.samsung.rc \
