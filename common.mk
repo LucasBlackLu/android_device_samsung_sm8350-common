@@ -339,6 +339,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc
 
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
+	secril_config_svc
+
 # Samsung DAP
 PRODUCT_PACKAGES += \
     SamsungDAP
