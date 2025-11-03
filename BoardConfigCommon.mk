@@ -180,5 +180,17 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 # Treble
 BOARD_VNDK_VERSION := current
 
+# Wi-Fi
+BOARD_WLAN_BCMDHD_SAE                         := true
+BOARD_WLAN_DEVICE                             := bcmdhd
+BOARD_WPA_SUPPLICANT_DRIVER                   := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB              := lib_driver_cmd_bcmdhd
+BOARD_HOSTAPD_DRIVER                          := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB                     := lib_driver_cmd_bcmdhd
+WIFI_AVOID_IFACE_RESET_MAC_CHANGE             := true
+WIFI_HIDL_FEATURE_DUAL_INTERFACE              := true
+WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+WPA_SUPPLICANT_VERSION                        := VER_0_8_X
+
 # Get non-open-source specific aspects
 include vendor/samsung/sm8350-common/BoardConfigVendor.mk
