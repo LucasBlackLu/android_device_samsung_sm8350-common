@@ -244,6 +244,7 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.rc \
     init.recovery.qcom.rc \
     init.samsung.bsp.rc \
+    init.samsung.camera.rc \
     init.samsung.display.rc \
     init.samsung.connector.rc \
     init.samsung.rc \
