@@ -183,10 +183,6 @@ vendor/lib64/libsnap_compute_wrapper.so
 vendor/lib64/libsnap_compute_wrapper_secure.so
 vendor/lib64/libsnap_vndk.so
 vendor/lib64/libsnap_vndk_secure.so
-vendor/lib64/libsnaplite_native.so
-vendor/lib64/libsnaplite_native_secure.so
-vendor/lib64/libsnaplite_wrapper.so
-vendor/lib64/libsnaplite_wrapper_secure.so
 vendor/lib64/libsynx.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libuniplugin.so
@@ -197,6 +193,11 @@ vendor/lib64/unihal_filter_unit.so
 vendor/lib64/unihal_main.so
 vendor/lib64/unihal_scenario.so
 vendor/lib64/unihal_uniplugin@1.0.so
+vendor/lib64/camera.device@1.0-impl.so
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/camera.device@3.4-impl.so
+vendor/lib64/camera.device@3.5-impl.so
 vendor/lib64/vendor.samsung.hardware.camera.device@5.0-impl.so
 vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so
 vendor/lib64/vendor.samsung.hardware.camera.provider@4.0-legacy.so

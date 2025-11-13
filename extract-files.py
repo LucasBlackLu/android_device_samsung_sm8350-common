@@ -60,6 +60,12 @@ blob_fixups: blob_fixups_user_type = {
      ('vendor/lib64/unihal_android.so'): blob_fixup()
         .add_needed('libshim_sensorndkbridge.so')
         .add_needed('libui_shim.so'),
+     ('vendor/lib64/libsnaplite_native.so'): blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_acquire')
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lockPlanes')
+        .clear_symbol_version('AHardwareBuffer_release')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
