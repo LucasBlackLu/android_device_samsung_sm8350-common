@@ -12,3 +12,10 @@ prebuilt_hidl_interfaces {
         "vendor.samsung.hardware.bluetooth@2.0::ISehBluetooth",
     ],
 }
+
+prebuilt_hidl_interfaces {
+    name: "sec-camera-provider-4-0",
+    interfaces: [
+        "vendor.samsung.hardware.camera.provider@4.0::ISehCameraProvider",
+    ],
+}

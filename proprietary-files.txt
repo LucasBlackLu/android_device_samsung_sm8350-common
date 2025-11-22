@@ -136,6 +136,7 @@ vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so
 
 # Camera
 vendor/bin/hw/vendor.samsung.hardware.camera.provider@4.0-service_64
+vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc
 vendor/etc/init/camera.unihal.rc
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/libarcsoft_aieffectpk_video.so
@@ -213,6 +214,11 @@ vendor/lib64/camera/t_t10_dual_calibration.bin
 vendor/lib64/camera/uw_dual_calibration.bin
 vendor/lib64/camera/w_dual_calibration.bin
 
+# Camera IDDQ plugin
+vendor/lib64/libIDDQD_core.so
+vendor/lib64/libIDDQD_interface.so
+vendor/lib64/libLocalTM_preview_core.so
+vendor/lib64/libOpenCv.camera.samsung.so
 
 # Charger
 vendor/bin/hvdcp_opti
